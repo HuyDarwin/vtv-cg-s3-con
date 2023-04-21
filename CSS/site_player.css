@@ -1,0 +1,277 @@
+@font-face {
+	font-family: 'UTM Neo Sans Intel';
+	src: url('../Fonts/subset-UTMNeoSansIntel.woff2') format('woff2'), url('../Fonts/subset-UTMNeoSansIntel.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'UTM Neo Sans Intel';
+	src: url('../Fonts/subset-UTMNeoSansIntelBold.woff2') format('woff2'), url('../Fonts/subset-UTMNeoSansIntelBold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'UTM Neo Sans Intel';
+	src: url('../Fonts/subset-UTMNeoSansIntel-BoldItalic.woff2') format('woff2'), url('../Fonts/subset-UTMNeoSansIntel-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'UTM Neo Sans Intel';
+	src: url('../Fonts/subset-UTMNeoSansIntel-Italic.woff2') format('woff2'), url('../Fonts/subset-UTMNeoSansIntel-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "UTM Duepuntozero";
+	src: url("../Fonts/UTM Duepuntozero.ttf") format("woff"), url("../Fonts/UTM Duepuntozero.ttf") format("opentype"), url("../Fonts/UTM Duepuntozero.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+body {
+	overflow:hidden;
+	background: url('../Graphics/background-2.png') no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+div, img, button, textarea, iframe, select, option, input, label {
+	position:absolute;
+	margin:auto;
+}
+
+p {
+	margin:auto;
+	position:absolute;
+}
+
+table {
+	margin:auto;
+	position:absolute;
+}
+
+button {
+	cursor: pointer;
+	font-family:'UTM Neo Sans Intel';
+	font-weight:bold;
+	border-width:0.01vw;
+	border-radius:1vw;
+}
+
+button:hover {
+	background-color:00FFFF;
+	transition: 0.5s;
+}
+
+#question {
+	width:99vw;
+	height:16.5vw;
+	top:0.5vw;
+	left:0.5vw;
+	background:rgba(255, 255, 255, 0.25);
+	text-align:center;
+}
+
+#round {
+	font-size:2.75vw;
+	color:white;
+	top:0.5vw;
+	left:73vw;
+	width:14.5vw;
+	height:3vw;
+	font-family:'UTM Neo Sans Intel';
+	font-weight:bold;
+}
+
+#players_left {
+	font-size:2.25vw;
+	color:white;
+	top:4vw;
+	left:87.75vw;
+	font-family:'UTM Neo Sans Intel';
+	font-weight:bold;
+}
+
+#timer {
+	font-size:6vw;
+	top:9.4vw;
+	left:88.8vw;
+	width:5.5vw;
+	height:5.2vw;
+	text-align:center;
+	font-family:'UTM Duepuntozero';
+}
+
+#q_text {
+	top:4.5vw;
+	left:1vw;
+	width:83vw;
+	height:6.9vw;
+	font-size:1.6vw;
+	font-family:'UTM Neo Sans Intel';
+	font-weight:bold;
+	line-height:2vw;
+	text-align: center;
+}
+
+#q_text td {
+	text-align: center;
+	vertical-align:middle;
+}
+
+#answer {
+	top:11.8vw;
+	left:19.15vw;
+	width:65.3vw;
+	height:3.4vw;
+	font-size:1.6vw;
+	font-family:'UTM Neo Sans Intel';
+	font-weight:bold;
+	font-style: italic;
+	line-height:1.5vw;
+	text-align: center;
+}
+
+#buzzer {
+	width:25vw;
+	height:27vw;
+	top:18vw;
+	left:74.5vw;
+	font-size:3vw;
+	background-color:ffa96b;
+}
+
+#input, #input_sn, #player_input, #player_sn_input {
+	left:20.5vw;
+	font-family:'UTM Neo Sans Intel';
+	font-weight:bold;
+	text-align:left;
+	font-size:1.5vw;
+	resize:none;
+}
+
+#text1, #text2 {
+	width:53.5vw;
+	height:1vw;
+	left:20.5vw;
+	font-family:'UTM Neo Sans Intel';
+	font-weight:bold;
+	text-align:left;
+	font-size:1.5vw;
+}
+
+#input {
+	width:53.5vw;
+	height:27vw;
+	top:18vw;
+}
+
+
+#input_sn {
+	width:79vw;
+	height:27vw;
+	top:18vw;
+}
+
+#text1 {
+	top:18vw;
+}
+
+#player_input {
+	width:53.5vw;
+	height:11.25vw;
+	top:20vw;
+}
+
+#text2 {
+	top:31.75vw;
+}
+
+#player_sn_input {
+	width:53.5vw;
+	height:11.25vw;
+	top:33.75vw;
+}
+
+.gpx {
+	width:19.5vw;
+	height:6vw;
+	left:0.5vw;
+	border-radius:1vw;
+	font-size:1.8vw;
+	text-align:center;
+	font-family:'UTM Neo Sans Intel';
+	font-weight:bold;
+	line-height:2vw;
+}
+
+#gpx1 {
+	top:18vw;
+	background-color:e100a9;
+	color:white;
+}
+
+#gpx2 {
+	top:24.5vw;
+	background-color:09dd9d;
+}
+
+#gpx3 {
+	top:31vw;
+	background-color:ffa96b;
+}
+
+#score_table, #score_table_sn, #score_table_player, #score_table_player_sn {
+	font-family:'UTM Neo Sans Intel';
+	font-weight:bold;
+	font-size:2vw;
+	background-color:ffffff;
+	border-collapse: collapse;
+	border: 0.1vw solid;
+	text-align:center;
+}
+
+#score_table {
+	top:18vw;
+	left:75vw;
+}
+
+#score_table_sn {
+	top:30vw;
+	left:75vw;
+}
+
+#score_table_player, #score_table_player_sn {
+	top:37.5vw;
+	left:0.5vw;
+}
+
+#score_table td, #score_table_sn td, #score_table_player td, #score_table_player_sn td {
+	border-collapse: collapse;
+	border: 0.1vw solid;
+}
+
+#sn1, #sn2, #sn3, #sn4, #sntd {
+	width:20.25vw;
+	background-color:rgba(57,213,247);
+}
+
+#sn1p, #sn2p, #sn3p, #sn4p, #sntdp {
+	width:15vw;
+	background-color:rgba(57,213,247);
+}
+
+#ss1, #ss2, #ss3, #ss4, #ss1p, #ss2p, #ss3p, #ss4p, #sstd, #sstdp {
+	width:4vw;
+	background-color:rgba(245,120,16);
+}
