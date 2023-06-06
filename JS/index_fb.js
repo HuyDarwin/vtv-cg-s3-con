@@ -125,9 +125,8 @@ $(function () {
 			}
 				
 			if(data.question.length > 129){
-        console.log('yes')
 				var qla = data.question.length - 129;
-				var qlb = qla * (0.026 - qla * 0.00018);
+				var qlb = qla * (0.045 - qla * 0.00021);
 				var qlc = 2.1 - qlb;
 				var qld = String(qlc) + "vw";
 				var qle = 2.2 - (2.7 - 2) / (2.6 - 1.6) * qlb;
@@ -135,7 +134,6 @@ $(function () {
 				$("#q_text").css({"font-size": qld, "line-height": qlf});
 			}
 			else{
-        console.log('no')
 				$("#q_text").css({"font-size": "2.1vw", "line-height": "2.3vw"});
 			}
 				
