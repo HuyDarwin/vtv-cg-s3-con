@@ -150,7 +150,7 @@ $(function () {
 				update(ref(db), { suspense : 0 });
 			}
 			if (data.pq == 1){
-				con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/30s%20Countdown.mp3?v=1687698305508',2);
+				con.ChoiAmThanh('Sounds/violate.mp3',2);
 				update(ref(db), { pq : 0 });
 			}
 			if (data.ctd == 1){
