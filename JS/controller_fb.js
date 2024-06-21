@@ -206,7 +206,12 @@ $(function () {
         */
         
         for(var i = 3; i <= 15; i += 6) {
-          
+          cau_hoi_4.push({
+            NumOfQ: sheet['A' + i].v,
+            KeyCol: sheet['I' + i].v,
+            KeyWord: sheet['J' + i].v
+          })
+          cau_hoi_4.
         }
 			};
 			reader.readAsArrayBuffer(file);
