@@ -94,13 +94,14 @@ $(function () {
 			cau_hoi_chp_2 = [];
 			cau_hoi_3 = [];
 			cau_hoi_chp_3 = [];
-			cau_hoi_4 = [];
+			//cau_hoi_4 = [];
 			var file = e.target.files[0];
 			var reader = new FileReader();
 			reader.onload = function(e) {
 				var data = e.target.result;
 				var workbook = XLSX.read(e.target.result);
 				var sheet = workbook.Sheets[workbook.SheetNames[0]];
+				var sheet2 = workbook.Sheets[workbook.SheetNames[1]];
 				
 				for(var i = 6; i <= 18; i++){
 					cau_hoi_1.push({
@@ -193,6 +194,7 @@ $(function () {
 						Answer: sheet['E' + i].v
 					})
 				}
+        /*
 				for(var i = 100; i <= 102; i++){
 					cau_hoi_4.push({
 						Round: sheet['A' + i].v,
@@ -201,6 +203,11 @@ $(function () {
 						Answer: sheet['E' + i].v
 					})
 				}
+        */
+        
+        for(var i = 3; i <= 15; i += 6) {
+          
+        }
 			};
 			reader.readAsArrayBuffer(file);
 		});
