@@ -207,11 +207,28 @@ $(function () {
         
         for(var i = 3; i <= 15; i += 6) {
           cau_hoi_4.push({
-            NumOfQ: sheet['A' + i].v,
-            KeyCol: sheet['I' + i].v,
-            KeyWord: sheet['J' + i].v
+            NumOfQ: sheet2['A' + i].v,
+            KeyCol: sheet2['I' + i].v,
+            KeyWord: sheet2['J' + i].v
           })
-          cau_hoi_4.
+          for (var j = 0; j <= (i - 3) % 6 + 3; j++) {
+            cau_hoi_4[(i - 3) % 6].push({
+              Question: sheet2['B' + (i + j)].v.replace("++++", "<br />"),
+              LetterQ1: sheet2['C' + (i + j)].v,
+              LetterQ2: sheet2['D' + (i + j)].v,
+              LetterQ3: sheet2['E' + (i + j)].v,
+              LetterQ4: sheet2['F' + (i + j)].v,
+              LetterQ5: sheet2['G' + (i + j)].v,
+              LetterQ6: sheet2['H' + (i + j)].v,
+              LetterA1: sheet2['K' + (i + j)].v,
+              LetterA2: sheet2['L' + (i + j)].v,
+              LetterA3: sheet2['M' + (i + j)].v,
+              LetterA4: sheet2['N' + (i + j)].v,
+              LetterA5: sheet2['O' + (i + j)].v,
+              LetterA6: sheet2['P' + (i + j)].v
+            })            
+          }
+
         }
 			};
 			reader.readAsArrayBuffer(file);
