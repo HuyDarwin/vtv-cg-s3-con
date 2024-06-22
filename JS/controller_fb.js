@@ -228,7 +228,6 @@ $(function () {
               LetterA6: sheet2['P' + (i + j)].v
             })            
           }
-
         }
 			};
 			reader.readAsArrayBuffer(file);
