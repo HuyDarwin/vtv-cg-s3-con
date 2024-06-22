@@ -87,7 +87,7 @@ $(function () {
 				update(ref(db), { rc1_obj8 : 0 });
 			}
 			if (data.rc1_obj10 == 1){
-				$('#answer').animate({ opacity: 1 }, 250)
+				$('#answer').animate({ opacity: 1 }, 125)
 				update(ref(db), { rc1_obj10 : 0 });
 			}
 			if (data.rc1_obj9 == 1){
