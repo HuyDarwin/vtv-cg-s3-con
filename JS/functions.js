@@ -160,8 +160,8 @@ $(function () {
 				
 			}
 			con.AnCauHoi = function(){
-				$('#question-1, #question-2').animate({ opacity: 0}, 250);
-				$('#question_content').animate({ opacity: 0}, 250, function(){
+				$('#question-1, #question-2').animate({ opacity: 0}, 0);
+				$('#question_content').animate({ opacity: 0}, 0, function(){
 					$('#q_text td, #answer, #timer, #round_q, #players_left').html('');
 					$('#answer').css('opacity', 0);
 				});
@@ -260,9 +260,9 @@ $(function () {
 		con.ChayCauHoi = function(round,is_tiebreak){
 			if (forced_question == 0){
 				if (round == 1){
-					if(played_questions >= 13 * (played_contestants + 1) && timer != 0){
+					if(played_questions >= 14 * (played_contestants + 1) && timer != 0){
 						update(ref(db), { end_of_qs : 1 })
-						played_questions = 13 * (played_contestants + 1);
+						played_questions = 14 * (played_contestants + 1);
 						update(ref(db), { played_questions : played_questions })
 						con.TamDungDongHo();
 					}

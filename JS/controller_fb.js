@@ -52,7 +52,7 @@ $(function () {
 			$('#player_sn_input').html(data.input_sn);
 			
 			if(round == 1){
-				$('#info1').html('Thứ tự câu hỏi hiện tại: ' + (played_questions + 1) % 13);
+				$('#info1').html('Thứ tự câu hỏi hiện tại: ' + (played_questions + 1) % 14);
 			}
 			else if(round == 2){
 				$('#info1').html('Thứ tự câu hỏi hiện tại: ' + (played_questions + 1) % 2);
@@ -103,7 +103,7 @@ $(function () {
 				var sheet = workbook.Sheets[workbook.SheetNames[0]];
 				var sheet2 = workbook.Sheets[workbook.SheetNames[1]];
 				
-				for(var i = 6; i <= 18; i++){
+				for(var i = 6; i <= 19; i++){
 					cau_hoi_1.push({
 						Round: sheet['A' + i].v,
 						Player: sheet['B' + i].v,
@@ -112,7 +112,7 @@ $(function () {
 						Answer: sheet['E' + i].v
 					})
 				}				
-				for(var i = 20; i <= 32; i++){
+				for(var i = 21; i <= 34; i++){
 					cau_hoi_1.push({
 						Round: sheet['A' + i].v,
 						Player: sheet['B' + i].v,
@@ -121,7 +121,7 @@ $(function () {
 						Answer: sheet['E' + i].v
 					})
 				}			
-				for(var i = 34; i <= 46; i++){
+				for(var i = 36; i <= 49; i++){
 					cau_hoi_1.push({
 						Round: sheet['A' + i].v,
 						Player: sheet['B' + i].v,
@@ -130,7 +130,7 @@ $(function () {
 						Answer: sheet['E' + i].v
 					})
 				}			
-				for(var i = 48; i <= 60; i++){
+				for(var i = 51; i <= 64; i++){
 					cau_hoi_1.push({
 						Round: sheet['A' + i].v,
 						Player: sheet['B' + i].v,
@@ -139,7 +139,7 @@ $(function () {
 						Answer: sheet['E' + i].v
 					})
 				}	
-				for(var i = 62; i <= 66; i++){
+				for(var i = 66; i <= 70; i++){
 					cau_hoi_chp_1.push({
 						Round: sheet['A' + i].v,
 						NumOfQ: sheet['C' + i].v,
@@ -147,7 +147,7 @@ $(function () {
 						Answer: sheet['E' + i].v
 					})
 				}
-				for(var i = 69; i <= 70; i++){
+				for(var i = 73; i <= 74; i++){
 					cau_hoi_2.push({
 						Round: sheet['A' + i].v,
 						Player: sheet['B' + i].v,
@@ -155,7 +155,7 @@ $(function () {
 						Question: sheet['D' + i].v.replace("++++", "<br />")
 					})
 				}
-				for(var i = 72; i <= 73; i++){
+				for(var i = 76; i <= 77; i++){
 					cau_hoi_2.push({
 						Round: sheet['A' + i].v,
 						Player: sheet['B' + i].v,
@@ -163,7 +163,7 @@ $(function () {
 						Question: sheet['D' + i].v.replace("++++", "<br />")
 					})
 				}
-				for(var i = 75; i <= 76; i++){
+				for(var i = 79; i <= 80; i++){
 					cau_hoi_2.push({
 						Round: sheet['A' + i].v,
 						Player: sheet['B' + i].v,
@@ -171,14 +171,14 @@ $(function () {
 						Question: sheet['D' + i].v.replace("++++", "<br />")
 					})
 				}
-				for(var i = 78; i <= 82; i++){
+				for(var i = 82; i <= 86; i++){
 					cau_hoi_chp_2.push({
 						Round: sheet['A' + i].v,
 						NumOfQ: sheet['C' + i].v,
 						Question: sheet['D' + i].v.replace("++++", "<br />")
 					})
 				}
-				for(var i = 84; i <= 92; i++){
+				for(var i = 88; i <= 96; i++){
 					cau_hoi_3.push({
 						Round: sheet['A' + i].v,
 						NumOfQ: sheet['C' + i].v,
@@ -186,7 +186,7 @@ $(function () {
 						Answer: sheet['E' + i].v
 					})
 				}
-				for(var i = 94; i <= 98; i++){
+				for(var i = 98; i <= 102; i++){
 					cau_hoi_chp_3.push({
 						Round: sheet['A' + i].v,
 						NumOfQ: sheet['C' + i].v,
@@ -211,8 +211,12 @@ $(function () {
             KeyCol: sheet2['I' + i].v,
             KeyWord: sheet2['J' + i].v
           })
-          for (var j = 0; j <= (i - 3) % 6 + 3; j++) {
-            cau_hoi_4[(i - 3) % 6].push({
+        }
+        
+        for(var i = 3; i <= 15; i += 6){
+          cau_hoi_4_cw.push([])
+          for (var j = 0; j <= 5; j++) {
+            cau_hoi_4_cw[(i - 3) % 6].push({
               Question: sheet2['B' + (i + j)].v.replace("++++", "<br />"),
               LetterQ1: sheet2['C' + (i + j)].v,
               LetterQ2: sheet2['D' + (i + j)].v,
@@ -604,7 +608,7 @@ $(function () {
 					update(ref(db), { is_able_to_input : 0 })
 				}, 90000);
 				$('#rc1_obj9, #rc1_obj10, #rc1_obj11, #rc1_obj12').removeAttr("disabled");
-				played_questions = 13 * played_contestants;
+				played_questions = 14 * played_contestants;
 				update(ref(db), { played_questions : played_questions })
 				con.ChayCauHoi(1,false);
 			})
@@ -612,7 +616,7 @@ $(function () {
 				con.CongDiemNguoiChoi(1,false);
 				if(tiebreak_questions_left == 0 && timer != 0){
 					played_questions++;
-					if(played_questions >= 13 * (played_contestants + 1)){
+					if(played_questions >= 14 * (played_contestants + 1)){
 						update(ref(db), {
 							played_questions : played_questions,
 						})
@@ -636,7 +640,7 @@ $(function () {
 			$('#rc1_obj12').click(function(){
 				if(tiebreak_questions_left == 0 && timer != 0){
 					played_questions++;
-					if(played_questions >= 13 * (played_contestants + 1)){
+					if(played_questions >= 14 * (played_contestants + 1)){
 						update(ref(db), {
 							played_questions : played_questions,
 						})

@@ -185,7 +185,7 @@ $(function () {
 			}*/
 			
 			if(data.round == 1){
-				$('#gpx3').html('Thứ tự câu hỏi hiện tại:<br/>' + (data.played_questions + 1) % 13);
+				$('#gpx3').html('Thứ tự câu hỏi hiện tại:<br/>' + (data.played_questions + 1) % 14);
 			}
 			else if(data.round == 2 ){
 				$('#gpx3').html('Thứ tự câu hỏi hiện tại:<br/>' + (data.played_questions + 1) % 2);
