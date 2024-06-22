@@ -77,11 +77,18 @@ $(function () {
 			$('#sn3, #sn3p').html(data.player_3_last_name);
 			$('#sn4, #sn4p').html(data.player_4_last_name);
 			$('#sntd, #sntdp').html(data.player_sn_last_name);
-			$('#ss1, #ss1p').html(data.player_1_score);
-			$('#ss2, #ss2p').html(data.player_2_score);
-			$('#ss3, #ss3p').html(data.player_3_score);
-			$('#ss4, #ss4p').html(data.player_4_score);
-			$('#sstd, #sstdp').html(data.player_sn_score);
+			$('#ss1').html(data.player_1_score);
+			$('#ss2').html(data.player_2_score);
+			$('#ss3').html(data.player_3_score);
+			$('#ss4').html(data.player_4_score);
+			$('#sstd').html(data.player_sn_score);
+      /*
+			$('#ss1p').html(data.player_1_score);
+			$('#ss2p').html(data.player_2_score);
+			$('#ss3p').html(data.player_3_score);
+			$('#ss4p').html(data.player_4_score);
+			$('#sstdp').html(data.player_sn_score);
+      */
 				
 			if(data.is_player_1_eliminated == true){
 				$('#sn1, #ss1').css('background-color', 'gray');
