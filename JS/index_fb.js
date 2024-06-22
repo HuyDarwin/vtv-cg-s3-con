@@ -66,7 +66,7 @@ $(function () {
 				update(ref(db), { hindc : 0 });
 			}
 			if (data.aindc == 1){
-				$('#question-1-input, #player_input').animate({ opacity: 0 }, 250)
+				$('#question-1-input, #player_input').animate({ opacity: 0 }, 0)
 				update(ref(db), { aindc : 0 });
 			}
 			

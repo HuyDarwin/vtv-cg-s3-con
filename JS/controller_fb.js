@@ -52,7 +52,8 @@ $(function () {
 			$('#player_sn_input').html(data.input_sn);
 			
 			if(round == 1){
-				$('#info1').html('Thứ tự câu hỏi hiện tại: ' + (played_questions + 1));
+        if((played_questions + 1) % 14 == 0) $('#info1').html('Thứ tự câu hỏi hiện tại: 14')
+				else $('#info1').html('Thứ tự câu hỏi hiện tại: ' + (played_questions + 1) % 14);
 			}
 			else if(round == 2){
 				$('#info1').html('Thứ tự câu hỏi hiện tại: ' + (played_questions + 1) % 2);
