@@ -138,6 +138,10 @@ $(function () {
           $('#qc-1-bg').css('left','100vw');
           $('#qc-1-bg').animate({'left':'50vw'}, 750, 'linear')
           $('#qc-timer').css('opacity',1).trigger('play');
+          
+          setTimeout(function(){
+            $('#qcc').css('opacity',1);
+          }, 750)
         }
         else {
           $('.question_crossword').css('opacity', 0)
@@ -176,7 +180,7 @@ $(function () {
 			}
 			con.AnCauHoi = function(){
         if(data.round == 4) {
-          $('.question-crossword, #qc-timer').css('opacity',0);          
+          $('.question-crossword, #qc-timer, #qcc').css('opacity',0);          
           $('#qc-1-bg').css('left','100vw');
           con.ChuyenCanhVong4()
         }
