@@ -134,24 +134,24 @@ $(function () {
 			if(data.round == 1 || data.round == 4){
 				if(data.is_able_to_input == 1){
 					if(data.player_in_game == number_of_player){
-						$('#input').removeAttr("disabled");
+						$('#input, #input_send').removeAttr("disabled");
 					}
 					else{
-						$('#input').attr("disabled", true);
+						$('#input, #input_send').attr("disabled", true);
 					}
 					if(number_of_player == 6){
-						$('#input_sn').removeAttr("disabled");
+						$('#input_sn, #input_sn_send').removeAttr("disabled");
 					}
 					else{
-						$('#input_sn').attr("disabled", true);
+						$('#input_sn, #input_sn_send').attr("disabled", true);
 					}
 				}
 				else{
-					$('#input, #input_sn').attr("disabled", true);
+					$('#input, #input_sn, #input_send, #input_sn_send').attr("disabled", true);
 				}
 			}
 			else{
-				$('#input, #input_sn').attr("disabled", true);
+				$('#input, #input_sn, #input_send, #input_sn_send').attr("disabled", true);
 			}
 				
 			if(data.player_in_game == 1 && data.player_1_last_name != null){
@@ -233,10 +233,11 @@ $(function () {
 				pause_timer : 'true'
 			})
 		})
-		$('#input').change(function(){
+    
+		$('#input_send').click(function(){
 			update(ref(db), { input : $('#input').val() })
 		})
-		$('#input_sn').change(function(){
+		$('#input_sn_send').click(function(){
 			update(ref(db), { input_sn : $('#input_sn').val() })
 		})
 	}(window.VTVCGV = window.VTVCGV || {}));

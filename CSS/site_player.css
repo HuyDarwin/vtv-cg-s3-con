@@ -142,10 +142,19 @@ button:hover {
 	text-align: center;
 }
 
+#input_send, #input_sn_send {
+	width:25vw;
+	height:5vw;
+	top:18vw;
+	left:74.5vw;
+	font-size:3vw;
+	background-color:d3d3d3;
+}
+
 #buzzer {
 	width:25vw;
-	height:27vw;
-	top:18vw;
+	height:21.5vw;
+	top:23.5vw;
 	left:74.5vw;
 	font-size:3vw;
 	background-color:ffa96b;
