@@ -115,56 +115,75 @@ $(function () {
 		onValue(ref(db), (snapshot) => {
 			const data = snapshot.val();
 			con.AnHetVideo = function() {
-				$('#intro,#comm,#rt1,#rt2,#rt3,#rt4,#question-1,#question-1-input,#question-2,#scoreboard-1,#scoreboard-2').css('opacity',0).trigger('pause')
-				$('#intro,#comm,#rt1,#rt2,#rt3,#rt4,#question-1,#question-1-input,#question-2,#scoreboard-1,#scoreboard-2').prop('currentTime', 0);
+				$('#intro,#comm,#rt1,#rt2,#rt3,#rt4,#question-1,#question-1-input,#question-2,#qc-timer,#scoreboard-1,#scoreboard-2').css('opacity',0).trigger('pause')
+				$('#intro,#comm,#rt1,#rt2,#rt3,#rt4,#question-1,#question-1-input,#question-2,#qc-timer,#scoreboard-1,#scoreboard-2').prop('currentTime', 0);
 			}
+      
+      con.ChuyenCanhVong4 = function(x) {
+        $('#qc-1, #qc-2, #qc-3').css('opacity', 0)
+        if(x == 1 || x == 2 || x == 3) {
+          $('#qc-' + x).css('opacity', 1);
+        }
+      }
+      
 			con.HienCauHoi = function(){
 				
 				con.AnHetVideo();
-				
-				if (data.round == 2){
-					$('#question-2').css('opacity',1).trigger('play');
-					$('#round_q').css({"left": "49.75vw", "top": "3vw"});
-					$('#q_text').css({"width": "41.2vw", "height": "3.2vw", "left": "15vw", "top": "5.5vw"});
-				}
-				else{
-					$('#question-1').css('opacity',1).trigger('play');
-					$('#round_q').css({"left": "50.5vw", "top": "0.4vw"});
-					$('#q_text').css({"width": "55vw", "height": "4.5vw", "left": "0.6vw", "top": "3vw"});
-				}
-				
-				if(data.round == 4){
-					$('#crown').css('opacity',1);
-				}
-				else{
-					$('#crown').css('opacity',0);
-					$('#players_left').html('Còn<br/>' + (5 - data.round) + ' người');
-				}
-				
-				$('.round').html('Vòng ' + data.round);
-				
-				/*
-				if(data.is_playing_tiebreak == 1){
-					$('#timer').css('opacity', 0);
-					$('#tiebreak_text').css('opacity', 1);
-				}
-				else {
-					$('#timer').css('opacity', 1);
-					$('#tiebreak_text').css('opacity', 0);
-				}
-				*/
-				
-				setTimeout(function(){
-					$('#question_content').css('opacity',1);
-				}, 750)
+        
+        if (data.round == 4) {
+          $('.question_crossword').css('opacity', 1)
+          
+          con.ChuyenCanhVong4(1)
+        }
+        else {
+          $('.question_crossword').css('opacity', 0)
+          
+          if (data.round == 2){
+            $('#question-2').css('opacity',1).trigger('play');
+            $('#round_q').css({"left": "49.75vw", "top": "3vw"});
+            $('#q_text').css({"width": "41.2vw", "height": "3.2vw", "left": "15vw", "top": "5.5vw"});
+          }
+          else{
+            $('#question-1').css('opacity',1).trigger('play');
+            $('#round_q').css({"left": "50.5vw", "top": "0.4vw"});
+            $('#q_text').css({"width": "55vw", "height": "4.5vw", "left": "0.6vw", "top": "3vw"});
+          }
+
+          $('#crown').css('opacity',0);
+          $('#players_left').html('Còn<br/>' + (5 - data.round) + ' người');
+          }
+
+          $('.round').html('Vòng ' + data.round);
+
+          /*
+          if(data.is_playing_tiebreak == 1){
+            $('#timer').css('opacity', 0);
+            $('#tiebreak_text').css('opacity', 1);
+          }
+          else {
+            $('#timer').css('opacity', 1);
+            $('#tiebreak_text').css('opacity', 0);
+          }
+          */
+
+          setTimeout(function(){
+            $('#question_content').css('opacity',1);
+          }, 750)
+        }
 				
 			}
 			con.AnCauHoi = function(){
-				$('#question-1, #question-2').animate({ opacity: 0}, 0);
-				$('#question_content').animate({ opacity: 0}, 0, function(){
-					$('#q_text td, #answer, #timer, #round_q, #players_left').html('');
-					$('#answer').css('opacity', 0);
-				});
+        if(data.round == 4) {
+          $('.question-crossword, #qc-1, #qc-2, #qc-3').css('opacity',0);
+        }
+        else {
+          $('#question-1, #question-2').animate({ opacity: 0}, 0);
+          $('#question_content').animate({ opacity: 0}, 0, function(){
+            $('#q_text td, #answer, #timer, #round_q, #players_left').html('');
+            $('#answer').css('opacity', 0);
+          });          
+        }
+
 			}
 		})
 		

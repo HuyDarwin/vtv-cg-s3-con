@@ -124,6 +124,38 @@ div.question {
 	opacity:0;
 }
 
+div.question-crossword, #qc-1, #qc-2, #qc-3 {
+	width:100%;
+	height:100%;
+  opacity:1;
+}
+
+#qc-1{
+  opacity: 1;
+}
+
+#qc-timer {
+  width:100vw;
+  height:100vw;
+  top:0vw;
+  left:0vw;
+}
+
+#qc-1-bg {
+  width:50vw;
+  height:100vw;
+  top:0vw;
+  left:50vw;
+}
+
+#qc-2{
+  opacity: 0;
+}
+
+#qc-3{
+  opacity: 0;
+}
+
 div.scoreboard {
 	width:100%;
 	height:100%;
