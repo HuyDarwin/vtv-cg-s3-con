@@ -321,6 +321,9 @@ $(function () {
 			}
 			$('#q_text td').html(question);
 			$('#answer').html(answer);
+      
+      update(ref(db), { input: '' })
+      update(ref(db), { input_sn: '' })
 		}
 		con.CongDiemNguoiChoi = function(score,is_adding_points_to_player_sn){
 			if (is_adding_points_to_player_sn == true){

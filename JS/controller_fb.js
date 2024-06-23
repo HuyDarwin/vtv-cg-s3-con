@@ -214,10 +214,11 @@ $(function () {
           })
         }
         
+        var t = 0;
         for(var i = 3; i <= 15; i += 6){
           cau_hoi_4_cw.push([])
           for (var j = 0; j <= 5; j++) {
-            cau_hoi_4_cw[(i - 3) % 6].push({
+            cau_hoi_4_cw[t].push({
               Question: sheet2['B' + (i + j)].v.replace("++++", "<br />"),
               LetterQ1: sheet2['C' + (i + j)].v,
               LetterQ2: sheet2['D' + (i + j)].v,
@@ -233,6 +234,7 @@ $(function () {
               LetterA6: sheet2['P' + (i + j)].v
             })            
           }
+          t++;
         }
 			};
 			reader.readAsArrayBuffer(file);

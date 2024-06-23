@@ -234,6 +234,14 @@ $(function () {
 			})
 		})
     
+    $('#input').bind('input propertychange', function() {
+			update(ref(db), { input : $('#input').val() })
+    });
+    
+    $('#input_sn').bind('input propertychange', function() {
+			update(ref(db), { input_sn : $('#input_sn').val() })
+    });
+    
 		$('#input_send').click(function(){
 			update(ref(db), { input : $('#input').val() })
 		})
