@@ -145,7 +145,14 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
   width:50vw;
   height:100vw;
   top:0vw;
-  left:50vw;
+  left:100vw;
+}
+
+#crown {
+	width:4.2vw;
+	height:3.5vw;
+	top:2.7vw;
+	left:59vw;
 }
 
 #qc-2{
@@ -194,13 +201,6 @@ div.scoreboard {
 	left:58.4vw;
 	font-family:'UTM Neo Sans Intel';
 	font-weight:bold;
-}
-
-#crown {
-	width:4.2vw;
-	height:3.5vw;
-	top:2.7vw;
-	left:59vw;
 }
 
 #timer {

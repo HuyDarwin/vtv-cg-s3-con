@@ -134,6 +134,10 @@ $(function () {
           $('.question_crossword').css('opacity', 1)
           
           con.ChuyenCanhVong4(1)
+          
+          $('#qc-1-bg').css('left','100vw');
+          $('#qc-1-bg').animate({'left':'50vw'}, 750, 'linear')
+          $('#qc-timer').css('opacity',1).trigger('play');
         }
         else {
           $('.question_crossword').css('opacity', 0)
@@ -149,9 +153,7 @@ $(function () {
             $('#q_text').css({"width": "55vw", "height": "4.5vw", "left": "0.6vw", "top": "3vw"});
           }
 
-          $('#crown').css('opacity',0);
           $('#players_left').html('Còn<br/>' + (5 - data.round) + ' người');
-          }
 
           $('.round').html('Vòng ' + data.round);
 
@@ -174,7 +176,9 @@ $(function () {
 			}
 			con.AnCauHoi = function(){
         if(data.round == 4) {
-          $('.question-crossword, #qc-1, #qc-2, #qc-3').css('opacity',0);
+          $('.question-crossword, #qc-timer').css('opacity',0);          
+          $('#qc-1-bg').css('left','100vw');
+          con.ChuyenCanhVong4()
         }
         else {
           $('#question-1, #question-2').animate({ opacity: 0}, 0);
