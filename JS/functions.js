@@ -285,69 +285,76 @@ $(function () {
 			update(ref(db), { timer : timer })
 		}
 		con.ChayCauHoi = function(round,is_tiebreak){
-			if (forced_question == 0){
-				if (round == 1){
-					if(played_questions >= 14 * (played_contestants + 1) && timer != 0){
-						update(ref(db), { end_of_qs : 1 })
-						played_questions = 14 * (played_contestants + 1);
-						update(ref(db), { played_questions : played_questions })
-						con.TamDungDongHo();
-					}
-					else{
-						if (!is_tiebreak){
-							question = cau_hoi_1[played_questions].Question;
-							update(ref(db), { question : question })
-							answer = cau_hoi_1[played_questions].Answer;
-							update(ref(db), { answer : answer })
-						}
-						else{
-							question = cau_hoi_chp_1[played_questions].Question;
-							update(ref(db), { question : question })
-							answer = cau_hoi_chp_1[played_questions].Answer;
-							update(ref(db), { answer : answer })
-						}
-					}
-				}
-				if (round == 2){
-					if (!is_tiebreak){
-						question = cau_hoi_2[played_questions].Question;
-						update(ref(db), { question : question })
-					}
-					else{
-						question = cau_hoi_chp_2[played_questions].Question;
-						update(ref(db), { question : question })
-					}
-				}
-				if (round == 3){
-					if (!is_tiebreak){
-						question = cau_hoi_3[played_questions].Question;
-						update(ref(db), { question : question })
-						answer = cau_hoi_3[played_questions].Answer;
-						update(ref(db), { answer : answer })
-					}
-					else{
-						question = cau_hoi_chp_3[played_questions].Question;
-						update(ref(db), { question : question })
-						answer = cau_hoi_chp_3[played_questions].Answer;
-						update(ref(db), { answer : answer })
-					}
-				}
-				if (round == 4){
-					question = cau_hoi_4[played_questions].Question;
-					update(ref(db), { question : question })
-					answer = cau_hoi_4[played_questions].Answer;
-					update(ref(db), { answer : answer })
-				}
-			}
-			else if(forced_question == 1){
-				question = ftp_question;
-				update(ref(db), { question : question })
-				answer = ftp_answer;
-				update(ref(db), { answer : answer })
-				forced_question = 0;
-			}
-			$('#q_text td').html(question);
-			$('#answer').html(answer);
+      if(round != 4) {
+        if (forced_question == 0){
+          if (round == 1){
+            if(played_questions >= 14 * (played_contestants + 1) && timer != 0){
+              update(ref(db), { end_of_qs : 1 })
+              played_questions = 14 * (played_contestants + 1);
+              update(ref(db), { played_questions : played_questions })
+              con.TamDungDongHo();
+            }
+            else{
+              if (!is_tiebreak){
+                question = cau_hoi_1[played_questions].Question;
+                update(ref(db), { question : question })
+                answer = cau_hoi_1[played_questions].Answer;
+                update(ref(db), { answer : answer })
+              }
+              else{
+                question = cau_hoi_chp_1[played_questions].Question;
+                update(ref(db), { question : question })
+                answer = cau_hoi_chp_1[played_questions].Answer;
+                update(ref(db), { answer : answer })
+              }
+            }
+          }
+          if (round == 2){
+            if (!is_tiebreak){
+              question = cau_hoi_2[played_questions].Question;
+              update(ref(db), { question : question })
+            }
+            else{
+              question = cau_hoi_chp_2[played_questions].Question;
+              update(ref(db), { question : question })
+            }
+          }
+          if (round == 3){
+            if (!is_tiebreak){
+              question = cau_hoi_3[played_questions].Question;
+              update(ref(db), { question : question })
+              answer = cau_hoi_3[played_questions].Answer;
+              update(ref(db), { answer : answer })
+            }
+            else{
+              question = cau_hoi_chp_3[played_questions].Question;
+              update(ref(db), { question : question })
+              answer = cau_hoi_chp_3[played_questions].Answer;
+              update(ref(db), { answer : answer })
+            }
+          }
+          /*
+          if (round == 4){
+            question = cau_hoi_4[played_questions].Question;
+            update(ref(db), { question : question })
+            answer = cau_hoi_4[played_questions].Answer;
+            update(ref(db), { answer : answer })
+          }
+          */
+        }
+        else if(forced_question == 1){
+          question = ftp_question;
+          update(ref(db), { question : question })
+          answer = ftp_answer;
+          update(ref(db), { answer : answer })
+          forced_question = 0;
+        }
+        $('#q_text td').html(question);
+        $('#answer').html(answer);        
+      }
+      else {
+        
+      }
       
       update(ref(db), { input: '' })
       update(ref(db), { input_sn: '' })
