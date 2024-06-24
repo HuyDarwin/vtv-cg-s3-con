@@ -284,6 +284,7 @@ $(function () {
 			$('#timer').html(timer);
 			update(ref(db), { timer : timer })
 		}
+    
 		con.ChayCauHoi = function(round,is_tiebreak){
       if(round != 4) {
         if (forced_question == 0){
@@ -352,13 +353,21 @@ $(function () {
         $('#q_text td').html(question);
         $('#answer').html(answer);        
       }
-      else {
-        
-      }
       
       update(ref(db), { input: '' })
       update(ref(db), { input_sn: '' })
 		}
+    
+    con.ChayCauHoiVong4 = function(num) {
+      key_col = cau_hoi_4[played_questions].KeyCol;
+      key_word = cau_hoi_4[played_questions].KeyWord;
+      
+      question_crossword_to_show
+      
+      update(ref(db), { input: '' })
+      update(ref(db), { input_sn: '' })      
+    }
+    
 		con.CongDiemNguoiChoi = function(score,is_adding_points_to_player_sn){
 			if (is_adding_points_to_player_sn == true){
 				player_sn_score += score;

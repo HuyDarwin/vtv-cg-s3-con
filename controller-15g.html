@@ -140,7 +140,6 @@
 			<option value='2'>Vòng 2: Giải nghĩa</option>
 			<option value='3'>Vòng 3: Xâu chuỗi</option>
 			<option value='4'>Vòng 4: Soán ngôi (Thường)</option>
-			<option value='4_2'>Vòng 4: Soán ngôi (Thách đấu)</option>
 		</select>
 		<button id='loadvt'>Load vòng thi</button>
 		<div id='round_control_frame'></div>
@@ -212,6 +211,9 @@
 		var answer = '';
 		var timer = 0;
 		var dtn = 0;
+    
+    var key_col = '';
+    var key_word = '';
 		
 		var forced_question = 0;
 		var ftp_question = '';

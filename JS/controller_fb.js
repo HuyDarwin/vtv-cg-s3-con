@@ -502,34 +502,6 @@ $(function () {
 				
 				$('#round_control_frame').html(rs);
 			}
-			if($("#round_select option:selected").val() == '4_2'){
-				$('#rc1, #rc2, #rc3, #rc4').remove();
-				
-				var rs = "<div id='rc4_2'>"
-				rs += "<button class='autoname' id='rc4_obj1'>Hình hiệu vòng thi</button>"
-				rs += "<button class='autoname' id='rc4_obj2'>Bắt đầu vòng thi</button>"
-				rs += "<button class='autoname' id='rc4_2_obj3' disabled>Hiện câu hỏi</button>"
-				rs += "<button class='autoname' id='rc4_2_obj4' disabled>Ẩn câu hỏi</button>"
-				rs += "<button class='autoname' id='rc4_2_obj5' disabled>Chạy thời gian</button>"
-				rs += "<button class='autoname' id='rc4_2_obj6' disabled>Chấm đáp án</button>"
-				rs += "<p id='rc4_2_obj7'>Thách đấu:</p>"
-				rs += "<button class='autoname' id='rc4_2_obj8' disabled>+1</button>"
-				rs += "<button class='autoname' id='rc4_2_obj9' disabled>+2</button>"
-				rs += "<button class='autoname' id='rc4_2_obj10' disabled>+3</button>"
-				rs += "<button class='autoname' id='rc4_2_obj11' disabled>+4</button>"
-				rs += "<button class='autoname' id='rc4_2_obj12' disabled>+5</button>"
-				rs += "<button class='autoname' id='rc4_2_obj13' disabled>Sai</button>"
-				rs += "<p id='rc4_2_obj14'>Tại vị:</p>"
-				rs += "<button class='autoname' id='rc4_2_obj15' disabled>+1</button>"
-				rs += "<button class='autoname' id='rc4_2_obj16' disabled>+2</button>"
-				rs += "<button class='autoname' id='rc4_2_obj17' disabled>+3</button>"
-				rs += "<button class='autoname' id='rc4_2_obj18' disabled>+4</button>"
-				rs += "<button class='autoname' id='rc4_2_obj19' disabled>+5</button>"
-				rs += "<button class='autoname' id='rc4_2_obj20' disabled>Sai</button>"
-				rs += "</div>"
-				
-				$('#round_control_frame').html(rs);
-			}
 		
 			$('.autoname').click(function(){
 				var bid = this.id;
@@ -1133,7 +1105,7 @@ $(function () {
 				$('#rc4_obj4, #rc4_obj5').removeAttr("disabled");
 			})
       
-			$('#rc4_obj5').click(function(){
+			$('#rc4_obj4').click(function(){
 				var time;
 				if(played_questions == 1){
 					time = 60;
@@ -1154,8 +1126,24 @@ $(function () {
 					update(ref(db), { is_able_to_input : 0 })
 				}, (time * 1000));
         
-				$('#rc4_obj5').attr("disabled", true);
+				$('#rc4_obj4').attr("disabled", true);
 			})
+      
+      $('#rc4_obj5').click(function(){
+        
+				$('#tddg, #ttdg').attr("disabled", true);
+				con.ResetDongHo();
+				$('#timer').html('');
+        
+				$('#rc4_obj5').attr("disabled", true);
+        
+				$('#rc4 button').attr("disabled", true);
+				$('#rc4_obj1, #rc4_obj2, #rc4_obj3').removeAttr("disabled");
+				$('#tddg').removeAttr("disabled");
+        
+      })
+      
+      /*
 			$('#rc4_obj6').click(function(){
 				$('#rc4_obj6').attr("disabled", true);
 				$('#rc4_obj7, #rc4_obj8').removeAttr("disabled");
@@ -1203,7 +1191,7 @@ $(function () {
 				$('#ss3').html(player_3_score);
 				$('#ss4').html(player_4_score);
 				$('#rc4_obj4, #rc4_obj5, #rc4_obj6, #rc4_obj7, #rc4_obj8').attr("disabled", true);
-			})
+			})*/
 			
 			$('#hbtkd').click(function(){
 				$('#hd1, #hd2, #hd3, #hd4').removeAttr("disabled");
