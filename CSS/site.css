@@ -1,4 +1,13 @@
 @font-face {
+    font-family: 'SFU Futura Bold';
+    src: url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/sfufuturabold-webfont.woff2?v=1719223360192') format('woff2'),
+         url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/sfufuturabold-webfont.woff?v=1719223313513') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
 	font-family: 'UTM Neo Sans Intel';
 	src: url('../Fonts/subset-UTMNeoSansIntel.woff2') format('woff2'), url('../Fonts/subset-UTMNeoSansIntel.woff') format('woff');
 	font-weight: normal;
@@ -131,11 +140,25 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
 }
 
 #cw_table {
-  width:30vw;
-  height:30vw;
-  left:65vw;
-  top:15vw;
-  background-color:red;
+  width:35vw;
+  height:42vw;
+  left:58vw;
+  top:2vw;
+  table-layout:fixed;
+  text-align:center;
+  font-family:'SFU Futura Bold';
+  font-size:1.2vw;
+  color:white;
+}
+
+#cw_table th {
+	background:url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646') no-repeat;
+	background-size: contain;
+}
+
+#cw_table td {
+	background:url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/letter.png?v=1719157858246') no-repeat;
+	background-size: contain;
 }
 
 #qc-1{
