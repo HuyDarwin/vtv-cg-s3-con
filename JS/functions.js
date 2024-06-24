@@ -193,6 +193,11 @@ $(function () {
         }
 
 			}
+      
+      con.LoadBangOChuVong4 = function(x) {
+        
+        for (var i = 0; i <= )
+      }
 		})
 		
 		// Controller
