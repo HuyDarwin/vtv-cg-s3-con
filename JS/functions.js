@@ -208,7 +208,7 @@ $(function () {
           for(var j = 1; j <= x; j++){
             var char = eval('data.cw_key_' + i + '_' + j);
             if (char == "*") {
-              string += "<td class='row_cell' id='row_cell_" + j + "'><div class='row_cell_x'></div></td>"
+              string += "<td class='row_cell' id='row_cell_" + j + "'><img class='row_cell_x' src='https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/cross.png?v=17192404117686'></div></td>"
             }
             else {
               string += "<td class='row_cell' id='row_cell_" + j + "'><div class='row_cell_text'>" + char + "</div></td>"
@@ -221,6 +221,7 @@ $(function () {
         
         $('.row_cell, .row_crown').css({'width':((28 + x) / x) + 'vw', 'height' : ((28 + x) / x) + 'vw'})
         $('.row_cell_text').css({'width':((28 + x) / x) + 'vw', 'height' : ((28 + x) / x) + 'vw', 'line-height' : '0vw', 'font-size' : '6cqw'})
+        $('.row_cell_x').css({'width':((28 + x) / x) + 'vw', 'height' : ((28 + x) / x) + 'vw'})
         $('#row_crown_' + data.key_col).css('background-image', 'url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646")')
       }
 		})
