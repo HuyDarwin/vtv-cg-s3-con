@@ -144,21 +144,36 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
   height:42vw;
   left:58vw;
   top:2vw;
+  color:white;
   table-layout:fixed;
+	border-width:0.5vw 0.2vw;
+	border-style: solid;
+	border-color: transparent;
+	border-collapse: collapse;
+}
+
+#cw_table th div, #cw_table td div {
+  width:calc(100%/6);
+  height:calc(100%/7);
+	line-height:0vw;
   text-align:center;
   font-family:'SFU Futura Bold';
-  font-size:1.2vw;
-  color:white;
+  font-size:500%;
 }
 
 #cw_table th {
 	background:url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646') no-repeat;
 	background-size: contain;
+  background-position: center;
+  width:calc(100%/6);
+  height:calc(100%/7);
 }
 
 #cw_table td {
 	background:url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/letter.png?v=1719157858246') no-repeat;
 	background-size: contain;
+  width:calc(100%/6);
+  height:calc(100%/7);
 }
 
 #qc-1{
