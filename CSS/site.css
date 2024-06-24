@@ -130,6 +130,14 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
   opacity:1;
 }
 
+#cw-table {
+  width:30vw;
+  height:30vw;
+  left:65vw;
+  top:15vw;
+  background-color:red;
+}
+
 #qc-1{
   opacity: 1;
 }
