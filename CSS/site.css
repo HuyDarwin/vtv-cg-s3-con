@@ -145,34 +145,28 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
   left:57.5vw;
   top:2vw;
   color:white;
-  table-layout:fixed;
 	border-width:0.5vw 0.2vw;
 	border-style: solid;
 	border-color: transparent;
 	border-collapse: collapse;
-}
-
-#cw_table r0 div {
-	background:url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646') no-repeat;
-	background-size: contain;
-  background-position: center;
-  width:6vw;
-  height:6vw;
-}
-
-#cw_table td {
-	background:url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/letter.png?v=1719157858246') no-repeat;
-	background-size: contain;
-  width:6vw;
-  height:6vw;
-}
-
-#cw_table tr th div, #cw_table tr td div {
   text-align:center;
   font-family:'SFU Futura Bold';
   font-size:5vw;
   line-height:0vw;
   border: 1px solid 000;
+  
+  display: table;
+}
+
+#cw_table .rc div {
+	background:url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646') no-repeat;
+	background-size: contain;
+  background-position: center;
+}
+
+#cw_table .rn div {
+	background:url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/letter.png?v=1719157858246') no-repeat;
+	background-size: contain;
 }
 
 #qc-1{
