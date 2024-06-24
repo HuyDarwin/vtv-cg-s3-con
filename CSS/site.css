@@ -140,9 +140,7 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
 }
 
 #cw_table {
-  width:36vw;
-  height:42vw;
-  left:57.5vw;
+  left:7.5vw;
   top:2vw;
   table-layout:fixed;
   
@@ -222,6 +220,10 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
   height:100vw;
   top:0vw;
   left:100vw;
+  background-image: url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/r4_bg.png?v=1719157866376");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 #qc-2{
