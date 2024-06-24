@@ -195,8 +195,27 @@ $(function () {
 			}
       
       con.LoadBangOChuVong4 = function(x) {
+        var string = "";
         
-        for (var i = 0; i <= )
+          string += "<tr>";
+          for(var i = 1; i <= x; i++){
+            if(data.key_col == i) {
+              string += "<th class='row_crown'><div></div></th>"
+            }
+            else {
+              string += "<th class='row_crown'><div><img src='https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646'/></div></th>"
+            }
+          }
+          string += "</tr>";
+        
+        for(var j = 1; j <= x; j++){
+          string += "<tr class='row_word' id='row_word_'" + j ">";
+          for(var i = 1; i <= x; i++){
+            string += "<td class='row_cell' id='row_cell_'" + "><div></div></td>"
+          }
+          string += "</tr>";
+        }
+        $('.puzzleboard').html(string);
       }
 		})
 		
