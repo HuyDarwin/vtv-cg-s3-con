@@ -194,7 +194,7 @@ $(function () {
 
 			}
       
-      con.LoadBangOChuVong4 = function(x) {
+      con.LoadDoHoaVong4 = function(x) {
         var string = "";
         
           string += "<tr>";
@@ -215,9 +215,15 @@ $(function () {
           }
           string += "</tr>";
         }
+        
+        
         $('#cw_table').html(string);
       }
 		})
+        
+    con.HighlightHangNgangVong4 = function(start, end) {
+      
+    }
 		
 		// Controller
 		con.ChonNguoiChoi = function(cont) {
@@ -449,7 +455,6 @@ $(function () {
           update(ref(db), { ['cw_key_ans_' + i + '_' + j] : cw_key_ans[i - 1][j - 1] })
         }
       }  
-        
     
 		con.CongDiemNguoiChoi = function(score,is_adding_points_to_player_sn){
 			if (is_adding_points_to_player_sn == true){

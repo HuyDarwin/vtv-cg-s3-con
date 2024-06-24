@@ -1098,7 +1098,7 @@ $(function () {
 				else if(played_questions == 3){
 					time = 90;
 				}
-				con.ChayCauHoi(4,false);
+				con.LoadCauHoiVong4();
 				$('#timer').html(time);
 				update(ref(db), { timer : time })
 				$('#rc4_obj3').attr("disabled", true);
