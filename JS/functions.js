@@ -358,11 +358,14 @@ $(function () {
       update(ref(db), { input_sn: '' })
 		}
     
-    con.ChayCauHoiVong4 = function(num) {
+    con.ChayCauHoiVong4 = function(start, end) {
       key_col = cau_hoi_4[played_questions].KeyCol;
       key_word = cau_hoi_4[played_questions].KeyWord;
       
-      question_crossword_to_show
+      for (var i = start; i <= end; i++) {
+        cw_question[i - 1] = cau_hoi_4_cw[played_questions][i - 1].Question;
+        cw_key[i - 1][0] = cau_hoi_4_cw[played_questions][i - 1].LetterQ1;
+      }
       
       update(ref(db), { input: '' })
       update(ref(db), { input_sn: '' })      
