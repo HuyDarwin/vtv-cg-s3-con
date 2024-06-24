@@ -208,10 +208,10 @@ $(function () {
           for(var j = 1; j <= x; j++){
             var char = eval('data.cw_key_' + i + '_' + j);
             if (char == "*") {
-              string += "<td class='row_cell_x' id='row_cell_" + j + "'><div></div></td>"
+              string += "<td class='row_cell' id='row_cell_" + j + "'><div class='row_cell_x'></div></td>"
             }
             else {
-              string += "<td class='row_cell' id='row_cell_" + j + "'><div>" + char + "</div></td>"
+              string += "<td class='row_cell' id='row_cell_" + j + "'><div class='row_cell_text'>" + char + "</div></td>"
             }
           }
           string += "</tr>";
@@ -219,14 +219,19 @@ $(function () {
         
         $('#cw_table').html(string);
         
-        $('.row_cell, .row_cell_x, .row_crown').css({'width':((28 + x) / x) + 'vw', 'height' : ((28 + x) / x) + 'vw'})
-        $('.row_cell div, .row_cell_x div').css({'width':((28 + x) / x) + 'vw', 'height' : ((28 + x) / x) + 'vw', 'line-height' : '0vw', 'font-size' : '6cqw'})
+        $('.row_cell, .row_crown').css({'width':((28 + x) / x) + 'vw', 'height' : ((28 + x) / x) + 'vw'})
+        $('.row_cell_text').css({'width':((28 + x) / x) + 'vw', 'height' : ((28 + x) / x) + 'vw', 'line-height' : '0vw', 'font-size' : '6cqw'})
         $('#row_crown_' + data.key_col).css('background-image', 'url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646")')
       }
 		})
         
-    con.HighlightHangNgangVong4 = function(start, end) {
-      
+    con.HighlightHangNgangVong4 = function(i,j) {
+      if(j == 1) {
+        $('#row_word_' + i + ' td').attr('class', 'row_cell_high');
+      }
+      else {
+        $('#row_word_' + i + ' td').attr('class', 'row_cell');
+      }
     }
 		
 		// Controller
