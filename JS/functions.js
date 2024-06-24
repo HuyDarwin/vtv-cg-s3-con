@@ -195,6 +195,7 @@ $(function () {
 			}
       
       con.LoadDoHoaVong4 = function(x) {
+        console.log(x);
         var string = "";
         
           string += "<tr>";

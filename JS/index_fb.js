@@ -292,9 +292,9 @@ $(function () {
 				update(ref(db), { rc4_obj2 : 0 });
 			}
 			if (data.rc4_obj3 == 1){
-				$('#timer').css('opacity', 1);
+				$('#qcc #timer').css('opacity', 1);
 				$('#tiebreak_text').css('opacity', 0);
-        con.LoadDoHoaVong4(data.questions_played + 4);
+        con.LoadDoHoaVong4(data.played_questions + 4);
 				con.HienCauHoi();
 				update(ref(db), { rc4_obj3 : 0 });
 			}
