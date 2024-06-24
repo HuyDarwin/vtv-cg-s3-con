@@ -480,24 +480,24 @@ $(function () {
 				rs += "<button class='autoname' id='rc4_obj6' disabled>Bảng chơi</button>"
 				rs += "<button class='autoname' id='rc4_obj7' disabled>Bảng thu nhỏ</button>"
 				rs += "<button class='autoname' id='rc4_obj8' disabled>Bảng chấm</button>"
-				rs += "<button class='autoname' id='rc4_obj10' disabled>1</button>"
-				rs += "<button class='autoname' id='rc4_obj11' disabled>2</button>"
-				rs += "<button class='autoname' id='rc4_obj12' disabled>3</button>"
-				rs += "<button class='autoname' id='rc4_obj13' disabled>4</button>"
-				rs += "<button class='autoname' id='rc4_obj14' disabled>5</button>"
-				rs += "<button class='autoname' id='rc4_obj15' disabled>6</button>"
-				rs += "<button class='autoname' id='rc4_obj16' disabled>1</button>"
-				rs += "<button class='autoname' id='rc4_obj17' disabled>2</button>"
-				rs += "<button class='autoname' id='rc4_obj18' disabled>3</button>"
-				rs += "<button class='autoname' id='rc4_obj19' disabled>4</button>"
-				rs += "<button class='autoname' id='rc4_obj20' disabled>5</button>"
-				rs += "<button class='autoname' id='rc4_obj21' disabled>6</button>"
-				rs += "<button class='autoname' id='rc4_obj22' disabled>1</button>"
-				rs += "<button class='autoname' id='rc4_obj23' disabled>2</button>"
-				rs += "<button class='autoname' id='rc4_obj24' disabled>3</button>"
-				rs += "<button class='autoname' id='rc4_obj25' disabled>4</button>"
-				rs += "<button class='autoname' id='rc4_obj26' disabled>5</button>"
-				rs += "<button class='autoname' id='rc4_obj27' disabled>6</button>"
+				rs += "<button class='autoname' id='rc4_obj9' disabled>1</button>"
+				rs += "<button class='autoname' id='rc4_obj10' disabled>2</button>"
+				rs += "<button class='autoname' id='rc4_obj11' disabled>3</button>"
+				rs += "<button class='autoname' id='rc4_obj12' disabled>4</button>"
+				rs += "<button class='autoname' id='rc4_obj13' disabled>5</button>"
+				rs += "<button class='autoname' id='rc4_obj14' disabled>6</button>"
+				rs += "<button class='autoname' id='rc4_obj15' disabled>1</button>"
+				rs += "<button class='autoname' id='rc4_obj16' disabled>2</button>"
+				rs += "<button class='autoname' id='rc4_obj17' disabled>3</button>"
+				rs += "<button class='autoname' id='rc4_obj18' disabled>4</button>"
+				rs += "<button class='autoname' id='rc4_obj19' disabled>5</button>"
+				rs += "<button class='autoname' id='rc4_obj20' disabled>6</button>"
+				rs += "<button class='autoname' id='rc4_obj21' disabled>1</button>"
+				rs += "<button class='autoname' id='rc4_obj22' disabled>2</button>"
+				rs += "<button class='autoname' id='rc4_obj23' disabled>3</button>"
+				rs += "<button class='autoname' id='rc4_obj24' disabled>4</button>"
+				rs += "<button class='autoname' id='rc4_obj25' disabled>5</button>"
+				rs += "<button class='autoname' id='rc4_obj26' disabled>6</button>"
 				rs += "</div>"
 				
 				$('#round_control_frame').html(rs);
@@ -857,7 +857,9 @@ $(function () {
 				con.TiepTucDongHo();
 				$('#rc2_obj10, #rc2_obj11').attr("disabled", true);
 			})
+      var pham_quy = 0;
 			$('#rc2_obj12').click(function(){
+        pham_quy = 1;
 				con.TamDungDongHo();
 				update(ref(db), { pause_timer: 'true', is_able_to_buzzer : 0 })
 				$('#rc2_obj10, #rc2_obj11, #rc2_obj12').attr("disabled", true);
@@ -897,7 +899,12 @@ $(function () {
 					}
 				}
 				else{
-					played_questions++;
+					if(pham_quy == 1){
+            pham_quy = 0;
+          }
+          else {
+            played_questions++;
+          }
 					update(ref(db), { played_questions : played_questions })
 					if(played_questions % 2 == 0){
 						player_in_game = 0;

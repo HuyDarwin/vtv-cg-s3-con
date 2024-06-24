@@ -1333,6 +1333,16 @@ div.round_control {
 	left:18.45vw;
 }
 
+#rc4_obj9 {
+  width:5vw;
+	height:2vw;
+	font-size:1.1vw;
+	border-radius:5px;
+	background-color:ffa96b;
+	top:7.5vw;
+}
+
+/*
 #rc4_2_obj3{
 	width:13vw;
 	height:2vw;
@@ -1468,6 +1478,7 @@ div.round_control {
 	color:white;
 	left:24vw;
 }
+*/
 
 #t7 {
 	font-family:'UTM Neo Sans Intel';
