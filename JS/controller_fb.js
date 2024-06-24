@@ -1089,13 +1089,13 @@ $(function () {
       
 			$('#rc4_obj3').click(function(){
 				var time;
-				if(played_questions == 1){
+				if(played_questions == 0){
 					time = 60;
 				}
-				else if(played_questions == 2){
+				else if(played_questions == 1){
 					time = 75;
 				}
-				else if(played_questions == 3){
+				else if(played_questions == 2){
 					time = 90;
 				}
 				con.LoadCauHoiVong4();
@@ -1107,13 +1107,13 @@ $(function () {
       
 			$('#rc4_obj4').click(function(){
 				var time;
-				if(played_questions == 1){
+				if(played_questions == 0){
 					time = 60;
 				}
-				else if(played_questions == 2){
+				else if(played_questions == 1){
 					time = 75;
 				}
-				else if(played_questions == 3){
+				else if(played_questions == 2){
 					time = 90;
 				}
         

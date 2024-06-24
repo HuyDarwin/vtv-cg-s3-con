@@ -294,6 +294,7 @@ $(function () {
 			if (data.rc4_obj3 == 1){
 				$('#timer').css('opacity', 1);
 				$('#tiebreak_text').css('opacity', 0);
+        con.LoadDoHoaVong4(data.questions_played + 4);
 				con.HienCauHoi();
 				update(ref(db), { rc4_obj3 : 0 });
 			}
@@ -651,6 +652,7 @@ $(function () {
 				con.AnCauHoi();
 				update(ref(db), { rc4_2_obj4 : 0 });
 			}
+      */
 		})
 	}(window.VTVCGV = window.VTVCGV || {}));
 });
