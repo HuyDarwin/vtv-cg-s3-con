@@ -209,13 +209,13 @@ $(function () {
           string += "</tr>";
         
         for(var j = 1; j <= x; j++){
-          string += "<tr class='row_word' id='row_word_'" + j ">";
+          string += "<tr class='row_word' id='row_word_'" + j +">";
           for(var i = 1; i <= x; i++){
-            string += "<td class='row_cell' id='row_cell_'" + "><div></div></td>"
+            string += "<td class='row_cell' id='row_cell_'" + i + "><div></div></td>"
           }
           string += "</tr>";
         }
-        $('.puzzleboard').html(string);
+        $('#cw_table').html(string);
       }
 		})
 		
@@ -403,29 +403,41 @@ $(function () {
         ['', '', '', '', '', ''],
         ['', '', '', '', '', '']
       ];      
+      
+      update(ref(db), { input: '' })
+      update(ref(db), { input_sn: '' })  
     }
     
     con.LoadCauHoiVong4 = function() {
-      if (played_questions == 0) {
-        
-      }
-    }
-    
-    con.ChayCauHoiVong4 = function(start, end) {
       key_col = cau_hoi_4[played_questions].KeyCol;
       key_word = cau_hoi_4[played_questions].KeyWord;
       
       update(ref(db), { key_col : key_col })
-      update(ref(db), { key_word : key_word })      
+      update(ref(db), { key_word : key_word })  
       
-      for (var i = start; i <= end; i++) {
-        cw_question[i - 1] = cau_hoi_4_cw[played_questions][i - 1].Question;
+      for (var i = 1; i <= 6; i++) {
         cw_key[i - 1][0] = cau_hoi_4_cw[played_questions][i - 1].LetterQ1;
         cw_key[i - 1][1] = cau_hoi_4_cw[played_questions][i - 1].LetterQ2;
         cw_key[i - 1][2] = cau_hoi_4_cw[played_questions][i - 1].LetterQ3;
         cw_key[i - 1][3] = cau_hoi_4_cw[played_questions][i - 1].LetterQ4;
         cw_key[i - 1][4] = cau_hoi_4_cw[played_questions][i - 1].LetterQ5;
         cw_key[i - 1][5] = cau_hoi_4_cw[played_questions][i - 1].LetterQ6;
+        
+        for (var j = 1; j <= 6; j++) {
+          update(ref(db), { ['cw_key_' + i + '_' + j] : cw_key[i - 1][j - 1] })
+        }
+      }
+    }
+    
+    con.HienTextCauHoiVong4 = function(i) {
+      
+        cw_question[i - 1] = cau_hoi_4_cw[played_questions][i - 1].Question;
+        
+        update(ref(db), { ['cw_question_' + i] : cw_question[i - 1] })
+    }
+    
+    con.HienDapAnHangNgangVong4 = function(i) {
+      
         cw_key_ans[i - 1][0] = cau_hoi_4_cw[played_questions][i - 1].LetterA1;
         cw_key_ans[i - 1][1] = cau_hoi_4_cw[played_questions][i - 1].LetterA2;
         cw_key_ans[i - 1][2] = cau_hoi_4_cw[played_questions][i - 1].LetterA3;
@@ -433,17 +445,11 @@ $(function () {
         cw_key_ans[i - 1][4] = cau_hoi_4_cw[played_questions][i - 1].LetterA5;
         cw_key_ans[i - 1][5] = cau_hoi_4_cw[played_questions][i - 1].LetterA6;
         
-        update(ref(db), { ['cw_question_' + i] : cw_question[i - 1] })
-        
         for (var j = 1; j <= 6; j++) {
-          update(ref(db), { ['cw_key_' + i + '_' + j] : cw_key[i - 1][j - 1] })
           update(ref(db), { ['cw_key_ans_' + i + '_' + j] : cw_key_ans[i - 1][j - 1] })
         }
-      }
-      
-      update(ref(db), { input: '' })
-      update(ref(db), { input_sn: '' })      
-    }
+      }  
+        
     
 		con.CongDiemNguoiChoi = function(score,is_adding_points_to_player_sn){
 			if (is_adding_points_to_player_sn == true){
