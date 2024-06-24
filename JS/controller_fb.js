@@ -1112,15 +1112,19 @@ $(function () {
 				update(ref(db), { played_questions : played_questions })
 				update(ref(db), { played_contestants : played_contestants })
 				update(ref(db), { player_in_game : player_in_game })
-				$('#rc4_obj3, #rc4_2_obj3').removeAttr("disabled");
+				$('#rc4_obj3').removeAttr("disabled");
 			})
+      
 			$('#rc4_obj3').click(function(){
 				var time;
-				if(played_questions == 2){
+				if(played_questions == 1){
 					time = 60;
 				}
-				else{
-					time = 30;
+				else if(played_questions == 2){
+					time = 75;
+				}
+				else if(played_questions == 3){
+					time = 90;
 				}
 				con.ChayCauHoi(4,false);
 				$('#timer').html(time);
@@ -1128,25 +1132,29 @@ $(function () {
 				$('#rc4_obj3').attr("disabled", true);
 				$('#rc4_obj4, #rc4_obj5').removeAttr("disabled");
 			})
+      
 			$('#rc4_obj5').click(function(){
 				var time;
-				if(played_questions == 2){
+				if(played_questions == 1){
 					time = 60;
 				}
-				else{
-					time = 30;
+				else if(played_questions == 2){
+					time = 75;
 				}
+				else if(played_questions == 3){
+					time = 90;
+				}
+        
 				con.ChayDongHo(time);
 				$('#tddg, #ttdg').attr("disabled", true);
 				$('#tddg').removeAttr("disabled");
+        
 				update(ref(db), { is_able_to_input : 1 })
 				setTimeout(function(){
 					update(ref(db), { is_able_to_input : 0 })
 				}, (time * 1000));
+        
 				$('#rc4_obj5').attr("disabled", true);
-				setTimeout(function(){
-					$('#rc4_obj6').removeAttr("disabled");
-				}, 30000)
 			})
 			$('#rc4_obj6').click(function(){
 				$('#rc4_obj6').attr("disabled", true);
@@ -1195,119 +1203,6 @@ $(function () {
 				$('#ss3').html(player_3_score);
 				$('#ss4').html(player_4_score);
 				$('#rc4_obj4, #rc4_obj5, #rc4_obj6, #rc4_obj7, #rc4_obj8').attr("disabled", true);
-			})
-			
-			$('#rc4_2_obj3').click(function(){
-				var time;
-				if(played_questions == 2){
-					time = 60;
-				}
-				else{
-					time = 30;
-				}
-				con.ChayCauHoi(4,false);
-				$('#timer').html(time);
-				update(ref(db), { timer : time })
-				$('#rc4_2_obj3').attr("disabled", true);
-				$('#rc4_2_obj4, #rc4_2_obj5').removeAttr("disabled");
-			})
-			$('#rc4_2_obj5').click(function(){
-				var time;
-				if(played_questions == 2){
-					time = 60;
-				}
-				else{
-					time = 30;
-				}
-				con.ChayDongHo(time);
-				$('#tddg, #ttdg').attr("disabled", true);
-				$('#tddg').removeAttr("disabled");
-				update(ref(db), { is_able_to_input : 1 })
-				setTimeout(function(){
-					update(ref(db), { is_able_to_input : 0 })
-				}, (time * 1000));
-				$('#rc4_2_obj5').attr("disabled", true);
-				setTimeout(function(){
-					$('#rc4_2_obj6').removeAttr("disabled");
-				}, 30000)
-			})
-			$('#rc4_2_obj6').click(function(){
-				$('#rc4_2_obj6').attr("disabled", true);
-				$('#rc4_2_obj8, #rc4_2_obj9, #rc4_2_obj10, #rc4_2_obj11, #rc4_2_obj12, #rc4_2_obj13, #rc4_2_obj15, #rc4_2_obj16, #rc4_2_obj17, #rc4_2_obj18, #rc4_2_obj19, #rc4_2_obj20').removeAttr("disabled");
-			})
-			$('#rc4_2_obj8').click(function(){
-				con.CongDiemNguoiChoi(1,false);
-			})
-			$('#rc4_2_obj9').click(function(){
-				con.CongDiemNguoiChoi(2,false);
-			})
-			$('#rc4_2_obj10').click(function(){
-				con.CongDiemNguoiChoi(3,false);
-			})
-			$('#rc4_2_obj11').click(function(){
-				con.CongDiemNguoiChoi(4,false);
-			})
-			$('#rc4_2_obj12').click(function(){
-				con.CongDiemNguoiChoi(5,false);
-			})
-			$('#rc4_2_obj15').click(function(){
-				con.CongDiemNguoiChoi(1,true);
-			})
-			$('#rc4_2_obj16').click(function(){
-				con.CongDiemNguoiChoi(2,true);
-			})
-			$('#rc4_2_obj17').click(function(){
-				con.CongDiemNguoiChoi(3,true);
-			})
-			$('#rc4_2_obj18').click(function(){
-				con.CongDiemNguoiChoi(4,true);
-			})
-			$('#rc4_2_obj19').click(function(){
-				con.CongDiemNguoiChoi(5,true);
-			})
-			$('#rc4_2_obj4').click(function(){
-				$('#tddg, #ttdg').attr("disabled", true);
-				$('#q_text td, #answer').html('');
-				setTimeout(function(){
-					con.ResetDongHo();
-					$('#timer').html('');
-				}, 250)
-				var score = 0;
-				if(is_player_1_eliminated == false){
-					score = player_1_score;
-				}
-				if(is_player_2_eliminated == false){
-					score = player_2_score;
-				}
-				if(is_player_3_eliminated == false){
-					score = player_3_score;
-				}
-				if(is_player_4_eliminated == false){
-					score = player_4_score;
-				}
-				if(score == player_sn_score){
-					played_questions++;
-					update(ref(db), { played_questions : played_questions })
-					$('#rc4_2_obj3').removeAttr("disabled");
-				}
-				player_1_score = 0;
-				player_2_score = 0;
-				player_3_score = 0;
-				player_4_score = 0;
-				player_sn_score = 0;
-				update(ref(db), {
-					player_1_score : player_1_score,
-					player_2_score : player_2_score,
-					player_3_score : player_3_score,
-					player_4_score : player_4_score,
-					player_sn_score : player_sn_score
-				})
-				$('#ss1').html(player_1_score);
-				$('#ss2').html(player_2_score);
-				$('#ss3').html(player_3_score);
-				$('#ss4').html(player_4_score);
-				$('#sstd').html(player_4_score);
-				$('#rc4_2_obj4, #rc4_2_obj5, #rc4_2_obj6, #rc4_2_obj8, #rc4_2_obj9, #rc4_2_obj10, #rc4_2_obj11, #rc4_2_obj12, #rc4_2_obj13, #rc4_2_obj15, #rc4_2_obj16, #rc4_2_obj17, #rc4_2_obj18, #rc4_2_obj19, #rc4_2_obj20').attr("disabled", true);
 			})
 			
 			$('#hbtkd').click(function(){
