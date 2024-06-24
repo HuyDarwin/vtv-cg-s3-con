@@ -11,7 +11,7 @@ $(function () {
 			const data = snapshot.val();		
 			// Variables update
 			
-			$('#timer').html(data.timer);
+			$('#timer, #qcc_timer').html(data.timer);
 			$('#q_text td').html(data.question);
 			if(data.round != 4){
 				$('#answer').html(data.answer);

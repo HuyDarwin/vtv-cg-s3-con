@@ -210,21 +210,23 @@ $(function () {
           string += "</tr>";
         
         for(var i = 1; i <= x; i++){
-          string += "<tr class='row_word' id='row_word_'" + i +">";
+          string += "<tr class='row_word' id='row_word_" + i +"''>";
           for(var j = 1; j <= x; j++){
             var char = eval('data.cw_key_' + i + '_' + j);
             if (char == "*") {
-              string += "<td class='row_cell' id='row_cell_'" + j + "><img src='https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/cross.png?v=1719240411768'/></td>"
+              string += "<td class='row_cell' id='row_cell_" + j + "''><img src='https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/cross.png?v=1719240411768'/></td>"
             }
             else {
-              string += "<td class='row_cell' id='row_cell_'" + j + "><div>" + char + "</div></td>"
+              string += "<td class='row_cell' id='row_cell_" + j + "''><div>" + char + "</div></td>"
             }
           }
           string += "</tr>";
         }
         
-        
         $('#cw_table').html(string);
+        
+        $('.row_cell, .row_cell img').css({'width':(36 / x) + 'vw', 'height' : (42 / x) + 'vw'})
+        $('.row_crown, .row_crown img').css({'width':(36 / x) + 'vw', 'height' : (42 / x) + 'vw'})
       }
 		})
         

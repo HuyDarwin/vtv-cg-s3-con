@@ -1098,9 +1098,11 @@ $(function () {
 				else if(played_questions == 2){
 					time = 90;
 				}
+        
 				con.LoadCauHoiVong4();
-				$('#qcc #timer').html(time);
+				$('#timer').html(time);
 				update(ref(db), { timer : time })
+        
 				$('#rc4_obj3').attr("disabled", true);
 				$('#rc4_obj4, #rc4_obj5').removeAttr("disabled");
 			})
