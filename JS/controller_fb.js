@@ -477,9 +477,9 @@ $(function () {
 				rs += "<button class='autoname' id='rc4_obj3' disabled>Hiện câu hỏi</button>"
 				rs += "<button class='autoname' id='rc4_obj4' disabled>Chạy thời gian</button>"
 				rs += "<button class='autoname' id='rc4_obj5' disabled>Ẩn câu hỏi</button>"
-				rs += "<button class='autoname' id='rc4_obj6' disabled>Bắt đầu chấm</button>"
-				rs += "<button class='autoname' id='rc4_obj7' disabled>Đáp án đúng</button>"
-				rs += "<button class='autoname' id='rc4_obj8' disabled>Đáp án sai</button>"
+				rs += "<button class='autoname' id='rc4_obj6' disabled>CW chơi</button>"
+				rs += "<button class='autoname' id='rc4_obj7' disabled>CW thu nhỏ</button>"
+				rs += "<button class='autoname' id='rc4_obj8' disabled>Đáp án đúng</button>"
 				rs += "</div>"
 				
 				$('#round_control_frame').html(rs);
