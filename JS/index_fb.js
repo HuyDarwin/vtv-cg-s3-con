@@ -297,6 +297,7 @@ $(function () {
 				con.HienCauHoi();
 				update(ref(db), { rc4_obj3 : 0 });
 			}
+      /*
 			if (data.rc4_obj6 == 1){
 				$('#answer').html('Số từ được chấp nhận: ' + '0/' + (data.played_questions + 5)).animate({ opacity: 1 }, 250)
 				update(ref(db), { rc4_obj6 : 0 });

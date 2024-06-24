@@ -146,12 +146,11 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
   top:2vw;
 }
 
-#cw_table td {
+.row_crown, .row_cell {
   color:white;
   text-align:center;
   font-family:'SFU Futura Bold';
   font-size:5vw;
-  line-height:0vw;
   
 	border-width: 0.2vw 0.2vw;
 	border-style: solid;
@@ -159,8 +158,20 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
 	border-collapse: collapse;  
 }
 
-#cw_table td div {
-  
+.row_crown div, .row_cell div {
+  line-height:0vw;
+}
+
+.row_crown img, .row_cell img {
+  width:100%;
+  height:100%;
+}
+
+.row_cell {
+	background-image: url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/letter.png?v=1719157858246");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 #qc-1{
