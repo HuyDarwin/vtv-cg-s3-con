@@ -1120,6 +1120,7 @@ $(function () {
 				}
         
 				con.ChayDongHo(time);
+        for (var i = 0; )
 				$('#tddg, #ttdg').attr("disabled", true);
 				$('#tddg').removeAttr("disabled");
         

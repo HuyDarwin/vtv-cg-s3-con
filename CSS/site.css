@@ -199,12 +199,13 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
 	width:40vw;
 	height:10vw;
 	left:5vw;
-	top:43vw;
+	top:43.5vw;
+  opacity:0;
 }
 
 #qc-arrow {
 	left:0vw;
-	top:1.4vw;
+	top:2.65vw;
 	width:9vw;
 }
 
@@ -217,6 +218,9 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
 	font-weight:bold;
 	font-size:1.8vw;
 	color:#20713c;
+    display: flex;
+    align-items: center;
+	line-height:1.9vw;
 }
 
 #qc-1{
