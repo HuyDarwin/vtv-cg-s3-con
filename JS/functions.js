@@ -190,6 +190,7 @@ $(function () {
       
       con.ChuyenCauHoiHangNgangVong4 = function (i) {
         $('#qc-q-text-holder').animate({'opacity':'0'}, 250, 'linear', function(){
+          console.log('data.cw_question_' + i)
           $('#qc-q-text').html(eval('data.cw_question_' + i));
           $('#qc-q-text-holder').animate({'opacity':'1'}, 250)
         })
@@ -471,18 +472,11 @@ $(function () {
         for (var j = 1; j <= 6; j++) {
           update(ref(db), { ['cw_key_' + i + '_' + j] : cw_key[i - 1][j - 1] })
         }
-      }
-    }
-    
-    con.GuiTextCauHoiVong4 = function(i) {
       
-        console.log(played_questions,i - 1)
         cw_question[i - 1] = cau_hoi_4_cw[played_questions][i - 1].Question;
         
         update(ref(db), { ['cw_question_' + i] : cw_question[i - 1] })
-    }
-    
-    con.HienDapAnHangNgangVong4 = function(i) {
+        update(ref(db), { ['cw_question_' + i + '_hide'] : 1 })
       
         cw_key_ans[i - 1][0] = cau_hoi_4_cw[played_questions][i - 1].LetterA1;
         cw_key_ans[i - 1][1] = cau_hoi_4_cw[played_questions][i - 1].LetterA2;
@@ -493,8 +487,18 @@ $(function () {
         
         for (var j = 1; j <= 6; j++) {
           update(ref(db), { ['cw_key_ans_' + i + '_' + j] : cw_key_ans[i - 1][j - 1] })
+          update(ref(db), { ['cw_key_ans_' + i + '_hide'] : 1 })
         }
-      }  
+      }
+    }
+    
+    con.ChoHienTextCauHoiVong4 = function(i) {
+      update(ref(db), { ['cw_question_' + i + '_hide'] : 0 })
+    }
+    
+    con.ChoHienDapAnHangNgangVong4 = function(i) {
+      update(ref(db), { ['cw_key_ans_' + i + '_hide'] : 0 })
+    }  
     
 		con.CongDiemNguoiChoi = function(score,is_adding_points_to_player_sn){
 			if (is_adding_points_to_player_sn == true){

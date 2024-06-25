@@ -1123,7 +1123,7 @@ $(function () {
         var j = 1;
         for (var i = 1; i <= played_questions + 4; i++) {
           setTimeout(function(){
-            con.GuiTextCauHoiVong4(j);
+            con.ChoHienTextCauHoiVong4(j);
             j++;
           }, 15000 * (i - 1))
         }
@@ -1172,6 +1172,9 @@ $(function () {
 				$('#rc4 button').attr("disabled", true);
 				$('#rc4_obj1, #rc4_obj2, #rc4_obj3').removeAttr("disabled");
 				$('#tddg').removeAttr("disabled");
+        
+        played_questions++
+        update(ref(db), { played_questions : played_questions })
         
       })
       
