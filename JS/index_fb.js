@@ -301,10 +301,11 @@ $(function () {
         }, 100)
 			}
       if(data.rc4_obj4 == 1) {
-        for (var i = 1; i <= questions_played + 4; i++) {
+        for (var i = 1; i <= data.played_questions + 4; i++) {
           setTimeout(function(){
             con.HighlightHangNgangVong4(i,1)
-          } 15000 * (i - 1))
+            con.ChuyenCauHoiHangNgangVong4(i)
+          }, 15000 * (i - 1))
         }
         update(ref(db), { rc4_obj4 : 0 });  
       }

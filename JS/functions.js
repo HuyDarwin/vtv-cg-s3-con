@@ -188,7 +188,12 @@ $(function () {
         }
       }
       
-      
+      con.ChuyenCauHoiHangNgangVong4 = function (i) {
+        $('#qc-q-text-holder').animate({'opacity':'0'}, 250, 'linear', function(){
+          $('#qc-q-text').html(eval('data.cw_question_' + i));
+          $('#qc-q-text-holder').animate({'opacity':'1'}, 250)
+        })
+      }
       
 			con.HienCauHoi = function(){
 				con.AnHetVideo();
@@ -201,6 +206,8 @@ $(function () {
           $('#qc-1-bg').css('left','100vw');
           $('#qc-1-bg').animate({'left':'50vw'}, 750, 'linear')
           $('#qc-timer').css('opacity',1).trigger('play');
+          
+          $('#qc-q-text-holder').css('opacity',0)
           
           setTimeout(function(){
             $('#qcc').css('opacity',1);
