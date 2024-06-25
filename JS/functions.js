@@ -188,6 +188,8 @@ $(function () {
         }
       }
       
+      
+      
 			con.HienCauHoi = function(){
 				con.AnHetVideo();
         
