@@ -119,13 +119,6 @@ $(function () {
 				$('#intro,#comm,#rt1,#rt2,#rt3,#rt4,#question-1,#question-1-input,#question-2,#qc-timer,#scoreboard-1,#scoreboard-2').prop('currentTime', 0);
 			}
       
-      con.ChuyenCanhVong4 = function(x) {
-        $('#qc-1, #qc-2, #qc-3').css('opacity', 0)
-        if(x == 1 || x == 2 || x == 3) {
-          $('#qc-' + x).css('opacity', 1);
-        }
-      }
-      
 
 
       
@@ -465,7 +458,7 @@ $(function () {
       }
     }
     
-    con.HienTextCauHoiVong4 = function(i) {
+    con.GuiTextCauHoiVong4 = function(i) {
       
         cw_question[i - 1] = cau_hoi_4_cw[played_questions][i - 1].Question;
         

@@ -1120,22 +1120,48 @@ $(function () {
 				}
         
 				con.ChayDongHo(time);
-        for (var i = 0; )
+        for (var i = 1; i <= played_questions + 4; i++ ) {
+          con.GuiTextCauHoiVong4(i);
+          setTimeout(function(){}, 15000)
+        }
 				$('#tddg, #ttdg').attr("disabled", true);
 				$('#tddg').removeAttr("disabled");
         
 				update(ref(db), { is_able_to_input : 1 })
 				setTimeout(function(){
 					update(ref(db), { is_able_to_input : 0 })
+          $('#rc4_obj6, #rc4_obj7').removeAttr('disabled');
+        
+          da_hoi_xong_vong_4 = 1;
 				}, (time * 1000));
         
 				$('#rc4_obj4').attr("disabled", true);
 			})
       
+      $('#rc4_obj6').click(function(){
+        if(da_hoi_xong_vong_4 == 1) {
+          update(ref(db), { reset_hl_hn : 1})
+          da_hoi_xong_vong_4 = 0;
+          for(var i = 8; i<=14;i++) $('#rc4_obj' + i).removeAttr('disabled');
+        }
+        $('#rc4_obj6').attr("disabled", true);
+        $('#rc4_obj7').removeAttr('disabled');
+      })
+      
+      $('#rc4_obj7').click(function(){
+        if(da_hoi_xong_vong_4 == 1) {
+          update(ref(db), { reset_hl_hn : 1})
+          da_hoi_xong_vong_4 = 0;
+          for(var i = 8; i<=14;i++) $('#rc4_obj' + i).removeAttr('disabled');
+        }
+        $('#rc4_obj7').attr("disabled", true);
+        $('#rc4_obj6').removeAttr('disabled');
+      })
+      
       $('#rc4_obj5').click(function(){
         
-				$('#tddg, #ttdg').attr("disabled", true);
 				con.ResetDongHo();
+				$('#tddg, #ttdg').attr("disabled", true);
 				$('#timer').html('');
         
 				$('#rc4_obj5').attr("disabled", true);

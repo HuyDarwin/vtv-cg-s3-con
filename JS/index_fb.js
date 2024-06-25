@@ -300,6 +300,26 @@ $(function () {
           update(ref(db), { rc4_obj3 : 0 });         
         }, 100)
 			}
+      if(data.rc4_obj4 == 1) {
+        for (var i = 1; i <= data.played_questions + 4; i++ ) {
+          con.HighlightHangNgangVong4(i,1)
+          setTimeout(function(){}, 15000)
+        }
+        update(ref(db), { rc4_obj4 : 0 });  
+      }
+      if(data.rc4_obj6 == 1) {
+        con.ChuyenCanhVong4(2);
+        update(ref(db), { rc4_obj6 : 0 }); 
+      }
+      if(data.rc4_obj7 == 1) {
+        con.ChuyenCanhVong4(3);
+        update(ref(db), { rc4_obj7 : 0 }); 
+      }
+      
+      if(data.reset_hl_hn == 1){
+          con.ResetHighLightHangNgangVong4();
+          update(ref(db), { reset_hl_hn : 0 });           
+      }
       /*
 			if (data.rc4_obj6 == 1){
 				$('#answer').html('Số từ được chấp nhận: ' + '0/' + (data.played_questions + 5)).animate({ opacity: 1 }, 250)
