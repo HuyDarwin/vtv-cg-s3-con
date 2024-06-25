@@ -141,7 +141,7 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
 
 #cw_table {
   left:7.5vw;
-  top:2vw;
+  top:1vw;
   table-layout:fixed;
   
   text-align:center;
@@ -193,6 +193,30 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+}
+
+#qc-q-text-holder {
+	width:40vw;
+	height:10vw;
+	left:5vw;
+	top:43vw;
+}
+
+#qc-arrow {
+	left:0vw;
+	top:1.4vw;
+	width:9vw;
+}
+
+#qc-q-text {
+	left:10vw;
+	width:30vw;
+	height:10vw;
+	top:0vw;
+	font-family:'UTM Neo Sans Intel';
+	font-weight:bold;
+	font-size:1.8vw;
+	color:#20713c;
 }
 
 #qc-1{
