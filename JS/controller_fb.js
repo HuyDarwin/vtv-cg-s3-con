@@ -1128,7 +1128,7 @@ $(function () {
           }, 15000 * (i - 1))
         }
 				$('#tddg, #ttdg').attr("disabled", true);
-				$('#tddg').removeAttr("disabled");
+				//$('#tddg').removeAttr("disabled");
         
 				update(ref(db), { is_able_to_input : 1 })
 				setTimeout(function(){
@@ -1170,11 +1170,15 @@ $(function () {
 				$('#rc4_obj5').attr("disabled", true);
         
 				$('#rc4 button').attr("disabled", true);
-				$('#rc4_obj1, #rc4_obj2, #rc4_obj3').removeAttr("disabled");
+				$('#rc4_obj1, #rc4_obj2').removeAttr("disabled");
 				$('#tddg').removeAttr("disabled");
         
         played_questions++
         update(ref(db), { played_questions : played_questions })
+        
+        if(played_questions <= 2){
+          $('#rc4_obj3').removeAttr("disabled");
+        }
         
       })
       

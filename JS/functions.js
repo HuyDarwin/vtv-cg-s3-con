@@ -200,7 +200,7 @@ $(function () {
 				con.AnHetVideo();
         
         if (data.round == 4) {
-          $('.question_crossword').css('opacity', 1)
+          $('.question-crossword').css('opacity', 1)
           
           con.ChuyenCanhVong4(1)
           
@@ -215,7 +215,7 @@ $(function () {
           }, 750)
         }
         else {
-          $('.question_crossword').css('opacity', 0)
+          $('.question-crossword').css('opacity', 0)
           
           if (data.round == 2){
             $('#question-2').css('opacity',1).trigger('play');
