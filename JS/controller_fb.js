@@ -1120,9 +1120,11 @@ $(function () {
 				}
         
 				con.ChayDongHo(time);
+        var j = 1;
         for (var i = 1; i <= played_questions + 4; i++) {
           setTimeout(function(){
-            con.GuiTextCauHoiVong4(i);
+            con.GuiTextCauHoiVong4(j);
+            j++;
           }, 15000 * (i - 1))
         }
 				$('#tddg, #ttdg').attr("disabled", true);

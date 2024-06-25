@@ -476,6 +476,7 @@ $(function () {
     
     con.GuiTextCauHoiVong4 = function(i) {
       
+        console.log(played_questions,i - 1)
         cw_question[i - 1] = cau_hoi_4_cw[played_questions][i - 1].Question;
         
         update(ref(db), { ['cw_question_' + i] : cw_question[i - 1] })

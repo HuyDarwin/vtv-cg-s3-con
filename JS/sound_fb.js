@@ -310,12 +310,12 @@ $(function () {
 					con.ChoiAmThanh('Sounds/60s_timer_1.mp3',4);
 				}
 				else if(data.played_questions == 1){
-				  con.ChoiAmThanh('Sounds/https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/75s%20Countdown%20(from%2060s%20Countdown%201).mp3?v=1719318363662',4);
+				  con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/75s%20Countdown%20(from%2060s%20Countdown%201).mp3?v=1719318363662',4);
 				}
 				else if(data.played_questions == 2){
 				  con.ChoiAmThanh('Sounds/90s_timer.mp3',4);
 				}
-				update(ref(db), { rc4_obj5 : 0 });
+				update(ref(db), { rc4_obj4 : 0 });
 			}
       
 		})
