@@ -1120,9 +1120,12 @@ $(function () {
 				}
         
 				con.ChayDongHo(time);
-        for (var i = 1; i <= played_questions + 4; i++ ) {
+        var i = 1;
+        while (i <= 4){
           con.GuiTextCauHoiVong4(i);
-          setTimeout(function(){}, 15000)
+          setTimeout(function(){
+            i++;
+          }, 15000)
         }
 				$('#tddg, #ttdg').attr("disabled", true);
 				$('#tddg').removeAttr("disabled");

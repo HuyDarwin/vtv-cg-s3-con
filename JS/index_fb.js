@@ -301,11 +301,18 @@ $(function () {
         }, 100)
 			}
       if(data.rc4_obj4 == 1) {
-        for (var i = 1; i <= data.played_questions + 4; i++ ) {
+        var i = 1;
+        while (i <= 4){
           con.HighlightHangNgangVong4(i,1)
-          setTimeout(function(){}, 15000)
+          setTimeout(function(){
+            i++;
+          }, 15000)
         }
         update(ref(db), { rc4_obj4 : 0 });  
+      }
+      if(data.rc4_obj5 == 1){
+        con.AnCauHoi()
+        update(ref(db), { rc4_obj5 : 0 });  
       }
       if(data.rc4_obj6 == 1) {
         con.ChuyenCanhVong4(2);

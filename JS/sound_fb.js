@@ -305,93 +305,19 @@ $(function () {
 				con.ChoiAmThanh('Sounds/suspense.mp3',2);
 				update(ref(db), { rc4_obj3 : 0 });
 			}
-			if (data.rc4_obj5 == 1){
-				if(data.played_questions == 2){
+			if (data.rc4_obj4 == 1){
+				if(data.played_questions == 0){
 					con.ChoiAmThanh('Sounds/60s_timer_1.mp3',4);
 				}
-				else{
-					con.ChoiAmThanh('Sounds/30s_timer_2.mp3',4);
+				else if(data.played_questions == 1){
+				  con.ChoiAmThanh('Sounds/https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/75s%20Countdown%20(from%2060s%20Countdown%201).mp3?v=1719318363662',4);
+				}
+				else if(data.played_questions == 2){
+				  con.ChoiAmThanh('Sounds/90s_timer.mp3',4);
 				}
 				update(ref(db), { rc4_obj5 : 0 });
 			}
-			if (data.rc4_obj6 == 1){
-				con.ChoiAmThanh('Sounds/bed_2.mp3',3);
-				update(ref(db), { rc4_obj6 : 0 });
-			}
-			if (data.rc4_obj7 == 1){
-				con.ChoiAmThanh('Sounds/correct.mp3',4);
-				update(ref(db), { rc4_obj7 : 0 });
-			}
-			if (data.rc4_obj8 == 1){
-				con.ChoiAmThanh('Sounds/wrong.mp3',1);
-				update(ref(db), { rc4_obj8 : 0 });
-			}
-			
-			if (data.rc4_2_obj3 == 1){
-				con.ChoiAmThanh('Sounds/suspense.mp3',2);
-				update(ref(db), { rc4_2_obj3 : 0 });
-			}
-			if (data.rc4_2_obj5 == 1){
-				if(data.played_questions == 2){
-					con.ChoiAmThanh('Sounds/60s_timer_1.mp3',4);
-				}
-				else{
-					con.ChoiAmThanh('Sounds/30s_timer_2.mp3',4);
-				}
-				update(ref(db), { rc4_2_obj5 : 0 });
-			}
-			if (data.rc4_2_obj6 == 1){
-				con.ChoiAmThanh('Sounds/bed_2.mp3',3);
-				update(ref(db), { rc4_2_obj6 : 0 });
-			}
-			if (data.rc4_2_obj8 == 1){
-				con.ChoiAmThanh('Sounds/correct.mp3',4);
-				update(ref(db), { rc4_2_obj8 : 0 });
-			}
-			if (data.rc4_2_obj9 == 1){
-				con.ChoiAmThanh('Sounds/correct.mp3',4);
-				update(ref(db), { rc4_2_obj9 : 0 });
-			}
-			if (data.rc4_2_obj10 == 1){
-				con.ChoiAmThanh('Sounds/correct.mp3',4);
-				update(ref(db), { rc4_2_obj10 : 0 });
-			}
-			if (data.rc4_2_obj11 == 1){
-				con.ChoiAmThanh('Sounds/correct.mp3',4);
-				update(ref(db), { rc4_2_obj11 : 0 });
-			}
-			if (data.rc4_2_obj12 == 1){
-				con.ChoiAmThanh('Sounds/correct.mp3',4);
-				update(ref(db), { rc4_2_obj12 : 0 });
-			}
-			if (data.rc4_2_obj13 == 1){
-				con.ChoiAmThanh('Sounds/wrong.mp3',1);
-				update(ref(db), { rc4_2_obj13 : 0 });
-			}
-			if (data.rc4_2_obj15 == 1){
-				con.ChoiAmThanh('Sounds/correct.mp3',4);
-				update(ref(db), { rc4_2_obj15 : 0 });
-			}
-			if (data.rc4_2_obj16 == 1){
-				con.ChoiAmThanh('Sounds/correct.mp3',4);
-				update(ref(db), { rc4_2_obj16 : 0 });
-			}
-			if (data.rc4_2_obj17 == 1){
-				con.ChoiAmThanh('Sounds/correct.mp3',4);
-				update(ref(db), { rc4_2_obj17 : 0 });
-			}
-			if (data.rc4_2_obj18 == 1){
-				con.ChoiAmThanh('Sounds/correct.mp3',4);
-				update(ref(db), { rc4_2_obj18 : 0 });
-			}
-			if (data.rc4_2_obj19 == 1){
-				con.ChoiAmThanh('Sounds/correct.mp3',4);
-				update(ref(db), { rc4_2_obj19 : 0 });
-			}
-			if (data.rc4_2_obj20 == 1){
-				con.ChoiAmThanh('Sounds/wrong.mp3',1);
-				update(ref(db), { rc4_2_obj20 : 0 });
-			}
+      
 		})
 	}(window.VTVCGV = window.VTVCGV || {}));
 });

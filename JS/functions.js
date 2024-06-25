@@ -119,6 +119,13 @@ $(function () {
 				$('#intro,#comm,#rt1,#rt2,#rt3,#rt4,#question-1,#question-1-input,#question-2,#qc-timer,#scoreboard-1,#scoreboard-2').prop('currentTime', 0);
 			}
       
+      con.ChuyenCanhVong4 = function(x) {
+        $('#qc-1, #qc-2, #qc-3').css('opacity', 0)
+        if(x == 1 || x == 2 || x == 3) {
+          $('#qc-' + x).css('opacity', 1);
+        }
+      }
+      
 
 
       
@@ -234,7 +241,7 @@ $(function () {
         if(data.round == 4) {
           $('.question-crossword, #qc-timer, #qcc').css('opacity',0);          
           $('#qc-1-bg').css('left','100vw');
-          con.ChuyenCanhVong4()
+          con.ChuyenCanhVong4(0)
         }
         else {
           $('#question-1, #question-2').animate({ opacity: 0}, 0);
