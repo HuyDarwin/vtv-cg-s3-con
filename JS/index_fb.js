@@ -49,11 +49,12 @@ $(function () {
 			}
 			if (data.giailao == 1){
 				con.AnHetVideo();
-				$('#comm').css('opacity',1);
-				$('#comm').trigger('play');
+				//'#comm').css('opacity',1);
+				//'#comm').trigger('play');
+        /*
 				setTimeout(function(){
 					$('#comm').css('opacity',0);
-				}, 10000)
+				}, 10000)*/
 				update(ref(db), { giailao : 0 });
 			}
 			
