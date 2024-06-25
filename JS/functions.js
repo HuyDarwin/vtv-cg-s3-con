@@ -126,8 +126,69 @@ $(function () {
         }
       }
       
+
+
+      
+      con.LoadDoHoaVong4 = function(x) {
+        var string = "";
+        
+          string += "<tr>";
+          for(var i = 1; i <= x; i++){
+            string += "<th class='row_crown' id='row_crown_" + i + "'></th>"
+          }
+          string += "</tr>";
+        
+        for(var i = 1; i <= x; i++){
+          string += "<tr class='row_word' id='row_word_" + i + "'>";
+          for(var j = 1; j <= x; j++){
+            var char = eval('data.cw_key_' + i + '_' + j);
+            if (char == "*") {
+              string += "<td class='row_cell_x' id='row_cell_" + j + "'></td>"
+            }
+            else {
+              string += "<td class='row_cell' id='row_cell_" + j + "'>" + char + "</td>"
+            }
+          }
+          string += "</tr>";
+        }
+        
+        $('#cw_table').html(string);
+        
+        $('.row_cell, .row_crown, .row_cell_x, .row_cell_high, .row_cell_high_x').css({'width':((28 + x) / x) + 'vw', 'height' : ((28 + x) / x) + 'vw', 'line-height' : '0vw', 'font-size' : '6cqw'})
+        $('#row_crown_' + data.key_col).css('background-image', 'url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646")')
+      }
+      
+
+        
+    con.HighlightHangNgangVong4 = function(i,k) {
+      for (var j = 1; j <= data.played_questions + 4; j++ ) {
+        var char = eval('data.cw_key_' + i + '_' + j);
+        if (char == "*") {
+          if(k == 1) {
+            $('#row_word_' + i + ' #row_cell_' + j).attr('class', 'row_cell_high_x');
+          }
+          else {
+            $('#row_word_' + i + ' #row_cell_' + j).attr('class', 'row_cell_x');
+          }          
+        }
+        else {
+           if(k == 1) {
+            $('#row_word_' + i + ' #row_cell_' + j).attr('class', 'row_cell_high');
+          }
+          else {
+            $('#row_word_' + i + ' #row_cell_' + j).attr('class', 'row_cell');
+          }            
+        }
+      }
+    }
+      
+      con.ResetHighLightHangNgangVong4 = function () {
+        for (var i = 1; i <= data.played_questions + 4; i++ ) {
+          con.HighlightHangNgangVong4(i, 0);
+        }
+      }
+      
 			con.HienCauHoi = function(){
-				
 				con.AnHetVideo();
         
         if (data.round == 4) {
@@ -161,7 +222,6 @@ $(function () {
 
           $('.round').html('Vòng ' + data.round);
 
-          /*
           if(data.is_playing_tiebreak == 1){
             $('#timer').css('opacity', 0);
             $('#tiebreak_text').css('opacity', 1);
@@ -170,14 +230,13 @@ $(function () {
             $('#timer').css('opacity', 1);
             $('#tiebreak_text').css('opacity', 0);
           }
-          */
 
           setTimeout(function(){
             $('#question_content').css('opacity',1);
           }, 750)
-        }
-				
+        }	
 			}
+      
 			con.AnCauHoi = function(){
         if(data.round == 4) {
           $('.question-crossword, #qc-timer, #qcc').css('opacity',0);          
@@ -191,9 +250,10 @@ $(function () {
             $('#answer').css('opacity', 0);
           });          
         }
-
 			}
-    }
+      
+
+		})
 		
 		// Controller
 		con.ChonNguoiChoi = function(cont) {

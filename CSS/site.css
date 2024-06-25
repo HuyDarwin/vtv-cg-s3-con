@@ -147,7 +147,7 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
   text-align:center;
 }
 
-.row_crown, .row_cell {
+.row_crown, .row_cell, .row_cell_x, .row_cell_high, .row_cell_high_x {
   color:white;
   text-align:center;
   font-family:'SFU Futura Bold';
@@ -177,7 +177,7 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
     url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/red_bg.png?v=1719246460845");
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: contain, 105%;
+	background-size: contain, 110%;
 }
 
 .row_cell_high_x {
@@ -186,7 +186,7 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
     url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/red_bg.png?v=1719246460845");
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 90%, contain, 105%;
+	background-size: 90%, contain, 110%;
 }
 
 .row_crown {
