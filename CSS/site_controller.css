@@ -1330,16 +1330,17 @@ div.round_control {
 	height:2vw;
 	font-size:1.1vw;
 	border-radius:5px;
-	background-color:#39D5F7;
 	top:5vw;
 }
 
 #rc4_obj7{
 	left:9.5vw;
+	background-color:#39D5F7;
 }
 
 #rc4_obj8{
 	left:18.45vw;
+	background-color:ffa96b;
 }
 
 #rc4_obj9 {
