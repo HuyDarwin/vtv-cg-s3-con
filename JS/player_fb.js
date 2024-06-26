@@ -69,7 +69,9 @@ $(function () {
 			if(number_of_player == 5){
 				$('#answer').html(data.answer);
 				$('#player_input').html(data.input);
-				$('#player_sn_input').html(data.input_sn);				
+				$('#player_sn_input').html(data.input_sn);	
+				$('#qc #player_input').html(data.input);
+				$('#qc #player_sn_input').html(data.input_sn);				
 			}
 			
 			$('#sn1, #sn1p').html(data.player_1_last_name);
@@ -280,7 +282,7 @@ $(function () {
       
 
           for (var i = 1; i <= data.played_questions + 4; i++) {
-            if (eval('data.cw_question_' + i + '_hide') == 0 || data.number_of_player == 5) {
+            if (eval('data.cw_question_' + i + '_hide') == 0 || number_of_player == 5) {
               $('#qc #row_cell_ques_' + i + ' textarea').val(eval('data.cw_question_' + i))
             }
             else{
@@ -288,7 +290,7 @@ $(function () {
             }
             
             for (var j = 1; j <= data.played_questions + 4; j++) {
-              if (eval('data.cw_key_ans_' + i + '_hide') == 0 || data.number_of_player == 5) {
+              if (eval('data.cw_key_ans_' + i + '_hide') == 0 || number_of_player == 5) {
                 if(eval('data.cw_key_' + i + '_' + j) == '.') {
                   $('#row_word_' + i + ' #row_cell_' + j).css('color','#EB5F00');
                   $('#row_word_' + i + ' #row_cell_' + j).html(eval('data.cw_key_ans_' + i + '_' + j));
@@ -307,7 +309,7 @@ $(function () {
          
           } 
           
-          if(data.key_word == null || data.number_of_player != 5){
+          if(data.key_word == null || number_of_player != 5){
             $('#qc-keyword').html('Từ hàng dọc: ')
           }
           else{

@@ -413,3 +413,25 @@ textarea{
 	width:26vw;
 	height:35vw;
 }
+
+#qc #text1{
+	top:7.5vw;
+	left:72vw;
+}
+
+#qc #player_input{
+	top:9.5vw;
+	left:72vw;
+	width:26vw;
+}
+
+#qc #text2{
+	top:21.5vw;
+	left:72vw;
+}
+
+#qc #player_sn_input{
+	top:23.5vw;
+	left:72vw;
+	width:26vw;
+}

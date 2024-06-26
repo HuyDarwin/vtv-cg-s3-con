@@ -453,7 +453,7 @@ $(function () {
 		}
     
     con.ResetCauHoiVong4 = function(){
-      key_col = '';
+      /*key_col = '';
       key_word = '';
 
       cw_question = ['', '', '', '', '', ''];
@@ -472,7 +472,24 @@ $(function () {
         ['', '', '', '', '', ''],
         ['', '', '', '', '', ''],
         ['', '', '', '', '', '']
-      ];      
+      ];  */    
+      
+      update(ref(db), { key_col : '', key_word : ''})
+      for (var i = 1; i <= 6; i++) {
+        
+        for (var j = 1; j <= 6; j++) {
+          update(ref(db), { ['cw_key_' + i + '_' + j] : '' })
+        }
+      
+        cw_question[i - 1] = '';
+        
+        update(ref(db), { ['cw_question_' + i] : '' })
+        update(ref(db), { ['cw_question_' + i + '_hide'] : 1 })
+        
+        for (var j = 1; j <= 6; j++) {
+          update(ref(db), { ['cw_key_ans_' + i + '_' + j] : '' })
+          update(ref(db), { ['cw_key_ans_' + i + '_hide'] : 1 })
+        }
       
       update(ref(db), { input: '' })
       update(ref(db), { input_sn: '' })  

@@ -1274,6 +1274,8 @@ $(function () {
           $('#rc4_obj3').removeAttr("disabled");
         }
         
+        con.ResetCauHoiVong4()
+        
       })
       
       /*
