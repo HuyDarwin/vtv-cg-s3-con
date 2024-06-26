@@ -159,8 +159,6 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
   left:7.5vw;
   top:3vw;
   table-layout:fixed;
-  
-  text-align:center;
 }
 
 .row_crown, .row_cell, .row_cell_x, .row_cell_high, .row_cell_high_x {
@@ -179,8 +177,8 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
 	font-weight:bold;
 	font-size:1.8vw;
 	color:#20713c;
-    vertical-align: middle;
-  background-color:red;
+  vertical-align: middle;
+  margin-left:0.5vw;
 }
 
 .row_cell {

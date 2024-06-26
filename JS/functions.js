@@ -153,7 +153,7 @@ $(function () {
             }
           }
             string += "<td class='row_cell_arrow'></td>"
-            string += "<td class='row_cell_ques'></td>"
+            string += "<td class='row_cell_ques' id='row_cell_ques_" + i + "'></td>"
           string += "</tr>";
         }
         
@@ -168,6 +168,17 @@ $(function () {
         $('#qc-3 #row_crown_' + data.key_col).css('background-image', 'url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646")')
         
     
+      
+        if (data.round == 4) {
+          for (var i = 1; i <= data.played_questions + 4; i++) {
+            if (eval('data.cw_question_' + i + '_hide') == 0) {
+              $('#qc-3 #row_cell_ques_' + i).html(eval('data.cw_question_' + i))
+            }
+            else{
+              $('#qc-3 #row_cell_ques_' + i).html('')
+            }
+          }        
+        }
       }
       
 
