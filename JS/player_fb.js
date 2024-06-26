@@ -266,7 +266,7 @@ $(function () {
         
         for(var i = 1; i <= x; i++){
           string2 += "<tr class='row_word' id='row_word_" + i + "'>";
-          string2 += "<td class='row_cell_ques' id='row_cell_ques_" + i + "'></td>"
+          string2 += "<td class='row_cell_ques' id='row_cell_ques_" + i + "'><textarea disabled></textarea></td>"
           string2 += "</tr>";
         }
         
@@ -274,18 +274,17 @@ $(function () {
         
         $('.row_word').css({'max-height':(32 / x) + 'vw'})
         $('.row_cell, .row_crown, .row_cell_x, .row_cell_high, .row_cell_high_x').css({'width':(32 / x) + 'vw', 'height':(32 / x) + 'vw', 'font-size' : (4.85 - Math.abs(4 - x) * 0.5) + 'vw'})
-        $('#qc .row_cell_arrow').css({'width':(40 / x) + 'vw', 'height':(32 / x) + 'vw', 'font-size' : (4.5 - Math.abs(4 - x) * 0.2) + 'vw'})
-        $('#qc .row_cell_ques').css({'width':'38vw', 'height':(32 / x) + 'vw'})
+        $('#qc .row_cell_ques').css({'width':'35vw', 'height':(32 / x) + 'vw'})
         
         $('#qc #row_crown_' + data.key_col).css('background-image', 'url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646")')
       
 
           for (var i = 1; i <= data.played_questions + 4; i++) {
             if (eval('data.cw_question_' + i + '_hide') == 0 || data.number_of_player == 5) {
-              $('#qc #row_cell_ques_' + i).html(eval('data.cw_question_' + i))
+              $('#qc #row_cell_ques_' + i + ' textarea').val(eval('data.cw_question_' + i))
             }
             else{
-              $('#qc #row_cell_ques_' + i).html('')
+              $('#qc #row_cell_ques_' + i + ' textarea').val('')
             }
             
             for (var j = 1; j <= data.played_questions + 4; j++) {
