@@ -133,7 +133,7 @@ $(function () {
         var string = "";
         
           string += "<tr>";
-          for(var i = 1; i <= x; i++){
+          for(var i = 1; i <= x + 1; i++){
             string += "<th class='row_crown' id='row_crown_" + i + "'></th>"
           }
           string += "</tr>";
@@ -145,17 +145,21 @@ $(function () {
             if (char == "*") {
               string += "<td class='row_cell_x' id='row_cell_" + j + "'></td>"
             }
+            else if (char == ".") {
+              string += "<td class='row_cell' id='row_cell_" + j + "'></td>"
+            }
             else {
               string += "<td class='row_cell' id='row_cell_" + j + "'>" + char + "</td>"
             }
           }
+            string += "<td class='row_cell_arrow'></td>"
           string += "</tr>";
         }
         
         $('#qc-1 #cw_table, #qc-2 #cw_table, #qc-3 #cw_table').html(string);
         
-        $('.row_cell, .row_crown, .row_cell_x, .row_cell_high, .row_cell_high_x').css({'width':(28 / x) + 'vw', 'height' : 28 + 'vw', 'line-height' : '-2vw', 'font-size' : (4 - (4 - x) * 0.2) + 'vw'})
-        $('#qc-2 .row_cell, #qc-2 .row_crown, #qc-2 .row_cell_x, #qc-2 .row_cell_high, #qc-2 .row_cell_high_x').css({'width':(28 / x) / 4 + 'vw', 'height' : (28 / x) / 4 + 'vw', 'line-height' : '-2vw', 'font-size' : ((4 - (4 - x) * 0.2) / 4) + 'vw'})
+        $('.row_cell, .row_crown, .row_cell_x, .row_cell_high, .row_cell_high_x, #qc-3 .row_cell_arrow').css({'width':(32 / x) + 'vw', 'height' : (32 / x) + 'vw', 'line-height' : '-2vw', 'font-size' : (5 - (4 - x) * 0.2) + 'vw'})
+        $('#qc-2 .row_cell, #qc-2 .row_crown, #qc-2 .row_cell_x, #qc-2 .row_cell_high, #qc-2 .row_cell_high_x').css({'width':(32 / x) / 2 + 'vw', 'height' : (32 / x) / 2 + 'vw', 'line-height' : '-2vw', 'font-size' : ((5 - (4 - x) * 0.2) / 4) + 'vw'})
         $('#qc-1 #row_crown_' + data.key_col).css('background-image', 'url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646")')
         $('#qc-2 #row_crown_' + data.key_col).css('background-image', 'url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646")')
         $('#qc-3 #row_crown_' + data.key_col).css('background-image', 'url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646")')
