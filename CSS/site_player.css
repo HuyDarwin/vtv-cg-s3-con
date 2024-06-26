@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'SFU Futura Bold';
-    src: url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/sfufuturabold-webfont.woff2?v=1719223360192') format('woff2'),
-         url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/sfufuturabold-webfont.woff?v=1719223313513') format('woff');
+    src: url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/SFUFuturaBold.woff2?v=1719416410442') format('woff2'),
+        url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/SFUFuturaBold.woff?v=1719416424733') format('woff');
     font-weight: normal;
     font-style: normal;
-
+    font-display: swap;
 }
 
 @font-face {
@@ -292,4 +292,116 @@ button:hover {
 #ss1, #ss2, #ss3, #ss4, #ss1p, #ss2p, #ss3p, #ss4p, #sstd, #sstdp {
 	width:4vw;
 	background-color:rgba(245,120,16);
+}
+
+#qc{
+	width:100%;
+	height:100%;
+  opacity: 0;
+  background-image: url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/r4_bg_16.9.png?v=1719157888030");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+
+#cw_table {
+  left:7.5vw;
+  top:3vw;
+  table-layout:fixed;
+}
+
+#cw_table2 {
+  left:52vw;
+  top:3vw;
+  table-layout:fixed;
+}
+
+.row_crown, .row_cell, .row_cell_x, .row_cell_high, .row_cell_high_x {
+  color:white;
+  text-align:center;
+    vertical-align: middle;
+  font-family:'SFU Futura Bold';
+  
+	border-width: 0.1vw 0.1vw;
+	border-style: solid;
+	border-color: transparent; 
+}
+
+.row_cell_ques {
+	font-family:'UTM Neo Sans Intel';
+	font-weight:bold;
+	font-size:1.7vw;
+	color:#20713c;
+  vertical-align: middle;
+}
+
+.row_cell {
+	background-image: url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/letter.png?v=1719157858246");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+
+.row_cell_x {
+	background-image: url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/cross.png?v=1719240411768"),
+    url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/letter.png?v=1719157858246");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 80% 80%, 100% 100%;
+}
+
+.row_cell_high {
+	background-image: url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/letter.png?v=1719157858246"),
+    url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/red_bg.png?v=1719246460845");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%, 110% 110%;
+}
+
+.row_cell_high_x {
+	background-image: url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/cross.png?v=1719240411768"),
+    url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/letter.png?v=1719157858246"),
+    url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/red_bg.png?v=1719246460845");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 80% 80%, 100% 100%, 110% 110%;
+}
+
+.row_cell_arrow {
+	background-image: url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/arrow.png?v=1719316238341");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.row_crown {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+#qcc_timer {
+	font-size:4vw;
+	width:5vw;
+	height:5vw;
+  left:13.2vw;
+  top:45.5vw;
+	text-align:center;
+	font-family:'UTM Duepuntozero';
+  background-color:white;
+  color:black;
+}
+
+#qc-keyword {
+	left:7.75vw;
+	width:30vw;
+	height:10vw;
+	top:45vw;
+	font-family:'UTM Neo Sans Intel';
+	font-weight:bold;
+	font-size:1.8vw;
+	color:#20713c;
+	line-height:1.9vw;
+  opacity:0;
 }

@@ -224,6 +224,13 @@ $(function () {
 			else{
 				$("#answer").css({"font-size": "2.6vw", "top": "12.6vw"});
 			}
+      
+      // Question crossword
+      
+      if(data.round == 4) if(data.played_questions >= 0 && data.played_questions <- {
+        
+      }
+      
 		})
 		
 		$('#buzzer').click(function(){

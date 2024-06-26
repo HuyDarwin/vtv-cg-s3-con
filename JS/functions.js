@@ -225,10 +225,10 @@ $(function () {
       }
       
       con.ChuyenCauHoiHangNgangVong4 = function (i) {
-        $('#qc-q-text-holder').animate({'opacity':'0'}, 250, 'linear', function(){
+        $('#qc-q-text').animate({'opacity':'0'}, 125, 'linear', function(){
           //console.log('data.cw_question_' + i)
           $('#qc-q-text').html(eval('data.cw_question_' + i));
-          $('#qc-q-text-holder').animate({'opacity':'1'}, 250)
+          $('#qc-q-text').animate({'opacity':'1'}, 125)
         })
       }
       
