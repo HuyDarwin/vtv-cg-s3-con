@@ -178,7 +178,7 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
 	font-size:1.8vw;
 	color:#20713c;
   vertical-align: middle;
-  margin-left:0.5vw;
+  padding-left:2vw;
 }
 
 .row_cell {

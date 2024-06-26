@@ -34,6 +34,19 @@ $(function () {
 			$('#sbs2').html(data.player_2_score);
 			$('#sbs3').html(data.player_3_score);
 			$('#sbs4').html(data.player_4_score);
+      
+        if (data.round == 4) {
+          for (var i = 1; i <= data.played_questions + 4; i++) {
+            if (eval('data.cw_question_' + i + '_hide') == 0) {
+              $('#qc-3 #row_cell_ques_' + i).html(eval('data.cw_question_' + i))
+            }
+            else{
+              $('#qc-3 #row_cell_ques_' + i).html('')
+            }
+          }        
+          
+          console.log($('#qc-3 #row_cell_ques_' + i).height())
+        }
 
 			
 			// Graphics
