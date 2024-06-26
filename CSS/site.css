@@ -167,7 +167,7 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
   table-layout:fixed;
 }
 
-.row_crown, .row_cell, .row_cell_x, .row_cell_high, .row_cell_high_x, .row_cell_orange {
+.row_crown, .row_cell, .row_cell_x, .row_cell_high, .row_cell_high_x {
   color:white;
   text-align:center;
     vertical-align: middle;
@@ -178,10 +178,6 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
 	border-color: transparent; 
 }
 
-.row_cell_orange {
-  color:orange;
-}
-
 #qc-3 .row_cell_ques {
 	font-family:'UTM Neo Sans Intel';
 	font-weight:bold;
@@ -190,7 +186,7 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
   vertical-align: middle;
 }
 
-.row_cell, .row_cell_orange {
+.row_cell {
 	background-image: url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/letter.png?v=1719157858246");
 	background-repeat: no-repeat;
 	background-position: center;

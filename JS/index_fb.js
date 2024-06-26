@@ -46,16 +46,30 @@ $(function () {
             
             for (var j = 1; j <= data.played_questions + 4; j++) {
               if (eval('data.cw_key_ans_' + i + '_hide') == 0) {
-                if(eval('data.cw_key_' + i + '_' + j) != eval('data.cw_key_ans_' + i + '_' + j)) {
-                  $('#row_word_' + i + ' #row_cell_' + j)
+                if(eval('data.cw_key_' + i + '_' + j) == '.') {
+                  $('#row_word_' + i + ' #row_cell_' + j).css('color','orange');
+                  $('#row_word_' + i + ' #row_cell_' + j).html(eval('data.cw_key_ans_' + i + '_' + j));
+                }
+                else{
+                  $('#row_word_' + i + ' #row_cell_' + j).css('color','white');
                 }
               }
               else{
-                
+                if(eval('data.cw_key_' + i + '_' + j) == '.') {
+                  $('#row_word_' + i + ' #row_cell_' + j).html('');
+                }
+                $('#row_word_' + i + ' #row_cell_' + j).css('color','white');                
               }                
             }
          
-          }        
+          } 
+          
+          if(data.key_word == null){
+            $('#qc-keyword').html('Từ hàng dọc: ')
+          }
+          else{
+            $('#qc-keyword').html('Từ hàng dọc: ' + data.key_word)
+          }
           
         }
 
@@ -367,7 +381,7 @@ $(function () {
         con.ResetHighLightHangNgangVong4()
         con.HighlightHangNgangVong4(3,1)
         update(ref(db), { rc4_obj11 : 0 });         
-      
+      }
       if(data.rc4_obj12 == 1){
         con.ResetHighLightHangNgangVong4()
         con.HighlightHangNgangVong4(4,1)
@@ -388,361 +402,6 @@ $(function () {
           con.ResetHighLightHangNgangVong4();
           update(ref(db), { reset_hl_hn : 0 });           
       }
-      /*
-			if (data.rc4_obj6 == 1){
-				$('#answer').html('Số từ được chấp nhận: ' + '0/' + (data.played_questions + 5)).animate({ opacity: 1 }, 250)
-				update(ref(db), { rc4_obj6 : 0 });
-			}
-			if (data.rc4_obj7 == 1){
-				var num;
-				if(data.is_player_1_eliminated == false){
-					num = data.player_1_score;
-				}
-				else if(data.is_player_2_eliminated == false){
-					num = data.player_2_score;
-				}
-				else if(data.is_player_3_eliminated == false){
-					num = data.player_3_score;
-				}
-				else if(data.is_player_4_eliminated == false){
-					num = data.player_4_score;
-				}
-				$('#answer').html('Số từ được chấp nhận: ' + (num + 1) + '/' + (data.played_questions + 5))
-				update(ref(db), { rc4_obj7 : 0 });
-			}
-			if (data.rc4_obj4 == 1){
-				con.AnCauHoi();
-				update(ref(db), { rc4_obj4 : 0 });
-			}
-			
-			if (data.rc4_2_obj3 == 1){
-				$('#timer').css('opacity', 1);
-				$('#tiebreak_text').css('opacity', 0);
-				con.HienCauHoi();
-				update(ref(db), { rc4_2_obj3 : 0 });
-			}
-			if (data.rc4_2_obj6 == 1){
-				var name;
-				if(data.is_player_1_eliminated == false){
-					name = data.player_1_last_name;
-				}
-				else if(data.is_player_2_eliminated == false){
-					name = data.player_2_last_name;
-				}
-				else if(data.is_player_3_eliminated == false){
-					name = data.player_3_last_name;
-				}
-				else if(data.is_player_4_eliminated == false){
-					name = data.player_4_last_name;
-				}
-				$('#answer').html(name + ': 0' + '&nbsp '.repeat(10) + data.player_sn_last_name + ': 0').animate({ opacity: 1 }, 250)
-				update(ref(db), { rc4_2_obj6 : 0 });
-			}
-			if (data.rc4_2_obj8 == 1){
-				var name;
-				if(data.is_player_1_eliminated == false){
-					name = data.player_1_last_name;
-				}
-				else if(data.is_player_2_eliminated == false){
-					name = data.player_2_last_name;
-				}
-				else if(data.is_player_3_eliminated == false){
-					name = data.player_3_last_name;
-				}
-				else if(data.is_player_4_eliminated == false){
-					name = data.player_4_last_name;
-				}
-				var num;
-				if(data.is_player_1_eliminated == false){
-					num = data.player_1_score;
-				}
-				else if(data.is_player_2_eliminated == false){
-					num = data.player_2_score;
-				}
-				else if(data.is_player_3_eliminated == false){
-					num = data.player_3_score;
-				}
-				else if(data.is_player_4_eliminated == false){
-					num = data.player_4_score;
-				}
-				$('#answer').html(name + ': ' + (num+1) + '&nbsp '.repeat(10) + data.player_sn_last_name + ': ' + data.player_sn_score)
-				update(ref(db), { rc4_2_obj8 : 0 });
-			}
-			if (data.rc4_2_obj9 == 1){
-				var name;
-				if(data.is_player_1_eliminated == false){
-					name = data.player_1_last_name;
-				}
-				else if(data.is_player_2_eliminated == false){
-					name = data.player_2_last_name;
-				}
-				else if(data.is_player_3_eliminated == false){
-					name = data.player_3_last_name;
-				}
-				else if(data.is_player_4_eliminated == false){
-					name = data.player_4_last_name;
-				}
-				var num;
-				if(data.is_player_1_eliminated == false){
-					num = data.player_1_score;
-				}
-				else if(data.is_player_2_eliminated == false){
-					num = data.player_2_score;
-				}
-				else if(data.is_player_3_eliminated == false){
-					num = data.player_3_score;
-				}
-				else if(data.is_player_4_eliminated == false){
-					num = data.player_4_score;
-				}
-				$('#answer').html(name + ': ' + (num+2) + '&nbsp '.repeat(10) + data.player_sn_last_name + ': ' + data.player_sn_score)
-				update(ref(db), { rc4_2_obj9 : 0 });
-			}
-			if (data.rc4_2_obj10 == 1){
-				var name;
-				if(data.is_player_1_eliminated == false){
-					name = data.player_1_last_name;
-				}
-				else if(data.is_player_2_eliminated == false){
-					name = data.player_2_last_name;
-				}
-				else if(data.is_player_3_eliminated == false){
-					name = data.player_3_last_name;
-				}
-				else if(data.is_player_4_eliminated == false){
-					name = data.player_4_last_name;
-				}
-				var num;
-				if(data.is_player_1_eliminated == false){
-					num = data.player_1_score;
-				}
-				else if(data.is_player_2_eliminated == false){
-					num = data.player_2_score;
-				}
-				else if(data.is_player_3_eliminated == false){
-					num = data.player_3_score;
-				}
-				else if(data.is_player_4_eliminated == false){
-					num = data.player_4_score;
-				}
-				$('#answer').html(name + ': ' + (num+3) + '&nbsp '.repeat(10) + data.player_sn_last_name + ': ' + data.player_sn_score)
-				update(ref(db), { rc4_2_obj10 : 0 });
-			}
-			if (data.rc4_2_obj11 == 1){
-				var name;
-				if(data.is_player_1_eliminated == false){
-					name = data.player_1_last_name;
-				}
-				else if(data.is_player_2_eliminated == false){
-					name = data.player_2_last_name;
-				}
-				else if(data.is_player_3_eliminated == false){
-					name = data.player_3_last_name;
-				}
-				else if(data.is_player_4_eliminated == false){
-					name = data.player_4_last_name;
-				}
-				var num;
-				if(data.is_player_1_eliminated == false){
-					num = data.player_1_score;
-				}
-				else if(data.is_player_2_eliminated == false){
-					num = data.player_2_score;
-				}
-				else if(data.is_player_3_eliminated == false){
-					num = data.player_3_score;
-				}
-				else if(data.is_player_4_eliminated == false){
-					num = data.player_4_score;
-				}
-				$('#answer').html(name + ': ' + (num+4) + '&nbsp '.repeat(10) + data.player_sn_last_name + ': ' + data.player_sn_score)
-				update(ref(db), { rc4_2_obj11 : 0 });
-			}
-			if (data.rc4_2_obj12 == 1){
-				var name;
-				if(data.is_player_1_eliminated == false){
-					name = data.player_1_last_name;
-				}
-				else if(data.is_player_2_eliminated == false){
-					name = data.player_2_last_name;
-				}
-				else if(data.is_player_3_eliminated == false){
-					name = data.player_3_last_name;
-				}
-				else if(data.is_player_4_eliminated == false){
-					name = data.player_4_last_name;
-				}
-				var num;
-				if(data.is_player_1_eliminated == false){
-					num = data.player_1_score;
-				}
-				else if(data.is_player_2_eliminated == false){
-					num = data.player_2_score;
-				}
-				else if(data.is_player_3_eliminated == false){
-					num = data.player_3_score;
-				}
-				else if(data.is_player_4_eliminated == false){
-					num = data.player_4_score;
-				}
-				$('#answer').html(name + ': ' + (num+5) + '&nbsp '.repeat(10) + data.player_sn_last_name + ': ' + data.player_sn_score)
-				update(ref(db), { rc4_2_obj12 : 0 });
-			}
-			if (data.rc4_2_obj15 == 1){
-				var name;
-				if(data.is_player_1_eliminated == false){
-					name = data.player_1_last_name;
-				}
-				else if(data.is_player_2_eliminated == false){
-					name = data.player_2_last_name;
-				}
-				else if(data.is_player_3_eliminated == false){
-					name = data.player_3_last_name;
-				}
-				else if(data.is_player_4_eliminated == false){
-					name = data.player_4_last_name;
-				}
-				var num;
-				if(data.is_player_1_eliminated == false){
-					num = data.player_1_score;
-				}
-				else if(data.is_player_2_eliminated == false){
-					num = data.player_2_score;
-				}
-				else if(data.is_player_3_eliminated == false){
-					num = data.player_3_score;
-				}
-				else if(data.is_player_4_eliminated == false){
-					num = data.player_4_score;
-				}
-				$('#answer').html(name + ': ' + num + '&nbsp '.repeat(10) + data.player_sn_last_name + ': ' + (data.player_sn_score+1))
-				update(ref(db), { rc4_2_obj15 : 0 });
-			}
-			if (data.rc4_2_obj16 == 1){
-				var name;
-				if(data.is_player_1_eliminated == false){
-					name = data.player_1_last_name;
-				}
-				else if(data.is_player_2_eliminated == false){
-					name = data.player_2_last_name;
-				}
-				else if(data.is_player_3_eliminated == false){
-					name = data.player_3_last_name;
-				}
-				else if(data.is_player_4_eliminated == false){
-					name = data.player_4_last_name;
-				}
-				var num;
-				if(data.is_player_1_eliminated == false){
-					num = data.player_1_score;
-				}
-				else if(data.is_player_2_eliminated == false){
-					num = data.player_2_score;
-				}
-				else if(data.is_player_3_eliminated == false){
-					num = data.player_3_score;
-				}
-				else if(data.is_player_4_eliminated == false){
-					num = data.player_4_score;
-				}
-				$('#answer').html(name + ': ' + num + '&nbsp '.repeat(10) + data.player_sn_last_name + ': ' + (data.player_sn_score+2))
-				update(ref(db), { rc4_2_obj16 : 0 });
-			}
-			if (data.rc4_2_obj17 == 1){
-				var name;
-				if(data.is_player_1_eliminated == false){
-					name = data.player_1_last_name;
-				}
-				else if(data.is_player_2_eliminated == false){
-					name = data.player_2_last_name;
-				}
-				else if(data.is_player_3_eliminated == false){
-					name = data.player_3_last_name;
-				}
-				else if(data.is_player_4_eliminated == false){
-					name = data.player_4_last_name;
-				}
-				var num;
-				if(data.is_player_1_eliminated == false){
-					num = data.player_1_score;
-				}
-				else if(data.is_player_2_eliminated == false){
-					num = data.player_2_score;
-				}
-				else if(data.is_player_3_eliminated == false){
-					num = data.player_3_score;
-				}
-				else if(data.is_player_4_eliminated == false){
-					num = data.player_4_score;
-				}
-				$('#answer').html(name + ': ' + num + '&nbsp '.repeat(10) + data.player_sn_last_name + ': ' + (data.player_sn_score+3))
-				update(ref(db), { rc4_2_obj17 : 0 });
-			}
-			if (data.rc4_2_obj18 == 1){
-				var name;
-				if(data.is_player_1_eliminated == false){
-					name = data.player_1_last_name;
-				}
-				else if(data.is_player_2_eliminated == false){
-					name = data.player_2_last_name;
-				}
-				else if(data.is_player_3_eliminated == false){
-					name = data.player_3_last_name;
-				}
-				else if(data.is_player_4_eliminated == false){
-					name = data.player_4_last_name;
-				}
-				var num;
-				if(data.is_player_1_eliminated == false){
-					num = data.player_1_score;
-				}
-				else if(data.is_player_2_eliminated == false){
-					num = data.player_2_score;
-				}
-				else if(data.is_player_3_eliminated == false){
-					num = data.player_3_score;
-				}
-				else if(data.is_player_4_eliminated == false){
-					num = data.player_4_score;
-				}
-				$('#answer').html(name + ': ' + num + '&nbsp '.repeat(10) + data.player_sn_last_name + ': ' + (data.player_sn_score+4))
-				update(ref(db), { rc4_2_obj18 : 0 });
-			}
-			if (data.rc4_2_obj19 == 1){
-				var name;
-				if(data.is_player_1_eliminated == false){
-					name = data.player_1_last_name;
-				}
-				else if(data.is_player_2_eliminated == false){
-					name = data.player_2_last_name;
-				}
-				else if(data.is_player_3_eliminated == false){
-					name = data.player_3_last_name;
-				}
-				else if(data.is_player_4_eliminated == false){
-					name = data.player_4_last_name;
-				}
-				var num;
-				if(data.is_player_1_eliminated == false){
-					num = data.player_1_score;
-				}
-				else if(data.is_player_2_eliminated == false){
-					num = data.player_2_score;
-				}
-				else if(data.is_player_3_eliminated == false){
-					num = data.player_3_score;
-				}
-				else if(data.is_player_4_eliminated == false){
-					num = data.player_4_score;
-				}
-				$('#answer').html(name + ': ' + num + '&nbsp '.repeat(10) + data.player_sn_last_name + ': ' + (data.player_sn_score+5))
-				update(ref(db), { rc4_2_obj19 : 0 });
-			}
-			if (data.rc4_2_obj4 == 1){
-				con.AnCauHoi();
-				update(ref(db), { rc4_2_obj4 : 0 });
-			}
-      */
 		})
 	}(window.VTVCGV = window.VTVCGV || {}));
 });
