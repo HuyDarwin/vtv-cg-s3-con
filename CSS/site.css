@@ -161,6 +161,12 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
   table-layout:fixed;
 }
 
+#qc-3 #cw_table2 {
+  left:50vw;
+  top:3vw;
+  table-layout:fixed;
+}
+
 .row_crown, .row_cell, .row_cell_x, .row_cell_high, .row_cell_high_x {
   color:white;
   text-align:center;
@@ -175,10 +181,9 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
 #qc-3 .row_cell_ques {
 	font-family:'UTM Neo Sans Intel';
 	font-weight:bold;
-	font-size:1.8vw;
+	font-size:1.7vw;
 	color:#20713c;
   vertical-align: middle;
-  padding-left:2vw;
 }
 
 .row_cell {

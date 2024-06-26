@@ -153,16 +153,28 @@ $(function () {
             }
           }
             string += "<td class='row_cell_arrow'></td>"
-            string += "<td class='row_cell_ques' id='row_cell_ques_" + i + "'></td>"
+            //string += "<td class='row_cell_ques' id='row_cell_ques_" + i + "'></td>"
           string += "</tr>";
         }
         
         $('#qc-1 #cw_table, #qc-2 #cw_table, #qc-3 #cw_table').html(string);
         
+        var string2 = "";
+        
+          string2 += "<tr><th class='row_crown'></th></tr>";
+        
+        for(var i = 1; i <= x; i++){
+          string2 += "<tr class='row_word' id='row_word_" + i + "'>";
+          string2 += "<td class='row_cell_ques' id='row_cell_ques_" + i + "'></td>"
+          string2 += "</tr>";
+        }
+        
+        $('#qc-3 #cw_table2').html(string2);
+        
         $('.row_word').css({'max-height':(32 / x) + 'vw'})
         $('.row_cell, .row_crown, .row_cell_x, .row_cell_high, .row_cell_high_x').css({'width':(32 / x) + 'vw', 'height':(32 / x) + 'vw', 'font-size' : (4.85 - Math.abs(4 - x) * 0.5) + 'vw'})
         $('#qc-3 .row_cell_arrow').css({'width':(40 / x) + 'vw', 'height':(32 / x) + 'vw', 'font-size' : (4.5 - Math.abs(4 - x) * 0.2) + 'vw'})
-        $('#qc-3 .row_cell_ques').css({'width':'38vw', 'max-height':(32 / x) + 'vw'})
+        $('#qc-3 .row_cell_ques').css({'width':'38vw', 'height':(32 / x) + 'vw'})
         
         $('#qc-2 .row_cell, #qc-2 .row_crown, #qc-2 .row_cell_x, #qc-2 .row_cell_high, #qc-2 .row_cell_high_x').css({'width':(32 / x) / 2 + 'vw', 'height':(32 / x) / 2 + 'vw', 'font-size' : ((4.85 - Math.abs(4 - x) * 0.5) / 2) + 'vw'})
         $('#qc-1 #row_crown_' + data.key_col).css('background-image', 'url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646")')

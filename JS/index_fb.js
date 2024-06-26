@@ -43,7 +43,6 @@ $(function () {
             else{
               $('#qc-3 #row_cell_ques_' + i).html('')
             }
-            console.log($('#qc-3 #row_cell_ques_' + i).height() - window.innerWidth * (32 / (data.played_questions + 4)) / 100)
           }        
           
         }
