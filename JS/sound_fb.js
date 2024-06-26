@@ -318,6 +318,31 @@ $(function () {
 				update(ref(db), { rc4_obj4 : 0 });
 			}
       
+      if(data.rc4_obj15 == 1){
+        con.ChoiAmThanh('Sounds/correct.mp3',1);
+        update(ref(db), { rc4_obj15 : 0 });         
+      }
+      if(data.rc4_obj16 == 1){
+        con.ChoiAmThanh('Sounds/correct.mp3',1);
+        update(ref(db), { rc4_obj16 : 0 });         
+      }
+      if(data.rc4_obj17 == 1){
+        con.ChoiAmThanh('Sounds/correct.mp3',1);
+        update(ref(db), { rc4_obj17 : 0 });         
+      }
+      if(data.rc4_obj185 == 1){
+        con.ChoiAmThanh('Sounds/correct.mp3',1);
+        update(ref(db), { rc4_obj185 : 0 });         
+      }
+      if(data.rc4_obj19 == 1){
+        con.ChoiAmThanh('Sounds/correct.mp3',1);
+        update(ref(db), { rc4_obj19 : 0 });         
+      }
+      if(data.rc4_obj20 == 1){
+        con.ChoiAmThanh('Sounds/correct.mp3',1);
+        update(ref(db), { rc4_obj20 : 0 });         
+      }
+      
 		})
 	}(window.VTVCGV = window.VTVCGV || {}));
 });

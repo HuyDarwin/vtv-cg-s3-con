@@ -1196,11 +1196,52 @@ $(function () {
       })
       
       $('#rc4_obj15').click(function(){
+        update(ref(db), {  })
         $('#rc4_obj15, #rc4_obj21').attr("disabled", true);
       })
       
-      $('#rc4_obj1').click(function(){
-        $('#rc4_obj1, #rc4_obj2').attr("disabled", true);
+      $('#rc4_obj16').click(function(){
+        $('#rc4_obj16, #rc4_obj22').attr("disabled", true);
+      })
+      
+      $('#rc4_obj17').click(function(){
+        $('#rc4_obj17, #rc4_obj23').attr("disabled", true);
+      })
+      
+      $('#rc4_obj18').click(function(){
+        $('#rc4_obj18, #rc4_obj24').attr("disabled", true);
+      })
+      
+      $('#rc4_obj19').click(function(){
+        $('#rc4_obj19, #rc4_obj25').attr("disabled", true);
+      })
+      
+      $('#rc4_obj20').click(function(){
+        $('#rc4_obj20, #rc4_obj26').attr("disabled", true);
+      })
+      
+      $('#rc4_obj21').click(function(){
+        $('#rc4_obj15, #rc4_obj21').attr("disabled", true);
+      })
+      
+      $('#rc4_obj22').click(function(){
+        $('#rc4_obj16, #rc4_obj22').attr("disabled", true);
+      })
+      
+      $('#rc4_obj23').click(function(){
+        $('#rc4_obj17, #rc4_obj23').attr("disabled", true);
+      })
+      
+      $('#rc4_obj24').click(function(){
+        $('#rc4_obj18, #rc4_obj24').attr("disabled", true);
+      })
+      
+      $('#rc4_obj25').click(function(){
+        $('#rc4_obj19, #rc4_obj25').attr("disabled", true);
+      })
+      
+      $('#rc4_obj26').click(function(){
+        $('#rc4_obj20, #rc4_obj26').attr("disabled", true);
       })
       
       $('#rc4_obj5').click(function(){
