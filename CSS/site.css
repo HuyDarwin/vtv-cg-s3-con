@@ -238,7 +238,7 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
 	height:10vw;
 	left:5vw;
 	top:43.5vw;
-  opacity:0;
+  opacity:1;
 }
 
 #qc-arrow {
@@ -325,7 +325,7 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
 	left:7.75vw;
 	width:30vw;
 	height:10vw;
-	top:45.5vw;
+	top:46.5vw;
 	font-family:'UTM Neo Sans Intel';
 	font-weight:bold;
 	font-size:1.8vw;

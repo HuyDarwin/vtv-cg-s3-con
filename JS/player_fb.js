@@ -268,7 +268,7 @@ $(function () {
         
         for(var i = 1; i <= x; i++){
           string2 += "<tr class='row_word' id='row_word_" + i + "'>";
-          string2 += "<td class='row_cell_ques' id='row_cell_ques_" + i + "'><textarea disabled></textarea></td>"
+          string2 += "<td class='row_cell_ques' id='row_cell_ques_" + i + "'></td>"
           string2 += "</tr>";
         }
         
@@ -283,10 +283,10 @@ $(function () {
 
           for (var i = 1; i <= data.played_questions + 4; i++) {
             if (eval('data.cw_question_' + i + '_hide') == 0 || (number_of_player == 5 && data.hdav4 == 1)) {
-              $('#qc #row_cell_ques_' + i + ' textarea').val(eval('data.cw_question_' + i))
+              $('#qc #row_cell_ques_' + i).html(eval('data.cw_question_' + i))
             }
             else{
-              $('#qc #row_cell_ques_' + i + ' textarea').val('')
+              $('#qc #row_cell_ques_' + i).html('')
             }
             
             for (var j = 1; j <= data.played_questions + 4; j++) {
@@ -345,7 +345,7 @@ $(function () {
     });
     
     $('#qc #input_sn').bind('input propertychange', function() {
-			update(ref(db), { input : $('#qc #input_sn').val() })
+			update(ref(db), { input_sn : $('#qc #input_sn').val() })
     });
     
 		$('#input_send').click(function(){

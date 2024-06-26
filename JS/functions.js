@@ -232,7 +232,7 @@ $(function () {
           $('#qc-1-bg').animate({'left':'50vw'}, 750, 'linear')
           $('#qc-timer').css('opacity',1).trigger('play');
           
-          $('#qc-q-text-holder, #qc-keyword').css('opacity',0)
+          $('#qc-q-text, #qc-keyword').css('opacity',0)
           
           setTimeout(function(){
             $('#qcc').css('opacity',1);

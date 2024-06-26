@@ -332,14 +332,10 @@ textarea{
 	border-color: transparent; 
 }
 
-.row_cell_ques textarea {
-  width:100%;
-  height:100%;
-  position:relative;
-  top:0%;
+.row_cell_ques {
 	font-family:'UTM Neo Sans Intel';
 	font-weight:bold;
-	font-size:1.5vw;
+	font-size:1.3vw;
 	color:#20713c;
   background-color: transparent;
 }
@@ -398,7 +394,7 @@ textarea{
 	left:3vw;
 	width:30vw;
 	height:10vw;
-	top:42.5vw;
+	top:43.5vw;
 	font-family:'UTM Neo Sans Intel';
 	font-weight:bold;
 	font-size:1.8vw;
