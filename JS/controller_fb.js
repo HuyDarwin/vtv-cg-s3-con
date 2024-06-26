@@ -1085,6 +1085,7 @@ $(function () {
 				update(ref(db), { played_contestants : played_contestants })
 				update(ref(db), { player_in_game : player_in_game })
 				$('#rc4_obj3').removeAttr("disabled");
+        update(ref(db), { dang_choi : 0 })
 			})
       
 			$('#rc4_obj3').click(function(){
@@ -1105,6 +1106,7 @@ $(function () {
         
 				$('#rc4_obj3').attr("disabled", true);
 				$('#rc4_obj4, #rc4_obj5').removeAttr("disabled");
+        update(ref(db), { dang_choi : 1 })
 			})
       
 			$('#rc4_obj4').click(function(){
@@ -1275,6 +1277,8 @@ $(function () {
         }
         
         con.ResetCauHoiVong4()
+        
+        update(ref(db), { dang_choi : 0 })
         
       })
       

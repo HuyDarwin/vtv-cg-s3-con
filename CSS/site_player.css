@@ -395,10 +395,10 @@ textarea{
 }
 
 #qc-keyword {
-	left:7.75vw;
+	left:3vw;
 	width:30vw;
 	height:10vw;
-	top:45vw;
+	top:42.5vw;
 	font-family:'UTM Neo Sans Intel';
 	font-weight:bold;
 	font-size:1.8vw;
@@ -434,4 +434,12 @@ textarea{
 	top:23.5vw;
 	left:72vw;
 	width:26vw;
+}
+
+#show_hide_ans_qc {
+  top:36vw;
+  width:26vw;
+  left:72vw;
+  height:5vw;
+  font-size:2vw;
 }

@@ -494,6 +494,7 @@ $(function () {
       update(ref(db), { input: '' })
       update(ref(db), { input_sn: '' })  
     }
+    }
     
     con.LoadCauHoiVong4 = function() {
       key_col = cau_hoi_4[played_questions].KeyCol;

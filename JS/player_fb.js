@@ -229,7 +229,7 @@ $(function () {
       
       // Question crossword
       
-      if(data.round == 4 && data.played_questions >= 0 && data.played_questions <= 2) {
+      if(data.round == 4 && data.played_questions >= 0 && data.played_questions <= 2 && data.dang_choi == 1) {
         $('#qc').css('opacity',1)
         
         var string = "";
@@ -282,7 +282,7 @@ $(function () {
       
 
           for (var i = 1; i <= data.played_questions + 4; i++) {
-            if (eval('data.cw_question_' + i + '_hide') == 0 || number_of_player == 5) {
+            if (eval('data.cw_question_' + i + '_hide') == 0 || (number_of_player == 5 && data.hdav4 == 1)) {
               $('#qc #row_cell_ques_' + i + ' textarea').val(eval('data.cw_question_' + i))
             }
             else{
@@ -290,7 +290,7 @@ $(function () {
             }
             
             for (var j = 1; j <= data.played_questions + 4; j++) {
-              if (eval('data.cw_key_ans_' + i + '_hide') == 0 || number_of_player == 5) {
+              if (eval('data.cw_key_ans_' + i + '_hide') == 0 || (number_of_player == 5 && data.hdav4 == 1)) {
                 if(eval('data.cw_key_' + i + '_' + j) == '.') {
                   $('#row_word_' + i + ' #row_cell_' + j).css('color','#EB5F00');
                   $('#row_word_' + i + ' #row_cell_' + j).html(eval('data.cw_key_ans_' + i + '_' + j));
@@ -309,11 +309,11 @@ $(function () {
          
           } 
           
-          if(data.key_word == null || number_of_player != 5){
-            $('#qc-keyword').html('Từ hàng dọc: ')
+          if(number_of_player == 5 && data.key_word != null && data.hdav4 == 1){
+            $('#qc-keyword').css('opacity',1).html('Từ hàng dọc: ' + data.key_word)
           }
           else{
-            $('#qc-keyword').html('Từ hàng dọc: ' + data.key_word)
+            $('#qc-keyword').css('opacity',0).html('Từ hàng dọc: ')
           }      
       }
       else{
@@ -354,5 +354,12 @@ $(function () {
 		$('#input_sn_send').click(function(){
 			update(ref(db), { input_sn : $('#input_sn').val() })
 		})
+    
+    $('#show_hide_ans_qc').click(function(){
+      hien_dap_an_vong_4++;
+      hien_dap_an_vong_4 %= 2;
+      update(ref(db), {hdav4: hien_dap_an_vong_4})
+    })
+    update(ref(db), {hdav4: 0})
 	}(window.VTVCGV = window.VTVCGV || {}));
 });
