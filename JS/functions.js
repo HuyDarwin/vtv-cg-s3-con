@@ -152,11 +152,13 @@ $(function () {
           string += "</tr>";
         }
         
-        $('#cw_table').html(string);
+        $('#qc-1 #cw_table, #qc-2 #cw_table, #qc-3 #cw_table').html(string);
         
-        $('.row_cell, .row_crown, .row_cell_x, .row_cell_high, .row_cell_high_x').css({'width':((28 + x) / x) + 'vw', 'height' : ((28 + x) / x) + 'vw', 'line-height' : '0vw', 'font-size' : '6cqw'})
-        $('#qc-2 .row_cell, #qc-2 .row_crown, #qc-2 .row_cell_x, #qc-2 .row_cell_high, #qc-2 .row_cell_high_x').css({'width':((28 + x) / x) / 4 + 'vw', 'height' : ((28 + x) / x) / 4 + 'vw', 'line-height' : '0vw', 'font-size' : '6cqw'})
-        $('#row_crown_' + data.key_col).css('background-image', 'url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646")')
+        $('.row_cell, .row_crown, .row_cell_x, .row_cell_high, .row_cell_high_x').css({'width':((28 + x) / x) + 'vw', 'height' : ((28 + x) / x) + 'vw', 'line-height' : '-2vw', 'font-size' : '4cqw'})
+        $('#qc-2 .row_cell, #qc-2 .row_crown, #qc-2 .row_cell_x, #qc-2 .row_cell_high, #qc-2 .row_cell_high_x').css({'width':((28 + x) / x) / 4 + 'vw', 'height' : ((28 + x) / x) / 4 + 'vw', 'line-height' : '-2vw', 'font-size' : (4 / 4) + 'cqw'})
+        $('#qc-1 #row_crown_' + data.key_col).css('background-image', 'url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646")')
+        $('#qc-2 #row_crown_' + data.key_col).css('background-image', 'url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646")')
+        $('#qc-3 #row_crown_' + data.key_col).css('background-image', 'url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646")')
       }
       
 
@@ -191,7 +193,7 @@ $(function () {
       
       con.ChuyenCauHoiHangNgangVong4 = function (i) {
         $('#qc-q-text-holder').animate({'opacity':'0'}, 250, 'linear', function(){
-          console.log('data.cw_question_' + i)
+          //console.log('data.cw_question_' + i)
           $('#qc-q-text').html(eval('data.cw_question_' + i));
           $('#qc-q-text-holder').animate({'opacity':'1'}, 250)
         })

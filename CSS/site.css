@@ -139,7 +139,23 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
   opacity:1;
 }
 
-#q#cw_table {
+#qc-1 #cw_table {
+  left:7.5vw;
+  top:1vw;
+  table-layout:fixed;
+  
+  text-align:center;
+}
+
+#qc-2 #cw_table {
+  left:7.5vw;
+  top:1vw;
+  table-layout:fixed;
+  
+  text-align:center;
+}
+
+#qc-3 #cw_table {
   left:7.5vw;
   top:1vw;
   table-layout:fixed;
