@@ -49,6 +49,11 @@ $(function () {
 			else{
 				$('#buzzer').attr("disabled", true);
 			}
+      
+      if(data.rc4_obj3 == 1){
+        $('#qc #input, #qc #input_sn').val('')
+        update(ref(db), { rc4_obj3 : 0 })
+      }
 			
 			// Variables update
 			
