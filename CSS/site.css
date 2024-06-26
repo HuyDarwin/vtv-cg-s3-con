@@ -1,11 +1,13 @@
 @font-face {
     font-family: 'SFU Futura Bold';
-    src: url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/sfufuturabold-webfont.woff2?v=1719223360192') format('woff2'),
-         url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/sfufuturabold-webfont.woff?v=1719223313513') format('woff');
+    src: url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/SFUFuturaBold.woff2?v=1719416410442') format('woff2'),
+        url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/SFUFuturaBold.woff?v=1719416424733') format('woff');
     font-weight: normal;
     font-style: normal;
-
+    font-display: swap;
 }
+
+
 
 @font-face {
 	font-family: 'UTM Neo Sans Intel';
