@@ -155,19 +155,10 @@ textarea{
 	text-align: center;
 }
 
-#input_send, #input_sn_send {
-	width:25vw;
-	height:5vw;
-	top:18vw;
-	left:74.5vw;
-	font-size:3vw;
-	background-color:d3d3d3;
-}
-
 #buzzer {
 	width:25vw;
-	height:21.5vw;
-	top:23.5vw;
+	height:27vw;
+	top:18vw;
 	left:74.5vw;
 	font-size:3vw;
 	background-color:ffa96b;
@@ -301,7 +292,7 @@ textarea{
 #qc{
 	width:100%;
 	height:100%;
-  opacity: 0;
+  top:100vw;
   background-image: url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/r4_bg_16.9.png?v=1719157888030");
 	background-repeat: no-repeat;
 	background-position: center;

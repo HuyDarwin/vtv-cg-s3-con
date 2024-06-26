@@ -230,7 +230,7 @@ $(function () {
       // Question crossword
       
       if(data.round == 4 && data.played_questions >= 0 && data.played_questions <= 2 && data.dang_choi == 1) {
-        $('#qc').css('opacity',1)
+        $('#qc').css('top','0vw')
         
         var string = "";
         var x = data.played_questions + 4;
@@ -317,7 +317,7 @@ $(function () {
           }      
       }
       else{
-        $('#qc').css('opacity',0)
+        $('#qc').css('top','100vw')
       }
       
 

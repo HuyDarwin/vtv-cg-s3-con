@@ -548,6 +548,7 @@ $(function () {
 						$('#rc1_obj8').removeAttr("disabled");
 					}, 19000)
 				}
+        update(ref(db), { is_able_to_input : 0})
 			})
 			$('#rc1_obj5').click(function(){
 				$('#rc1_obj5').attr("disabled", true);
@@ -562,6 +563,7 @@ $(function () {
 						$('#rc1_obj8').removeAttr("disabled");
 					}, 19000)
 				}
+        update(ref(db), { is_able_to_input : 0})
 			})
 			$('#rc1_obj6').click(function(){
 				$('#rc1_obj6').attr("disabled", true);
@@ -576,6 +578,7 @@ $(function () {
 						$('#rc1_obj8').removeAttr("disabled");
 					}, 19000)
 				}
+        update(ref(db), { is_able_to_input : 0})
 			})
 			$('#rc1_obj7').click(function(){
 				$('#rc1_obj7').attr("disabled", true);
@@ -590,6 +593,7 @@ $(function () {
 						$('#rc1_obj8').removeAttr("disabled");
 					}, 19000)
 				}
+        update(ref(db), { is_able_to_input : 0})
 			})
 			$('#rc1_obj8').click(function(){
 				con.ChayDongHo(90);
