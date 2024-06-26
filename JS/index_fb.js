@@ -43,6 +43,18 @@ $(function () {
             else{
               $('#qc-3 #row_cell_ques_' + i).html('')
             }
+            
+            for (var j = 1; j <= data.played_questions + 4; j++) {
+              if (eval('data.cw_key_ans_' + i + '_hide') == 0) {
+                if(eval('data.cw_key_' + i + '_' + j) != eval('data.cw_key_ans_' + i + '_' + j)) {
+                  $('#row_word_' + i + ' #row_cell_' + j)
+                }
+              }
+              else{
+                
+              }                
+            }
+         
           }        
           
         }
