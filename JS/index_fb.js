@@ -38,11 +38,12 @@ $(function () {
       if (data.round == 4) {
         for (var i = 1; i <= data.played_questions + 4; i++) {
           if (eval('data.cw_question_' + i + '_hide') == 0) {
-            $('#qc-3 #row-word-' + i + ' .row_cell_ques').html(eval('data.cw_question_' + i))
+            $('#qc-3 #row_word_' + i + ' .row_cell_ques').html(eval('data.cw_question_' + i))
           }
           else{
-            $('#qc-3 #row-word-' + i + ' .row_cell_ques').html('VY DUC TRI YEU LE XUAN DUONG')
+            $('#qc-3 #row_word_' + i + ' .row_cell_ques').html('VY DUC TRI YEU LE XUAN DUONG')
           }
+          $('#qc-3 #row_word_' + i + ' .row_cell_ques').css('background-color','orange')
         }        
       }
 
