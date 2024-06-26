@@ -159,7 +159,7 @@ $(function () {
         
         $('#qc-1 #cw_table, #qc-2 #cw_table, #qc-3 #cw_table').html(string);
         
-        $('.row_word').css({'width':'38vw', 'max-height':(32 / x) + 'vw'})
+        $('.row_word').css({'max-height':(32 / x) + 'vw'})
         $('.row_cell, .row_crown, .row_cell_x, .row_cell_high, .row_cell_high_x').css({'width':(32 / x) + 'vw', 'height':(32 / x) + 'vw', 'font-size' : (4.85 - Math.abs(4 - x) * 0.5) + 'vw'})
         $('#qc-3 .row_cell_arrow').css({'width':(40 / x) + 'vw', 'height':(32 / x) + 'vw', 'font-size' : (4.5 - Math.abs(4 - x) * 0.2) + 'vw'})
         $('#qc-3 .row_cell_ques').css({'width':'38vw', 'max-height':(32 / x) + 'vw'})
