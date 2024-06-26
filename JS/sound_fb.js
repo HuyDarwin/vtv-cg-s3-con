@@ -330,9 +330,9 @@ $(function () {
         con.ChoiAmThanh('Sounds/correct.mp3',1);
         update(ref(db), { rc4_obj17 : 0 });         
       }
-      if(data.rc4_obj185 == 1){
+      if(data.rc4_obj18 == 1){
         con.ChoiAmThanh('Sounds/correct.mp3',1);
-        update(ref(db), { rc4_obj185 : 0 });         
+        update(ref(db), { rc4_obj18 : 0 });         
       }
       if(data.rc4_obj19 == 1){
         con.ChoiAmThanh('Sounds/correct.mp3',1);

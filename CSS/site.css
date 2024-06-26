@@ -162,7 +162,7 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
 }
 
 #qc-3 #cw_table2 {
-  left:50vw;
+  left:52vw;
   top:3vw;
   table-layout:fixed;
 }
@@ -320,16 +320,14 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
 }
 
 #qc-keyword {
-	left:10vw;
+	left:7.75vw;
 	width:30vw;
 	height:10vw;
-	top:40vw;
+	top:45vw;
 	font-family:'UTM Neo Sans Intel';
 	font-weight:bold;
 	font-size:1.8vw;
 	color:#20713c;
-    display: flex;
-    align-items: center;
 	line-height:1.9vw;
   opacity:0;
 }

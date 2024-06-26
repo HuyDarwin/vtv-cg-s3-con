@@ -1145,7 +1145,7 @@ $(function () {
         if(da_hoi_xong_vong_4 == 1) {
           update(ref(db), { reset_hl_hn : 1})
           da_hoi_xong_vong_4 = 0;
-          for(var i = 8; i <= 12 + data.played_questions; i++) $('#rc4_obj' + i).removeAttr('disabled');
+          for(var i = 8; i <= 12 + played_questions; i++) $('#rc4_obj' + i).removeAttr('disabled');
         }
         $('#rc4_obj6').attr("disabled", true);
         $('#rc4_obj7').removeAttr('disabled');
@@ -1155,7 +1155,7 @@ $(function () {
         if(da_hoi_xong_vong_4 == 1) {
           update(ref(db), { reset_hl_hn : 1})
           da_hoi_xong_vong_4 = 0;
-          for(var i = 8; i <= 12 + data.played_questions; i++) $('#rc4_obj' + i).removeAttr('disabled');
+          for(var i = 8; i <= 12 + played_questions; i++) $('#rc4_obj' + i).removeAttr('disabled');
         }
         $('#rc4_obj7').attr("disabled", true);
         $('#rc4_obj6').removeAttr('disabled');
