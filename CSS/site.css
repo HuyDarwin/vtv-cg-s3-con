@@ -254,11 +254,11 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
 	top:0vw;
 	font-family:'UTM Neo Sans Intel';
 	font-weight:bold;
-	font-size:1.8vw;
+	font-size:1.7vw;
 	color:#20713c;
     display: flex;
     align-items: center;
-	line-height:1.9vw;
+	line-height:2.1vw;
 }
 
 #qc-1{
