@@ -281,7 +281,13 @@ $(function () {
         
         $('.row_word').css({'max-height':(32 / x) + 'vw'})
         $('.row_cell, .row_crown, .row_cell_x, .row_cell_high, .row_cell_high_x').css({'width':(32 / x) + 'vw', 'height':(32 / x) + 'vw', 'font-size' : (4.85 - Math.abs(4 - x) * 0.5) + 'vw'})
-        $('#qc .row_cell_ques').css({'width':'35vw', 'height':((2 * x + 23.5) / x) + 'vw'})
+        
+        if(number_of_player == 7){
+          $('#qc .row_cell_ques').css({'width':'60vw', 'height':((2 * x + 23.5) / x) + 'vw', 'font-size':'1.5vw'})
+        }
+        else{
+          $('#qc .row_cell_ques').css({'width':'35vw', 'height':((2 * x + 23.5) / x) + 'vw', 'font-size':'1.4vw'})
+        }
         
         $('#qc #row_crown_' + data.key_col).css('background-image', 'url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646")')
       
