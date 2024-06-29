@@ -833,9 +833,7 @@ $(function () {
 				con.TiepTucDongHo();
 				$('#rc2_obj10, #rc2_obj11').attr("disabled", true);
 			})
-      var pham_quy = 0;
 			$('#rc2_obj12').click(function(){
-        pham_quy = 1;
 				con.TamDungDongHo();
 				update(ref(db), { pause_timer: 'true', is_able_to_buzzer : 0 })
 				$('#rc2_obj10, #rc2_obj11, #rc2_obj12').attr("disabled", true);
@@ -875,12 +873,7 @@ $(function () {
 					}
 				}
 				else{
-					if(pham_quy == 1){
-            pham_quy = 0;
-          }
-          else {
-            played_questions++;
-          }
+          played_questions++;
 					update(ref(db), { played_questions : played_questions })
 					if(played_questions % 2 == 0){
 						player_in_game = 0;
