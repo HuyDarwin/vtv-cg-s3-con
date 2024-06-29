@@ -1,4 +1,13 @@
 @font-face {
+    font-family: 'UTM Facebook';
+    src: url('UTMFacebook.woff2') format('woff2'),
+        url('UTMFacebook.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'SFU Futura Bold';
     src: url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/SFUFuturaBold.woff2?v=1719416410442') format('woff2'),
         url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/SFUFuturaBold.woff?v=1719416424733') format('woff');
@@ -173,7 +182,7 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
   color:white;
   text-align:center;
     vertical-align: middle;
-  font-family:'SFU Futura Bold';
+  font-family:'UTM Facebook';
   
 	border-width: 0.1vw 0.1vw;
 	border-style: solid;
