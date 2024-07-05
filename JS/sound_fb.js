@@ -343,6 +343,43 @@ $(function () {
       if(data.rc4_obj20 == 1){
         con.ChoiAmThanh('Sounds/correct.mp3',1);
         update(ref(db), { rc4_obj20 : 0 });         
+      }        
+
+      if(data.sound_1 == 1){
+        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/utomp3.com%20-%20miaw%20miaw%20miaw%20miaw%20sound%20sad%20viral%20tiktok.mp3?v=1719659951301',1);
+        update(ref(db), { sound_1 : 0 });         
+      }
+      if(data.sound_2 == 1){
+        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/y2mate.com%20-%20Cute%20Dog%20%20Cat%20Song.mp3?v=1719659951708',1);
+        update(ref(db), { sound_2 : 0 });         
+      }
+      if(data.sound_3 == 1){
+        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/90s%20Countdown.mp3?v=1720170886392',1);
+        update(ref(db), { sound_3 : 0 });         
+      }
+      if(data.sound_4 == 1){
+        con.ChoiAmThanh('',1);
+        update(ref(db), { sound_4 : 0 });         
+      }
+      if(data.sound_5 == 1){
+        con.ChoiAmThanh('',1);
+        update(ref(db), { sound_5 : 0 });         
+      }
+      if(data.sound_6 == 1){
+        con.ChoiAmThanh('',1);
+        update(ref(db), { sound_6 : 0 });         
+      }
+      if(data.sound_7 == 1){
+        con.ChoiAmThanh('',1);
+        update(ref(db), { sound_7 : 0 });         
+      }
+      if(data.sound_8 == 1){
+        con.ChoiAmThanh('',1);
+        update(ref(db), { sound_8 : 0 });         
+      }
+      if(data.sound_9 == 1){
+        con.ChoiAmThanh('',1);
+        update(ref(db), { sound_9 : 0 });         
       }
       
 		})

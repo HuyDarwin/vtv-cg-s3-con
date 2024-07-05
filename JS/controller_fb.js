@@ -1083,6 +1083,7 @@ $(function () {
 				update(ref(db), { player_in_game : player_in_game })
 				$('#rc4_obj3').removeAttr("disabled");
         update(ref(db), { dang_choi : 0 })
+        update(ref(db), { show_cw_key_col : 0})
 			})
       
 			$('#rc4_obj3').click(function(){
@@ -1097,6 +1098,7 @@ $(function () {
 					time = 90;
 				}
         
+        update(ref(db), { show_cw_key_col : 0})
 				con.LoadCauHoiVong4();
 				$('#timer').html(time);
 				update(ref(db), { timer : time })
@@ -1181,6 +1183,7 @@ $(function () {
       
       $('#rc4_obj12').click(function(){
         $('#rc4_obj12').attr("disabled", true);
+        update(ref(db), { show_cw_key_col : 1 })
         $('#rc4_obj18, #rc4_obj24').removeAttr('disabled');
       })
       
@@ -1274,6 +1277,7 @@ $(function () {
         }
         
         con.ResetCauHoiVong4()
+        update(ref(db), { show_cw_key_col : 0})
         
         update(ref(db), { dang_choi : 0 })
         
