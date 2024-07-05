@@ -1643,26 +1643,94 @@ div.round_control {
 	background-color:09dd9d;
 }
 
-#hdwnc{
-	width:13.75vw;
+#sound_1{
+	width:1.4vw;
 	height:2vw;
 	font-size:1vw;
 	border-radius:5px;
 	left:0.5vw;
 	top:36.75vw;
 	background-color:ffa96b;
-	opacity:0;
 }
 
-#adwnc{
-	width:13.75vw;
+#sound_2{
+	width:1.4vw;
 	height:2vw;
 	font-size:1vw;
 	border-radius:5px;
-	left:14.5vw;
+	left:2vw;
 	top:36.75vw;
 	background-color:ffa96b;
-	opacity:0;
+}
+
+#sound_3{
+	width:1.4vw;
+	height:2vw;
+	font-size:1vw;
+	border-radius:5px;
+	left:3.5vw;
+	top:36.75vw;
+	background-color:ffa96b;
+}
+
+#sound_4{
+	width:1.4vw;
+	height:2vw;
+	font-size:1vw;
+	border-radius:5px;
+	left:5vw;
+	top:36.75vw;
+	background-color:ffa96b;
+}
+
+#sound_5{
+	width:1.4vw;
+	height:2vw;
+	font-size:1vw;
+	border-radius:5px;
+	left:6.5vw;
+	top:36.75vw;
+	background-color:ffa96b;
+}
+
+#sound_6{
+	width:1.4vw;
+	height:2vw;
+	font-size:1vw;
+	border-radius:5px;
+	left:8vw;
+	top:36.75vw;
+	background-color:ffa96b;
+}
+
+#sound_7{
+	width:1.4vw;
+	height:2vw;
+	font-size:1vw;
+	border-radius:5px;
+	left:9.5vw;
+	top:27.25vw;
+	background-color:ffa96b;
+}
+
+#sound_8{
+	width:1.4vw;
+	height:2vw;
+	font-size:1vw;
+	border-radius:5px;
+	left:11vw;
+	top:27.25vw;
+	background-color:ffa96b;
+}
+
+#sound_9{
+	width:1.4vw;
+	height:2vw;
+	font-size:1vw;
+	border-radius:5px;
+	left:12.5vw;
+	top:27.25vw;
+	background-color:ffa96b;
 }
 
 #cht{
