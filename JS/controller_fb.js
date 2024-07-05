@@ -1163,6 +1163,7 @@ $(function () {
       })
       
       $('#rc4_obj8').click(function(){
+        update(ref(db), { show_cw_key_col : 1 })
         $('#rc4_obj8').attr("disabled", true);
       })
       
@@ -1183,7 +1184,6 @@ $(function () {
       
       $('#rc4_obj12').click(function(){
         $('#rc4_obj12').attr("disabled", true);
-        update(ref(db), { show_cw_key_col : 1 })
         $('#rc4_obj18, #rc4_obj24').removeAttr('disabled');
       })
       

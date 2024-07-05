@@ -63,21 +63,6 @@ $(function () {
             }
             
             
-              if (eval('data.show_cw_key_col') == 1) {
-                if(eval('data.cw_key_' + i + '_' + data.key_col) == '.') {
-                  $('#row_word_' + i + ' #row_cell_' + data.key_col).css('color','#EB5F00');
-                  $('#row_word_' + i + ' #row_cell_' + data.key_col).html(eval('data.cw_key_ans_' + i + '_' + j));
-                }
-                else{
-                  $('#row_word_' + i + ' #row_cell_' + data.key_col).css('color','white');
-                }
-              }
-              else{
-                if(eval('data.cw_key_' + i + '_' + data.key_col) == '.') {
-                  $('#row_word_' + i + ' #row_cell_' + data.key_col).html('');
-                }
-                $('#row_word_' + i + ' #row_cell_' + data.key_col).css('color','white');                
-              }  
          
           } 
           

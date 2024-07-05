@@ -301,7 +301,7 @@ $(function () {
             }
             
             for (var j = 1; j <= data.played_questions + 4; j++) {
-              if (eval('data.cw_key_ans_' + i + '_hide') == 0 || (number_of_player == 5 && data.hdav4 == 1)) {
+              if (eval('data.cw_key_ans_' + i + '_hide') == 0 || (eval('data.show_cw_key_col') == 1 && j == data.key_col) || (number_of_player == 5 && data.hdav4 == 1)) {
                 if(eval('data.cw_key_' + i + '_' + j) == '.') {
                   $('#row_word_' + i + ' #row_cell_' + j).css('color','#EB5F00');
                   $('#row_word_' + i + ' #row_cell_' + j).html(eval('data.cw_key_ans_' + i + '_' + j));
