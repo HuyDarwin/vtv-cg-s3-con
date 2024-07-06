@@ -62,7 +62,7 @@ $(function () {
 				update(ref(db), { lcv1 : 0 });
 			}
 			if (data.lcv2 == 1){
-				con.ChoiAmThanh('Sounds/vtv_rules_v2.2.mp3',1);
+				con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/Lu%E1%BA%ADt%20Gi%E1%BA%A3i%20ngh%C4%A9a%20edited.mp3?v=1720266245811',1);
 				update(ref(db), { lcv2 : 0 });
 			}
 			if (data.lcv3 == 1){
@@ -300,7 +300,7 @@ $(function () {
 				update(ref(db), { rc4_obj1 : 0 });
 			}
 			if (data.rc4_obj2 == 1){
-				con.ChoiAmThanh('Sounds/theme_3.mp3',1);
+				con.ChoiAmThanh('Sounds/theme_4.mp3',1);
 				update(ref(db), { rc4_obj2 : 0 });
 			}
 			if (data.rc4_obj3 == 1){
