@@ -1267,7 +1267,7 @@ $(function () {
         
 				$('#rc4 button').attr("disabled", true);
 				$('#rc4_obj1, #rc4_obj2').removeAttr("disabled");
-				$('#tddg').removeAttr("disabled");
+				//$('#tddg').removeAttr("disabled");
         
         played_questions++
         update(ref(db), { played_questions : played_questions })

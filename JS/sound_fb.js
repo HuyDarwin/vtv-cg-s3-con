@@ -173,7 +173,7 @@ $(function () {
 				update(ref(db), { rc1_obj1 : 0 });
 			}
 			if (data.rc1_obj2 == 1){
-				con.ChoiAmThanh('Sounds/theme_3.mp3',1);
+				con.ChoiAmThanh('Sounds/theme_4.mp3',1);
 				update(ref(db), { rc1_obj2 : 0 });
 			}
 			if(data.played_contestants != 3){
@@ -358,23 +358,23 @@ $(function () {
         update(ref(db), { sound_3 : 0 });         
       }
       if(data.sound_4 == 1){
-        con.ChoiAmThanh('',1);
+        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/Start.mp3?v=1720265760594',1);
         update(ref(db), { sound_4 : 0 });         
       }
       if(data.sound_5 == 1){
-        con.ChoiAmThanh('',1);
+        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/Start%20Ver%201.mp3?v=1720265903668',1);
         update(ref(db), { sound_5 : 0 });         
       }
       if(data.sound_6 == 1){
-        con.ChoiAmThanh('',1);
+        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/Acce_Start.mp3?v=1720265914824',1);
         update(ref(db), { sound_6 : 0 });         
       }
       if(data.sound_7 == 1){
-        con.ChoiAmThanh('',1);
+        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/Start.mp3?v=1720265927390',1);
         update(ref(db), { sound_7 : 0 });         
       }
       if(data.sound_8 == 1){
-        con.ChoiAmThanh('',1);
+        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/RightObstacle.mp3?v=1720265950166',1);
         update(ref(db), { sound_8 : 0 });         
       }
       if(data.sound_9 == 1){
