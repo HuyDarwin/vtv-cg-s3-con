@@ -358,7 +358,7 @@ $(function () {
         update(ref(db), { sound_3 : 0 });         
       }
       if(data.sound_4 == 1){
-        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/Start.mp3?v=1720265760594',1);
+        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/Start.mp3?v=1720272930353',1);
         update(ref(db), { sound_4 : 0 });         
       }
       if(data.sound_5 == 1){
