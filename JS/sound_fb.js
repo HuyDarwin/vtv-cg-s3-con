@@ -381,6 +381,10 @@ $(function () {
         con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/T%C3%ACnh%20%C4%91%E1%BA%A5t%20-%20H%C4%90H%20ft%20B%E1%BA%A3o%20Ch%C3%A2u%20.MP3?v=1720603782532',1);
         update(ref(db), { sound_9 : 0 });         
       }
+      if(data.sound_10 == 1){
+        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/6f106068-feb0-4242-8be6-cd9de03e40c0.mp3?v=1720849196732',1);
+        update(ref(db), { sound_10 : 0 });         
+      }
       
 		})
 	}(window.VTVCGV = window.VTVCGV || {}));

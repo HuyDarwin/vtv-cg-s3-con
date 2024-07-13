@@ -1733,6 +1733,16 @@ div.round_control {
 	background-color:ffa96b;
 }
 
+#sound_10{
+	width:2.4vw;
+	height:2vw;
+	font-size:1vw;
+	border-radius:5px;
+	left:14vw;
+	top:36.75vw;
+	background-color:ffa96b;
+}
+
 #cht{
 	left:0.5vw;
 	font-family:'UTM Neo Sans Intel';
