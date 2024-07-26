@@ -1168,32 +1168,32 @@ $(function () {
       })
       
       $('#rc4_obj9').click(function(){
-        $('#rc4_obj9').attr("disabled", true);
+        //$('#rc4_obj9').attr("disabled", true);
         $('#rc4_obj15, #rc4_obj21').removeAttr('disabled');
       })
       
       $('#rc4_obj10').click(function(){
-        $('#rc4_obj10').attr("disabled", true);
+        //$('#rc4_obj10').attr("disabled", true);
         $('#rc4_obj16, #rc4_obj22').removeAttr('disabled');
       })
       
       $('#rc4_obj11').click(function(){
-        $('#rc4_obj11').attr("disabled", true);
+        //$('#rc4_obj11').attr("disabled", true);
         $('#rc4_obj17, #rc4_obj23').removeAttr('disabled');
       })
       
       $('#rc4_obj12').click(function(){
-        $('#rc4_obj12').attr("disabled", true);
+        //$('#rc4_obj12').attr("disabled", true);
         $('#rc4_obj18, #rc4_obj24').removeAttr('disabled');
       })
       
       $('#rc4_obj13').click(function(){
-        $('#rc4_obj13').attr("disabled", true);
+        //$('#rc4_obj13').attr("disabled", true);
         $('#rc4_obj19, #rc4_obj25').removeAttr('disabled');
       })
       
       $('#rc4_obj14').click(function(){
-        $('#rc4_obj14').attr("disabled", true);
+        //$('#rc4_obj14').attr("disabled", true);
         $('#rc4_obj20, #rc4_obj26').removeAttr('disabled');
       })
       
