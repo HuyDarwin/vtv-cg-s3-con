@@ -177,26 +177,45 @@ $(function () {
 				$('#gpx1').html('Người đang chơi:<br/>');
 			}
       
-			if(data.player_buzz != 0){
+			/*if(data.player_buzz != 0){
 				$('#gpx2').html('Người bấm chuông:<br/>' + data.player_buzz);
 			}
 			else{
 				$('#gpx2').html('Người bấm chuông:<br/>');
-			}
-      
-			/*
-			if(data.player_buzz == 2 && data.player_2_last_name != null){
-				$('#gpx2').html('Người bấm chuông:<br/>2. ' + data.player_2_last_name);
-			}
-			if(data.player_buzz == 3 && data.player_3_last_name != null){
-				$('#gpx2').html('Người bấm chuông:<br/>3. ' + data.player_3_last_name);
-			}
-			if(data.player_buzz == 4 && data.player_4_last_name != null){
-				$('#gpx2').html('Người bấm chuông:<br/>4. ' + data.player_4_last_name);
-			}
-			else{
-				$('#gpx2').html('Người bấm chuông:<br/>');
 			}*/
+      
+      if(data.player_buzz == 1) {
+        if (data.player_1_last_name != null) {
+          $('#gpx2').html('Người bấm chuông:<br/>1. ' + data.player_1_last_name);
+        }
+        else {
+          $('#gpx2').html('Người bấm chuông:<br/>1');
+        }
+      }
+      else if(data.player_buzz == 2) {
+        if (data.player_2_last_name != null) {
+          $('#gpx2').html('Người bấm chuông:<br/>2. ' + data.player_2_last_name);
+        }
+        else {
+          $('#gpx2').html('Người bấm chuông:<br/>2');
+        }
+      }
+      else if(data.player_buzz == 3) {
+        if (data.player_3_last_name != null) {
+          $('#gpx2').html('Người bấm chuông:<br/>3. ' + data.player_3_last_name);
+        }
+        else {
+          $('#gpx2').html('Người bấm chuông:<br/>3');
+        }
+      }
+      else if(data.player_buzz == 4) {
+        if (data.player_4_last_name != null) {
+          $('#gpx2').html('Người bấm chuông:<br/>4. ' + data.player_4_last_name);
+        }
+        else {
+          $('#gpx2').html('Người bấm chuông:<br/>4');
+        }
+      }
 			
 			if(data.round == 1){
         if((data.played_questions + 1) % 14 == 0) $('#info1').html('Thứ tự câu hỏi hiện tại: 14')
