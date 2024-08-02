@@ -378,7 +378,7 @@ $(function () {
         update(ref(db), { sound_8 : 0 });         
       }
       if(data.sound_9 == 1){
-        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/T%C3%ACnh%20%C4%91%E1%BA%A5t%20-%20H%C4%90H%20ft%20B%E1%BA%A3o%20Ch%C3%A2u%20.MP3?v=1720603782532',1);
+        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/tuy%E1%BB%87t%20%C4%91%E1%BB%89nh%20song%20ca.mp3?v=1722593220668',1);
         update(ref(db), { sound_9 : 0 });         
       }
       if(data.sound_10 == 1){
