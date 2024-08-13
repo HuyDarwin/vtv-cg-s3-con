@@ -349,9 +349,6 @@ $(function () {
       else{
         $('#qc').css('top','100vw')
       }
-      
-
-      
 		})
 		
 		$('#buzzer').click(function(){
