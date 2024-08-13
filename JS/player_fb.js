@@ -355,6 +355,7 @@ $(function () {
 		})
 		
 		$('#buzzer').click(function(){
+			$('#buzzer').attr("disabled", true);
 			update(ref(db), {
 				player_buzz : number_of_player,
 				buzzer_sound : 1,
