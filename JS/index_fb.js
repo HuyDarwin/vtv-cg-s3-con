@@ -252,7 +252,7 @@ $(function () {
 				update(ref(db), { hd4 : 0 });
 			}
 			if (data.abtkd == 1){
-				$('#scoreboard-1, #scoreboard-2, #round_s, .sbn, .sbs').animate({opacity: 0}, 500);
+				$('#scoreboard-1, #scoreboard-2, #round_s, .sbn, .sbs').animate({opacity: 0}, 0);
 				update(ref(db), { abtkd : 0 });
 			}
 			if (data.rc1_obj13 == 1){
