@@ -79,10 +79,10 @@ $(function () {
 				$('#qc #player_sn_input').html(data.input_sn);				
 			}
 			
-			$('#sn1, #sn1p').html(data.player_1_last_name);
-			$('#sn2, #sn2p').html(data.player_2_last_name);
-			$('#sn3, #sn3p').html(data.player_3_last_name);
-			$('#sn4, #sn4p').html(data.player_4_last_name);
+			$('#sn1, #sn1p').html('1. ' + data.player_1_last_name);
+			$('#sn2, #sn2p').html('2. ' + data.player_2_last_name);
+			$('#sn3, #sn3p').html('3. ' + data.player_3_last_name);
+			$('#sn4, #sn4p').html('4. ' + data.player_4_last_name);
 			$('#sntd, #sntdp').html(data.player_sn_last_name);
 			$('#ss1').html(data.player_1_score);
 			$('#ss2').html(data.player_2_score);

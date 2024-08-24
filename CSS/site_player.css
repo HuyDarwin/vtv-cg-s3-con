@@ -49,9 +49,10 @@
 
 body {
 	overflow:hidden;
-	background: url('../Graphics/background-2.png') no-repeat;
+	background: url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/455075990_8428044400592934_5942951214370282096_n.png?v=1724493498202') no-repeat;
 	background-position: center;
 	background-size: cover;
+  backdrop-filter: blur(2px) brightness(25%);
 }
 
 div, img, button, textarea, iframe, select, option, input, label {
@@ -198,6 +199,7 @@ textarea{
 
 #text1 {
 	top:18vw;
+  color:white;
 }
 
 #player_input {
@@ -208,6 +210,7 @@ textarea{
 
 #text2 {
 	top:31.75vw;
+  color:white;
 }
 
 #player_sn_input {
@@ -280,12 +283,17 @@ textarea{
 }
 
 #sn1p, #sn2p, #sn3p, #sn4p, #sntdp {
-	width:15vw;
+	width:19vw;
 	background-color:rgba(57,213,247);
 }
 
-#ss1, #ss2, #ss3, #ss4, #ss1p, #ss2p, #ss3p, #ss4p, #sstd, #sstdp {
+#ss1, #ss2, #ss3, #ss4, #sstd {
 	width:4vw;
+	background-color:rgba(245,120,16);
+}
+
+#ss1p, #ss2p, #ss3p, #ss4p, #sstdp {
+	width:0vw;
 	background-color:rgba(245,120,16);
 }
 
