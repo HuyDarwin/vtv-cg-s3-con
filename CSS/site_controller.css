@@ -1743,6 +1743,46 @@ div.round_control {
 	background-color:ffa96b;
 }
 
+#sound_11{
+	width:1.9vw;
+	height:2vw;
+	font-size:1vw;
+	border-radius:5px;
+	left:16vw;
+	top:36.75vw;
+	background-color:ffa96b;
+}
+
+#sound_12{
+	width:1.9vw;
+	height:2vw;
+	font-size:1vw;
+	border-radius:5px;
+	left:18vw;
+	top:36.75vw;
+	background-color:ffa96b;
+}
+
+#sound_13{
+	width:1.9vw;
+	height:2vw;
+	font-size:1vw;
+	border-radius:5px;
+	left:20vw;
+	top:36.75vw;
+	background-color:ffa96b;
+}
+
+#sound_14{
+	width:1.9vw;
+	height:2vw;
+	font-size:1vw;
+	border-radius:5px;
+	left:21vw;
+	top:36.75vw;
+	background-color:ffa96b;
+}
+
 #cht{
 	left:0.5vw;
 	font-family:'UTM Neo Sans Intel';

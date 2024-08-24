@@ -216,6 +216,9 @@ $(function () {
           $('#gpx2').html('Người bấm chuông:<br/>4');
         }
       }
+			else{
+				$('#gpx2').html('Người bấm chuông:<br/>');
+			}
 			
 			if(data.round == 1){
         if((data.played_questions + 1) % 14 == 0) $('#info1').html('Thứ tự câu hỏi hiện tại: 14')

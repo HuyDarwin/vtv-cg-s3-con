@@ -385,6 +385,22 @@ $(function () {
         con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/6f106068-feb0-4242-8be6-cd9de03e40c0.mp3?v=1720849196732',1);
         update(ref(db), { sound_10 : 0 });         
       }
+      if(data.sound_11 == 1){
+        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/ti%E1%BA%BFng%20c%C6%B0%E1%BB%9Di%20vtv%20ver%201.MP3?v=1724491017287',1);
+        update(ref(db), { sound_11 : 0 });         
+      }
+      if(data.sound_12 == 1){
+        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/Ti%E1%BA%BFng%20c%C6%B0%E1%BB%9Di%20VTV%20ver%202.mp3?v=1724491017996',1);
+        update(ref(db), { sound_12 : 0 });         
+      }
+      if(data.sound_13 == 1){
+        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/v%E1%BB%97%20tay%20(vua).MP3?v=1724491024296',1);
+        update(ref(db), { sound_13 : 0 });         
+      }
+      if(data.sound_14 == 1){
+        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/V%E1%BB%97%20tay%20(1).MP3?v=1724491030470',1);
+        update(ref(db), { sound_14 : 0 });         
+      }
       
 		})
 	}(window.VTVCGV = window.VTVCGV || {}));
