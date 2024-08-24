@@ -411,6 +411,7 @@ textarea{
 #qc #text1{
 	top:7.5vw;
 	left:72vw;
+  color:black;
 }
 
 #qc #player_input{
@@ -422,6 +423,7 @@ textarea{
 #qc #text2{
 	top:21.5vw;
 	left:72vw;
+  color:black;
 }
 
 #qc #player_sn_input{

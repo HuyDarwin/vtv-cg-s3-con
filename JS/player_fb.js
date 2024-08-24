@@ -222,14 +222,19 @@ $(function () {
 			
 			if(data.round == 1){
         if((data.played_questions + 1) % 14 == 0) {
-          $('#gpx3').html('Thứ tự câu hỏi hiện tại: 14')
+          $('#gpx3').html('Thứ tự câu hỏi hiện tại:<br/> 14')
         }
 				else {
-          $('#gpx3').html('Thứ tự câu hỏi hiện tại: ' + (data.played_questions + 1) % 14);
+          $('#gpx3').html('Thứ tự câu hỏi hiện tại:<br/> ' + (data.played_questions + 1) % 14);
         }
 			}
 			else if(data.round == 2 ){
-				$('#gpx3').html('Thứ tự câu hỏi hiện tại:<br/>' + (data.played_questions + 1) % 2);
+        if ((data.played_questions + 1) % 2 == 0) {
+          $('#gpx3').html('Thứ tự câu hỏi hiện tại:<br/> 2');
+        }
+        else {
+				  $('#gpx3').html('Thứ tự câu hỏi hiện tại:<br/>' + (data.played_questions + 1) % 2); 
+        }
 			}
 			else if(data.round == 3 || data.round == 4){
 				$('#gpx3').html('Thứ tự câu hỏi hiện tại:<br/>' + (data.played_questions + 1));
