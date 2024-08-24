@@ -221,8 +221,12 @@ $(function () {
 			}
 			
 			if(data.round == 1){
-        if((data.played_questions + 1) % 14 == 0) $('#info1').html('Thứ tự câu hỏi hiện tại: 14')
-				else $('#info1').html('Thứ tự câu hỏi hiện tại: ' + (data.played_questions + 1) % 14);
+        if((data.played_questions + 1) % 14 == 0) {
+          $('#gpx3').html('Thứ tự câu hỏi hiện tại: 14')
+        }
+				else {
+          $('#gpx3').html('Thứ tự câu hỏi hiện tại: ' + (data.played_questions + 1) % 14);
+        }
 			}
 			else if(data.round == 2 ){
 				$('#gpx3').html('Thứ tự câu hỏi hiện tại:<br/>' + (data.played_questions + 1) % 2);
