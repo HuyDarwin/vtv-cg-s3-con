@@ -465,11 +465,21 @@ div.amthanh {
 }
 
 #ctd{
-	width:18.5vw;
+	width:9vw;
 	height:2vw;
 	font-size:1.1vw;
 	border-radius:5px;
 	left:0.5vw;
+	top:29.5vw;
+	background-color:ffa96b;
+}
+
+#cnc{
+	width:9vw;
+	height:2vw;
+	font-size:1.1vw;
+	border-radius:5px;
+	left:10vw;
 	top:29.5vw;
 	background-color:ffa96b;
 }

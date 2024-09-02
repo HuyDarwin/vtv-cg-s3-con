@@ -158,6 +158,10 @@ $(function () {
        // con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/y2mate.com%20-%20Cute%20Dog%20%20Cat%20Song.mp3?v=1719659951708',1)
 				update(ref(db), { ctd : 0 });
 			}
+      if (data.cnc == 1){
+				con.ChoiAmThanh('Sounds/choose_player.mp3',1);
+        update(ref(db), { cnc : 0 });
+			}
 			if (data.stopat == 1){
 				con.DungAmThanh();
 				update(ref(db), { stopat : 0 });
