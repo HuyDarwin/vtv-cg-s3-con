@@ -246,9 +246,15 @@ $(function () {
 			if(data.question.length > 140){
 				var qla = data.question.length - 140;
 				var qlb = qla * (0.026 - qla * 0.00018);
-				var qlc = Math.min(1.5, 2.6 - qlb);
+				var qlc = 2.6 - qlb;
+        if (qlb < 0) {
+          qlc = 1.5;
+        }
 				var qld = String(qlc) + "vw";
 				var qle = 2.7 - (2.7 - 2) / (2.6 - 1.6) * qlb;
+        if (qlb < 0) {
+          qle = 1.5;
+        }
 				var qlf = String(qle) + "vw";
 				$("#q_text").css({"font-size": qld, "line-height": qlf});
 			}
