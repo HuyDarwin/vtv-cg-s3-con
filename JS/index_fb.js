@@ -169,7 +169,7 @@ $(function () {
 			if(data.question.length > 129){
 				var qla = data.question.length - 129;
 				var qlb = qla * (0.026 - qla * 0.00018);
-				var qlc = 2.1 - qlb;
+				var qlc = Math.min(2.1 - qlb, 1.5);
 				var qld = String(qlc) + "vw";
 				var qle = 2.2 - (2.7 - 2) / (2.6 - 1.6) * qlb;
 				var qlf = String(qle) + "vw";
