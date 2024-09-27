@@ -998,7 +998,7 @@ $(function () {
 					var min = Math.min(...score);
 					if((9 - played_questions) - (max - min) < 0 || played_questions == 9){
 						con.TimNguoiChoiBiLoai();
-						$('#rc3_obj3').attr("disabled", true);
+						//$('#rc3_obj3').attr("disabled", true);
 					}
 				}
 				else{
