@@ -138,7 +138,7 @@ $(function () {
 				update(ref(db), { nn7 : 0 });
 			}
 			if (data.nn8 == 1){
-				con.ChoiAmThanh('Sounds/bed_8.mp3',3);
+				con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/Bed%208.mp3?v=1730739637569',3);
 				update(ref(db), { nn8 : 0 });
 			}
 			if (data.nn9 == 1){
