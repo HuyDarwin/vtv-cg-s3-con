@@ -702,10 +702,16 @@ $(function () {
 				played_questions++;
 				update(ref(db), {
 					played_questions : played_questions,
-					is_able_to_buzzer : 1,
 					is_playing_tiebreak : 1
 				})
-				con.ChayCauHoi(1,true);
+				setTimeout(function(){
+          update(ref(db), {
+            is_able_to_buzzer : 1
+				  })
+        }, 750);
+				setTimeout(function(){
+          con.ChayCauHoi(1,true);
+        }, 150);
 			})
 			$('#rc1_obj14').click(function(){
 				round = 0;
