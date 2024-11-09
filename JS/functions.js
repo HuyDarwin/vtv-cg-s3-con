@@ -229,7 +229,8 @@ $(function () {
           con.ChuyenCanhVong4(1)
           
           $('#qc-1-bg').css('left','100vw');
-          $('#qc-1-bg').animate({'left':'50vw'}, 750, 'linear')
+          $('#qc-1-bg').animate({'left':'50vw'}, 750, 'linear');
+          $('#qc-timer').prop('currentTime',0);
           $('#qc-timer').css('opacity',1).trigger('play');
           
           $('#qc-q-text, #qc-keyword').css('opacity',0)
@@ -242,11 +243,13 @@ $(function () {
           $('.question-crossword').css('opacity', 0)
           
           if (data.round == 2){
+            $('#question-2').prop('currentTime',0);
             $('#question-2').css('opacity',1).trigger('play');
             $('#round_q').css({"left": "49.75vw", "top": "3vw"});
             $('#q_text').css({"width": "41.2vw", "height": "3.2vw", "left": "15vw", "top": "5.5vw"});
           }
           else{
+            $('#question-1').prop('currentTime',0);
             $('#question-1').css('opacity',1).trigger('play');
             $('#round_q').css({"left": "50.5vw", "top": "0.4vw"});
             $('#q_text').css({"width": "55vw", "height": "4.5vw", "left": "0.6vw", "top": "3vw"});

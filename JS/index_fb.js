@@ -406,6 +406,15 @@ $(function () {
         update(ref(db), { rc4_obj14 : 0 });         
       }
       
+        if(data.is_playing_tiebreak == 1){
+          $('#timer').css('opacity', 0);
+          $('#tiebreak_text').css('opacity', 1);
+        }
+        else {
+          $('#timer').css('opacity', 1);
+          $('#tiebreak_text').css('opacity', 0);
+        }
+      
       if(data.reset_hl_hn == 1){
           con.ResetHighLightHangNgangVong4();
           update(ref(db), { reset_hl_hn : 0 });           
