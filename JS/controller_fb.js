@@ -959,7 +959,7 @@ $(function () {
 					con.ChayDongHo(30);
 					$('#tddg, #ttdg').attr("disabled", true);
 					$('#tddg').removeAttr("disabled");
-					$('#rc3_obj3#rc3_obj4, #rc3_obj5').removeAttr("disabled");
+					$('#rc3_obj4, #rc3_obj5').removeAttr("disabled");
 					update(ref(db), { is_able_to_buzzer : 1 })
 					con.ChayCauHoi(3,false);
 				}, 2000);
