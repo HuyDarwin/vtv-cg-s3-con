@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'SFU Futura Bold';
-    src: url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/sfufuturabold-webfont.woff2?v=1719223360192') format('woff2'),
-         url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/sfufuturabold-webfont.woff?v=1719223313513') format('woff');
+    src: url("../Fonts/sfufuturabold-webfont.woff2") format('woff2'),
+         url("../Fonts/sfufuturabold-webfont.woff") format('woff');
     font-weight: normal;
     font-style: normal;
 

@@ -177,9 +177,9 @@ $(function () {
         $('#qc-3 .row_cell_ques').css({'width':'38vw', 'height':((2 * x + 23.5) / x) + 'vw'})
         
         $('#qc-2 .row_cell, #qc-2 .row_crown, #qc-2 .row_cell_x, #qc-2 .row_cell_high, #qc-2 .row_cell_high_x').css({'width':(32 / x) / 2 + 'vw', 'height':(32 / x) / 2 + 'vw', 'font-size' : ((4.85 - Math.abs(4 - x) * 0.5) / 2) + 'vw'})
-        $('#qc-1 #row_crown_' + data.key_col).css('background-image', 'url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646")')
-        $('#qc-2 #row_crown_' + data.key_col).css('background-image', 'url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646")')
-        $('#qc-3 #row_crown_' + data.key_col).css('background-image', 'url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646")')
+        $('#qc-1 #row_crown_' + data.key_col).css('background-image', 'url("Assets/orange_crown.png")')
+        $('#qc-2 #row_crown_' + data.key_col).css('background-image', 'url("Assets/orange_crown.png")')
+        $('#qc-3 #row_crown_' + data.key_col).css('background-image', 'url("Assets/orange_crown.png")')
 
         
       }

@@ -1,19 +1,19 @@
 @font-face {
-    font-family: 'UTM Facebook';
-    src: url('UTMFacebook.woff2') format('woff2'),
-        url('UTMFacebook.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'UTM Facebook';
+	src: url('UTMFacebook.woff2') format('woff2'),
+		url('UTMFacebook.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'SFU Futura Bold';
-    src: url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/SFUFuturaBold.woff2?v=1719416410442') format('woff2'),
-        url('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/SFUFuturaBold.woff?v=1719416424733') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'SFU Futura Bold';
+	src: url("../Fonts/SFUFuturaBold.woff2") format('woff2'),
+		url("../Fonts/SFUFuturaBold.woff") format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 
@@ -60,185 +60,200 @@
 
 body {
 	overflow: hidden;
-	background-color:#002063;
+	background-color: #002063;
 	background-position: center;
 	background-size: cover;
 }
 
-div, img, button, textarea, iframe, select, option, input, label {
-	position:absolute;
-	margin:auto;
+div,
+img,
+button,
+textarea,
+iframe,
+select,
+option,
+input,
+label {
+	position: absolute;
+	margin: auto;
 }
 
 video {
-	position:absolute;
-	margin:auto;
-	top:0;
-    left:0;
-    bottom:0;
-    right:0;
-    height:100%;
-    width:100%;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
 }
 
 p {
-	margin:auto;
-	position:absolute;
+	margin: auto;
+	position: absolute;
 }
 
 table {
-	margin:auto;
-	position:absolute;
+	margin: auto;
+	position: absolute;
 }
 
-div.bg_color{
-  width:100%;
-  height:100%;
-  top:0vw;
-  left:0vw;
-  background-color:#002063;
+div.bg_color {
+	width: 100%;
+	height: 100%;
+	top: 0vw;
+	left: 0vw;
+	background-color: #002063;
 }
 
 div.graphics {
-	width:100%;
-	height:100%;
-	opacity:1;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
 }
 
 div.titles {
-	width:100%;
-	height:100%;
+	width: 100%;
+	height: 100%;
 }
 
-#intro{
-	opacity:0;
+#intro {
+	opacity: 0;
 }
 
 
-#comm{
-	opacity:0;
+#comm {
+	opacity: 0;
 }
 
-#rt1{
-	opacity:0;
+#rt1 {
+	opacity: 0;
 }
 
-#rt2{
-	opacity:0;
+#rt2 {
+	opacity: 0;
 }
 
-#rt3{
-	opacity:0;
+#rt3 {
+	opacity: 0;
 }
 
-#rt4{
-	opacity:0;
+#rt4 {
+	opacity: 0;
 }
 
 div.question {
-	width:100%;
-	height:100%;
+	width: 100%;
+	height: 100%;
 }
 
-#question-1{
-	opacity:0;
+#question-1 {
+	opacity: 0;
 }
 
-#question-1-input{
-	opacity:0;
+#question-1-input {
+	opacity: 0;
 }
 
-#question-2{
-	opacity:0;
+#question-2 {
+	opacity: 0;
 }
 
-div.question-crossword, #qc-1, #qc-2, #qc-3 {
-	width:100%;
-	height:100%;
-  opacity:1;
+div.question-crossword,
+#qc-1,
+#qc-2,
+#qc-3 {
+	width: 100%;
+	height: 100%;
+	opacity: 1;
 }
 
 #qc-1 #cw_table {
-  left:7.5vw;
-  top:1vw;
-  table-layout:fixed;
-  
-  text-align:center;
+	left: 7.5vw;
+	top: 1vw;
+	table-layout: fixed;
+
+	text-align: center;
 }
 
 #qc-2 #cw_table {
-  left:72.5vw;
-  top:29vw;
-  table-layout:fixed;
-  
-  text-align:center;
+	left: 72.5vw;
+	top: 29vw;
+	table-layout: fixed;
+
+	text-align: center;
 }
 
 #qc-3 #cw_table {
-  left:7.5vw;
-  top:3vw;
-  table-layout:fixed;
+	left: 7.5vw;
+	top: 3vw;
+	table-layout: fixed;
 }
 
 #qc-3 #cw_table2 {
-  left:52vw;
-  top:3vw;
-  table-layout:fixed;
+	left: 52vw;
+	top: 3vw;
+	table-layout: fixed;
 }
 
-.row_crown, .row_cell, .row_cell_x, .row_cell_high, .row_cell_high_x {
-  color:white;
-  text-align:center;
-    vertical-align: middle;
-  font-family:'UTM Facebook';
-  
+.row_crown,
+.row_cell,
+.row_cell_x,
+.row_cell_high,
+.row_cell_high_x {
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	font-family: 'UTM Facebook';
+
 	border-width: 0.1vw 0.1vw;
 	border-style: solid;
-	border-color: transparent; 
+	border-color: transparent;
 }
 
 #qc-3 .row_cell_ques {
-	font-family:'UTM Neo Sans Intel';
-	font-weight:bold;
-	font-size:1.7vw;
-	color:#20713c;
-  vertical-align: middle;
+	font-family: 'UTM Neo Sans Intel';
+	font-weight: bold;
+	font-size: 1.7vw;
+	color: #20713c;
+	vertical-align: middle;
 }
 
 .row_cell {
-	background-image: url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/letter.png?v=1719157858246");
+	background-image: url("../Assets/letter.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100% 100%;
 }
 
 .row_cell_x {
-	background-image: url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/cross.png?v=1719240411768"),
-    url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/letter.png?v=1719157858246");
+	background-image: url("../Assets/cross.png"),
+		url("../Assets/letter.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 80% 80%, 100% 100%;
 }
 
 .row_cell_high {
-	background-image: url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/letter.png?v=1719157858246"),
-    url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/red_bg.png?v=1719246460845");
+	background-image: url("../Assets/letter.png"),
+		url("../Assets/red_bg.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100% 100%, 110% 110%;
 }
 
 .row_cell_high_x {
-	background-image: url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/cross.png?v=1719240411768"),
-    url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/letter.png?v=1719157858246"),
-    url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/red_bg.png?v=1719246460845");
+	background-image: url("../Assets/cross.png"),
+		url("../Assets/letter.png"),
+		url("../Assets/red_bg.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 80% 80%, 100% 100%, 110% 110%;
 }
 
 #qc-3 .row_cell_arrow {
-	background-image: url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/arrow.png?v=1719316238341");
+	background-image: url("../Assets/arrow.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
@@ -251,261 +266,261 @@ div.question-crossword, #qc-1, #qc-2, #qc-3 {
 }
 
 #qc-q-text-holder {
-	width:40vw;
-	height:10vw;
-	left:5vw;
-	top:43.5vw;
-  opacity:1;
+	width: 40vw;
+	height: 10vw;
+	left: 5vw;
+	top: 43.5vw;
+	opacity: 1;
 }
 
 #qc-arrow {
-	left:0vw;
-	top:2.65vw;
-	width:9vw;
+	left: 0vw;
+	top: 2.65vw;
+	width: 9vw;
 }
 
 #qc-q-text {
-	left:10vw;
-	width:30vw;
-	height:10vw;
-	top:0vw;
-	font-family:'UTM Neo Sans Intel';
-	font-weight:bold;
-	font-size:1.7vw;
-	color:#20713c;
-    display: flex;
-    align-items: center;
-	line-height:2.1vw;
+	left: 10vw;
+	width: 30vw;
+	height: 10vw;
+	top: 0vw;
+	font-family: 'UTM Neo Sans Intel';
+	font-weight: bold;
+	font-size: 1.7vw;
+	color: #20713c;
+	display: flex;
+	align-items: center;
+	line-height: 2.1vw;
 }
 
-#qc-1{
-  opacity: 1;
+#qc-1 {
+	opacity: 1;
 }
 
-#qcc{
-	width:100vw;
-	height:100vw;
-	top:0vw;
-	left:0vw;
-	opacity:0;
-	text-align:center;
+#qcc {
+	width: 100vw;
+	height: 100vw;
+	top: 0vw;
+	left: 0vw;
+	opacity: 0;
+	text-align: center;
 }
 
 #qcc_timer {
-	font-size:4vw;
-	width:5vw;
-	height:5vw;
-  left:13.2vw;
-  top:45.5vw;
-	text-align:center;
-	font-family:'UTM Duepuntozero';
+	font-size: 4vw;
+	width: 5vw;
+	height: 5vw;
+	left: 13.2vw;
+	top: 45.5vw;
+	text-align: center;
+	font-family: 'UTM Duepuntozero';
 }
 
 #crown {
-	width:4.2vw;
-	height:3.5vw;
-  left:13.55vw;
-  top:41.5vw;
+	width: 4.2vw;
+	height: 3.5vw;
+	left: 13.55vw;
+	top: 41.5vw;
 }
 
 #qc-timer {
-  width:100vw;
-  height:100vw;
-  top:0vw;
-  left:0vw;
+	width: 100vw;
+	height: 100vw;
+	top: 0vw;
+	left: 0vw;
 }
 
 #qc-1-bg {
-  width:50vw;
-  height:100vw;
-  top:0vw;
-  left:100vw;
-  background-image: url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/r4_bg.png?v=1719157866376");
+	width: 50vw;
+	height: 100vw;
+	top: 0vw;
+	left: 100vw;
+	background-image: url("../Assets/r4_bg.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 
-#qc-2{
-  opacity: 0;
+#qc-2 {
+	opacity: 0;
 }
 
-#qc-3{
-  opacity: 0;
-  background-image: url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/449443521_364260440018728_5760639616628401605_n.png?v=1720284214878");
+#qc-3 {
+	opacity: 0;
+	background-image: url("../Assets/449443521_364260440018728_5760639616628401605_n.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 
 #qc-keyword {
-	left:7.75vw;
-	width:30vw;
-	height:10vw;
-	top:46.5vw;
-	font-family:'UTM Neo Sans Intel';
-	font-weight:bold;
-	font-size:1.8vw;
-	color:#20713c;
-	line-height:1.9vw;
-  opacity:0;
+	left: 7.75vw;
+	width: 30vw;
+	height: 10vw;
+	top: 46.5vw;
+	font-family: 'UTM Neo Sans Intel';
+	font-weight: bold;
+	font-size: 1.8vw;
+	color: #20713c;
+	line-height: 1.9vw;
+	opacity: 0;
 }
 
 div.scoreboard {
-	width:100%;
-	height:100%;
+	width: 100%;
+	height: 100%;
 }
 
-#scoreboard-1{
-	opacity:0;
+#scoreboard-1 {
+	opacity: 0;
 }
 
-#scoreboard-2{
-	opacity:0;
+#scoreboard-2 {
+	opacity: 0;
 }
 
-#question_content{
-	width:66vw;
-	height:11.5vw;
-	top:38.85vw;
-	left:24.5vw;
-	opacity:0;
-	text-align:center;
+#question_content {
+	width: 66vw;
+	height: 11.5vw;
+	top: 38.85vw;
+	left: 24.5vw;
+	opacity: 0;
+	text-align: center;
 }
 
 #round_q {
-	font-size:2vw;
-	color:white;
-	top:0.4vw;
-	left:50.5vw;
-	font-family:'UTM Neo Sans Intel';
-	font-weight:bold;
+	font-size: 2vw;
+	color: white;
+	top: 0.4vw;
+	left: 50.5vw;
+	font-family: 'UTM Neo Sans Intel';
+	font-weight: bold;
 }
 
 #players_left {
-	font-size:1.6vw;
-	color:white;
-	top:2.8vw;
-	left:58.4vw;
-	font-family:'UTM Neo Sans Intel';
-	font-weight:bold;
+	font-size: 1.6vw;
+	color: white;
+	top: 2.8vw;
+	left: 58.4vw;
+	font-family: 'UTM Neo Sans Intel';
+	font-weight: bold;
 }
 
 #timer {
-	font-size:4vw;
-	width:5vw;
-	height:5vw;
-	top:6.7vw;
-	left:58.6vw;
-	text-align:center;
-	font-family:'UTM Duepuntozero';
+	font-size: 4vw;
+	width: 5vw;
+	height: 5vw;
+	top: 6.7vw;
+	left: 58.6vw;
+	text-align: center;
+	font-family: 'UTM Duepuntozero';
 }
 
 #tiebreak_text {
-	font-size:1.6vw;
-	width:5.5vw;
-	height:4vw;
-	top:6.8vw;
-	left:58.35vw;
-	text-align:center;
-	font-family:'UTM Neo Sans Intel';
-	font-weight:bold;
+	font-size: 1.6vw;
+	width: 5.5vw;
+	height: 4vw;
+	top: 6.8vw;
+	left: 58.35vw;
+	text-align: center;
+	font-family: 'UTM Neo Sans Intel';
+	font-weight: bold;
 }
 
 #player_input {
-	width:32.4vw;
-	height:2.1vw;
-	top:39.4vw;
-	left:40.8vw;
-	font-size:1.4vw;
-	font-family:'UTM Neo Sans Intel';
-	font-style:italic;
-	line-height:2.3vw;
-	opacity:0;
+	width: 32.4vw;
+	height: 2.1vw;
+	top: 39.4vw;
+	left: 40.8vw;
+	font-size: 1.4vw;
+	font-family: 'UTM Neo Sans Intel';
+	font-style: italic;
+	line-height: 2.3vw;
+	opacity: 0;
 }
 
 #q_text {
-	width:55vw;
-	height:4.5vw;
-	top:3vw;
-	left:0.6vw;
-	font-size:2.1vw;
-	font-family:'UTM Neo Sans Intel';
-	font-weight:bold;
-	line-height:2.3vw;
+	width: 55vw;
+	height: 4.5vw;
+	top: 3vw;
+	left: 0.6vw;
+	font-size: 2.1vw;
+	font-family: 'UTM Neo Sans Intel';
+	font-weight: bold;
+	line-height: 2.3vw;
 }
 
 #q_text td {
-	text-align:center;
-	vertical-align:middle;
+	text-align: center;
+	vertical-align: middle;
 }
 
 #answer {
-	width:44.2vw;
-	height:2.7vw;
-	top:8.4vw;
-	left:12.2vw;
-	font-size:2vw;
-	font-family:'UTM Neo Sans Intel';
-	font-weight:bold;
-	font-style:italic;
-	line-height:2.3vw;
-	opacity:0;
+	width: 44.2vw;
+	height: 2.7vw;
+	top: 8.4vw;
+	left: 12.2vw;
+	font-size: 2vw;
+	font-family: 'UTM Neo Sans Intel';
+	font-weight: bold;
+	font-style: italic;
+	line-height: 2.3vw;
+	opacity: 0;
 }
 
 #round_s {
-	font-size:2.5vw;
-	color:white;
-	top:7.5vw;
-	left:17vw;
-	width:9vw;
-	height:3vw;
-	font-family:'UTM Neo Sans Intel';
-	font-weight:bold;
-	text-align:center;
-	opacity:0;
+	font-size: 2.5vw;
+	color: white;
+	top: 7.5vw;
+	left: 17vw;
+	width: 9vw;
+	height: 3vw;
+	font-family: 'UTM Neo Sans Intel';
+	font-weight: bold;
+	text-align: center;
+	opacity: 0;
 }
 
 .nas {
-	font-family:'UTM Neo Sans Intel';
-	width:18.9vw;
-	height:3vw;
-	top:42.3vw;
+	font-family: 'UTM Neo Sans Intel';
+	width: 18.9vw;
+	height: 3vw;
+	top: 42.3vw;
 }
 
 .sbn {
-	width:15.6vw;
-	text-align:center;
-	height:100%;
-	font-size:2.1vw;
+	width: 15.6vw;
+	text-align: center;
+	height: 100%;
+	font-size: 2.1vw;
 	padding: 0.2vw;
-	opacity:0;
+	opacity: 0;
 }
 
 .sbs {
-	left:15.6vw;
-	width:3.3vw;
-	height:100%;
-	text-align:center;
-	color:white;
-	font-weight:bold;
-	font-size:2.4vw;
-	text-shadow:0.2vw 0.2vw 0.4vw rgba(255,255,255,0.5);
-	opacity:0;
+	left: 15.6vw;
+	width: 3.3vw;
+	height: 100%;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: 2.4vw;
+	text-shadow: 0.2vw 0.2vw 0.4vw rgba(255, 255, 255, 0.5);
+	opacity: 0;
 }
 
 #nas1 {
-	left:16.2vw;
+	left: 16.2vw;
 }
 
 #nas2 {
-	left:35.8vw;
+	left: 35.8vw;
 }
 
 #nas3 {
-	left:55.4vw;
+	left: 55.4vw;
 }
 
 #nas4 {
-	left:75vw;
+	left: 75vw;
 }

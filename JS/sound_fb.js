@@ -62,7 +62,7 @@ $(function () {
 				update(ref(db), { lcv1 : 0 });
 			}
 			if (data.lcv2 == 1){
-				con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/Lu%E1%BA%ADt%20Gi%E1%BA%A3i%20ngh%C4%A9a%20edited.mp3?v=1720266245811',1);
+				con.ChoiAmThanh("Assets/Luật%20Giải%20nghĩa%20edited.mp3", 1);
 				update(ref(db), { lcv2 : 0 });
 			}
 			if (data.lcv3 == 1){
@@ -138,7 +138,7 @@ $(function () {
 				update(ref(db), { nn7 : 0 });
 			}
 			if (data.nn8 == 1){
-				con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/Bed%208.mp3?v=1730739637569',3);
+				con.ChoiAmThanh("Assets/Bed%208.mp3", 3);
 				update(ref(db), { nn8 : 0 });
 			}
 			if (data.nn9 == 1){
@@ -316,7 +316,7 @@ $(function () {
 					con.ChoiAmThanh('Sounds/60s_timer_1.mp3',4);
 				}
 				else if(data.played_questions == 1){
-				  con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/75s%20Countdown%20(from%2060s%20Countdown%201).mp3?v=1719318363662',4);
+				  con.ChoiAmThanh("Assets/75s%20Countdown%20(from%2060s%20Countdown%201).mp3", 4);
 				}
 				else if(data.played_questions == 2){
 				  con.ChoiAmThanh('Sounds/90s_timer.mp3',4);
@@ -350,59 +350,59 @@ $(function () {
       }        
 
       if(data.sound_1 == 1){
-        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/utomp3.com%20-%20miaw%20miaw%20miaw%20miaw%20sound%20sad%20viral%20tiktok.mp3?v=1719659951301',1);
+        con.ChoiAmThanh("Assets/utomp3.com%20-%20miaw%20miaw%20miaw%20miaw%20sound%20sad%20viral%20tiktok.mp3", 1);
         update(ref(db), { sound_1 : 0 });         
       }
       if(data.sound_2 == 1){
-        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/y2mate.com%20-%20Cute%20Dog%20%20Cat%20Song.mp3?v=1719659951708',1);
+        con.ChoiAmThanh("Assets/y2mate.com%20-%20Cute%20Dog%20%20Cat%20Song.mp3", 1);
         update(ref(db), { sound_2 : 0 });         
       }
       if(data.sound_3 == 1){
-        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/90s%20Countdown.mp3?v=1720170886392',1);
+        con.ChoiAmThanh("Assets/90s%20Countdown.mp3", 1);
         update(ref(db), { sound_3 : 0 });         
       }
       if(data.sound_4 == 1){
-        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/Start.mp3?v=1720272930353',1);
+        con.ChoiAmThanh("Assets/Start.mp3", 1);
         update(ref(db), { sound_4 : 0 });         
       }
       if(data.sound_5 == 1){
-        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/Start%20Ver%201.mp3?v=1720265903668',1);
+        con.ChoiAmThanh("Assets/Start%20Ver%201.mp3", 1);
         update(ref(db), { sound_5 : 0 });         
       }
       if(data.sound_6 == 1){
-        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/Acce_Start.mp3?v=1720265914824',1);
+        con.ChoiAmThanh("Assets/Acce_Start.mp3", 1);
         update(ref(db), { sound_6 : 0 });         
       }
       if(data.sound_7 == 1){
-        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/Start.mp3?v=1720265927390',1);
+        con.ChoiAmThanh("Assets/FInish_Start.mp3", 1);
         update(ref(db), { sound_7 : 0 });         
       }
       if(data.sound_8 == 1){
-        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/RightObstacle.mp3?v=1720265950166',1);
+        con.ChoiAmThanh("Assets/RightObstacle.mp3", 1);
         update(ref(db), { sound_8 : 0 });         
       }
       if(data.sound_9 == 1){
-        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/tuy%E1%BB%87t%20%C4%91%E1%BB%89nh%20song%20ca.mp3?v=1722593220668',1);
+        con.ChoiAmThanh("Assets/tuyệt%20đỉnh%20song%20ca.mp3", 1);
         update(ref(db), { sound_9 : 0 });         
       }
       if(data.sound_10 == 1){
-        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/6f106068-feb0-4242-8be6-cd9de03e40c0.mp3?v=1720849196732',1);
+        con.ChoiAmThanh("Assets/6f106068-feb0-4242-8be6-cd9de03e40c0.mp3", 1);
         update(ref(db), { sound_10 : 0 });         
       }
       if(data.sound_11 == 1){
-        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/ti%E1%BA%BFng%20c%C6%B0%E1%BB%9Di%20vtv%20ver%201.MP3?v=1724491017287',1);
+        con.ChoiAmThanh("Assets/tiếng%20cười%20vtv%20ver%201.MP3", 1);
         update(ref(db), { sound_11 : 0 });         
       }
       if(data.sound_12 == 1){
-        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/Ti%E1%BA%BFng%20c%C6%B0%E1%BB%9Di%20VTV%20ver%202.mp3?v=1724491017996',1);
+        con.ChoiAmThanh("Assets/Tiếng%20cười%20VTV%20ver%202.mp3", 1);
         update(ref(db), { sound_12 : 0 });         
       }
       if(data.sound_13 == 1){
-        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/v%E1%BB%97%20tay%20(vua).MP3?v=1724491024296',1);
+        con.ChoiAmThanh("Assets/vỗ%20tay%20(vua).MP3", 1);
         update(ref(db), { sound_13 : 0 });         
       }
       if(data.sound_14 == 1){
-        con.ChoiAmThanh('https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/V%E1%BB%97%20tay%20(1).MP3?v=1724491030470',1);
+        con.ChoiAmThanh("Assets/Vỗ%20tay%20(1).MP3", 1);
         update(ref(db), { sound_14 : 0 });         
       }
       

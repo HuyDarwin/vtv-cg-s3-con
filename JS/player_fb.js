@@ -326,7 +326,7 @@ $(function () {
           $('#qc .row_cell_ques').css({'width':'35vw', 'height':((2 * x + 23.5) / x) + 'vw', 'font-size':'1.4vw'})
         }
         
-        $('#qc #row_crown_' + data.key_col).css('background-image', 'url("https://cdn.glitch.global/6c8505bb-04bd-4d53-9cb8-a1b40407c0a4/orange_crown.png?v=1719157862646")')
+        $('#qc #row_crown_' + data.key_col).css('background-image', 'url("Assets/orange_crown.png")')
       
 
           for (var i = 1; i <= data.played_questions + 4; i++) {
